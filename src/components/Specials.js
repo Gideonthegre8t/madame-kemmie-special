@@ -1,4 +1,5 @@
-import React from "react";
+import React, { useContext } from "react";
+import { CartContext } from "./CartContext";
 import spicyGrilled from "../assets/images/spicy-grilled-chicken.png";
 import star from "../assets/images/star.png";
 import fire from "../assets/images/fire.png";
@@ -8,10 +9,8 @@ import chocolateWhip from "../assets/images/chocolate-cake.png";
 import shrimpBasmati from "../assets/images/shrimp-basmati-rice.png";
 import foodTray from "../assets/images/food-tray.png";
 import richVegetableSalad from "../assets/images/rich-vegetable-salad.png";
-import  smallChops from "../assets/images/small-chops.png";
+import smallChops from "../assets/images/small-chops.png";
 import stirFriedSpag from "../assets/images/stir-fried-spaghetti.png";
-
-
 
 const foodItems = [
   {
@@ -73,7 +72,10 @@ const foodItems = [
   // Add more items as needed
 ];
 
+
 function Specials() {
+  const { addToCart } = useContext(CartContext);
+
   return (
     <section className="specials-container">
       <div className="specials-header">
@@ -110,7 +112,7 @@ function Specials() {
                 <p className="price">
                   <span>NGN </span>{item.price}
                 </p>
-                <div className="add-cart">
+                <div className="add-cart" onClick={() => addToCart(item)}>
                   <p>
                     <img className="plus-icon" src={plus} alt="plus" />
                     Add to cart
@@ -126,3 +128,4 @@ function Specials() {
 }
 
 export default Specials;
+
