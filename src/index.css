@@ -562,10 +562,15 @@ body {
   }
 
   .total-card{
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
     background: #fff;
     padding: 2em;
     border: 1px solid #7c1575;
     border-radius: 5px;
+    width: 30%;
+    height: auto;
   }
 
   .total-card > h4{
@@ -580,13 +585,13 @@ text-align: left;
     margin-top: 1em;
     display: flex;
     flex-direction: column;
-    gap: 1em;
+    gap: 2em;
   }
 
-  .price-total, .delivery-tab{
+  .price-total, .delivery-tab, .phone-tab, .delivery-tab{
     display: flex;
     justify-content: space-between;
-    gap: 5em;
+ font-weight: 600;
   }
 
   .checkout{
@@ -594,7 +599,30 @@ text-align: left;
     background: #f6cfa0;
     padding: 1em;
     margin-top: 1em;
-  
   }
 
+  .phone-tab > input,  .delivery-tab > input{
+border: none;
+border-bottom: 1px solid ;
+border-radius: 0px;
+width: 55%;
+margin-top: -2em;
+  }
+
+  .location-button{
+    height: 10%;
+  }
+
+  .hidden{
+    display: none;
+  }
+
+  .nothing-card{
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .nothing-wrapper{
+margin-top: 5em;
+  }
 }

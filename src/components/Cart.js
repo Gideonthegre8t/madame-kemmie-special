@@ -5,6 +5,9 @@ import wallpaper2 from "../assets/images/wallpaper2.png";
 import backIcon from "../assets/images/arrow-left.png";
 import trash from "../assets/images/trash.png";
 import Footer from "./Footer";
+import nothingHere from "../assets/images/nothing-here.png";
+
+
 
 function Cart() {
   const { cart, updateQuantity, removeFromCart, clearCart } = useContext(CartContext);
@@ -47,7 +50,9 @@ function Cart() {
   return (
     <section className="cart-container">
       <img className="wallpaper2" src={wallpaper2} alt="wallpaper" />
-      <div className="cart-content">
+  
+      <div className="cart-content hidden">
+      
         <div className="container-top">
           <img src={logo} alt="logo" />
           <button className="lets-talk">Let's Talk</button>
@@ -102,7 +107,7 @@ function Cart() {
 
             <div className="delivery-tab">
               <p>Delivery</p>
-              <button onClick={shareLocation}>Share Location</button>
+              <button className="location-button"  onClick={shareLocation}>Share Location</button>
               {userLocation && (
                 <p>
                   Your location: Latitude {userLocation.lat}, Longitude {userLocation.lng}
@@ -111,21 +116,23 @@ function Cart() {
               {locationError && <p className="error">{locationError}</p>}
             </div>
 
-            <div>
+            <div className="phone-tab">
               <p>Phone number</p>
               <input
                 type="text"
                 value={phoneNumber}
                 onChange={(e) => setPhoneNumber(e.target.value)}
+                placeholder="Enter number"
               />
             </div>
 
-            <div>
+            <div className="delivery-tab">
               <p>Date of delivery</p>
               <input
                 type="date"
                 value={deliveryDate}
                 onChange={(e) => setDeliveryDate(e.target.value)}
+  
               />
             </div>
 
@@ -134,6 +141,12 @@ function Cart() {
             </button>
           </div>
         </div>
+      </div>
+      <div className="nothing-card">
+        <div className="nothing-wrapper"></div>
+        <h4>Nothing is here</h4>
+        <p>Your cart is currently empty</p>
+        <img className="nothing-here" src={nothingHere} alt="nothing-here" />
       </div>
 
       <Footer />
