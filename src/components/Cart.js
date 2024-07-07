@@ -6,11 +6,11 @@ import backIcon from "../assets/images/arrow-left.png";
 import trash from "../assets/images/trash.png";
 import Footer from "./Footer";
 import nothingHere from "../assets/images/nothing-here.png";
-
-
+import questionMark from "../assets/images/question-mark.png";
 
 function Cart() {
-  const { cart, updateQuantity, removeFromCart, clearCart } = useContext(CartContext);
+  const { cart, updateQuantity, removeFromCart, clearCart } =
+    useContext(CartContext);
   const [phoneNumber, setPhoneNumber] = useState("");
   const [deliveryDate, setDeliveryDate] = useState("");
   const [userLocation, setUserLocation] = useState(null);
@@ -33,7 +33,7 @@ function Cart() {
         (position) => {
           setUserLocation({
             lat: position.coords.latitude,
-            lng: position.coords.longitude
+            lng: position.coords.longitude,
           });
           setLocationError(null);
         },
@@ -50,9 +50,7 @@ function Cart() {
   return (
     <section className="cart-container">
       <img className="wallpaper2" src={wallpaper2} alt="wallpaper" />
-  
-      <div className="cart-content hidden">
-      
+      <div className="cart-content ">
         <div className="container-top">
           <img src={logo} alt="logo" />
           <button className="lets-talk">Let's Talk</button>
@@ -78,11 +76,15 @@ function Cart() {
               </div>
 
               <div className="quantity">
-                <p onClick={() => updateQuantity(item.name, item.quantity - 1)}>-</p>
+                <p onClick={() => updateQuantity(item.name, item.quantity - 1)}>
+                  -
+                </p>
                 <div className="quantity-box">
                   <p>{item.quantity}</p>
                 </div>
-                <p onClick={() => updateQuantity(item.name, item.quantity + 1)}>+</p>
+                <p onClick={() => updateQuantity(item.name, item.quantity + 1)}>
+                  +
+                </p>
               </div>
               <div className="price">
                 <p>NGN {item.price}</p>
@@ -91,7 +93,12 @@ function Cart() {
                 <p>NGN {item.price * item.quantity}</p>
               </div>
               <div className="trash-box">
-                <img className="trash" src={trash} alt="trash" onClick={() => removeFromCart(item.name)} />
+                <img
+                  className="trash"
+                  src={trash}
+                  alt="trash"
+                  onClick={() => removeFromCart(item.name)}
+                />
               </div>
             </div>
           ))}
@@ -102,15 +109,24 @@ function Cart() {
           <div className="total-details">
             <div className="price-total">
               <p>Subtotal</p>
-              <p>NGN {cart.reduce((acc, item) => acc + item.price * item.quantity, 0)}</p>
+              <p>
+                NGN{" "}
+                {cart.reduce(
+                  (acc, item) => acc + item.price * item.quantity,
+                  0
+                )}
+              </p>
             </div>
 
             <div className="delivery-tab">
               <p>Delivery</p>
-              <button className="location-button"  onClick={shareLocation}>Share Location</button>
+              <button className="location-button" onClick={shareLocation}>
+                Share Location
+              </button>
               {userLocation && (
                 <p>
-                  Your location: Latitude {userLocation.lat}, Longitude {userLocation.lng}
+                  Your location: Latitude {userLocation.lat}, Longitude{" "}
+                  {userLocation.lng}
                 </p>
               )}
               {locationError && <p className="error">{locationError}</p>}
@@ -132,7 +148,6 @@ function Cart() {
                 type="date"
                 value={deliveryDate}
                 onChange={(e) => setDeliveryDate(e.target.value)}
-  
               />
             </div>
 
@@ -143,10 +158,23 @@ function Cart() {
         </div>
       </div>
       <div className="nothing-card">
-        <div className="nothing-wrapper"></div>
-        <h4>Nothing is here</h4>
-        <p>Your cart is currently empty</p>
-        <img className="nothing-here" src={nothingHere} alt="nothing-here" />
+        <div className="nothing-wrapper">
+          {" "}
+          <h4>Nothing is here</h4>
+          <p>Your cart is currently empty</p>
+          <div className="nothing-image">
+            <img
+              className="nothing-here"
+              src={nothingHere}
+              alt="nothing-here"
+            />
+            <img
+              className="question-mark"
+              src={questionMark}
+              alt="question-mark"
+            />
+          </div>
+        </div>
       </div>
 
       <Footer />

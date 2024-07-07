@@ -5,6 +5,7 @@ const CateringForm = () => {
   const [formData, setFormData] = useState({
     fullName: "",
     email: "",
+    phone: "",
     eventType: "",
     eventDate: "",
     eventLocation: "",
@@ -37,6 +38,7 @@ const CateringForm = () => {
     setFormData({
       fullName: "",
       email: "",
+      phone: "",
       eventType: "",
       eventDate: "",
       eventLocation: "",
@@ -70,6 +72,18 @@ const CateringForm = () => {
             required
           />
         </div>
+        <div>
+              <p className="formcard-label">Phone number</p>
+              <input
+                type="text"
+                name="phone"
+                value={formData.phone}
+                placeholder="Enter number"
+                onChange={handleChange}
+                required
+            
+              />
+            </div>
         <div>
           <p className="formcard-label">Type of Event</p>
           <input

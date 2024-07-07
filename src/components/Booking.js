@@ -3,6 +3,7 @@ import logo from "../assets/images/logo.png";
 import wallpaper2 from "../assets/images/wallpaper2.png";
 import backIcon from "../assets/images/arrow-left.png";
 import CateringForm from "./CateringForm";
+import successIcon from "../assets/images/success.png";
 import Footer from "./Footer";
 
 
@@ -20,7 +21,13 @@ function Booking() {
         <h2 className="book-header">Book us</h2>
       </div>
 <div className="book-us-form"><CateringForm /> </div>
+<div className="success-tab">
+<img className="success-icon" src={successIcon} alt="successIcon" />
+<p className="success-text">Success</p>
+<p className="success-paragraph">You have successfully Booked Madame Kemmie specials, we will reaach out to you for further questions and also to let you know the total price. Thanks </p>
+<p className="ok">OK</p>
 
+</div>
     <Footer />
     </section>
   );
