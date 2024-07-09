@@ -20,7 +20,7 @@ function Booking() {
         <img className="back-icon" src={backIcon} alt="backIcon" />
         <h2 className="book-header">Book us</h2>
       </div>
-<div className="book-us-form"><CateringForm /> </div>
+<div className="book-us-form hidden"><CateringForm /> </div>
 <div className="success-tab">
 <img className="success-icon" src={successIcon} alt="successIcon" />
 <p className="success-text">Success</p>

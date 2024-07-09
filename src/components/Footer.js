@@ -13,29 +13,36 @@ function Footer() {
         <img className="logo-pad" src={logoWhite} alt="logo" />
         <h2>Ready to spice up your event? </h2>
       </div>
-      <div className="footer-middle">
-        <button className="book-us">Book us now</button>
-        <p>About us</p>
-      </div>
-      <div className="footer-down">
-        <div className="whatsapp-button">
+      <div className="footer-flex">
+        {" "}
+        <div className="footer-middle">
+          <button className="book-us">Book us now</button>
+          <p>About us</p>
+        </div>
+        <div className="footer-down">
+          <div className="whatsapp-button">
+            <p>
+              <img
+                className="whatsapp-icon"
+                src={whatsapp}
+                alt="whatsapp-logo"
+              />
+              Reach us on whatsapp
+            </p>
+          </div>
           <p>
-            <img className="handle-icon" src={whatsapp} alt="whatsapp-logo" />
-            Reach us on whatsapp
+            <img className="handle-icon" src={facebook} alt="whatsapp-logo" />
+            Kemi Oluwole
+          </p>
+          <p>
+            <img className="handle-icon" src={instagram} alt="whatsapp-logo" />
+            madamekemmiespecial
+          </p>
+          <p>
+            <img className="handle-icon" src={tiktok} alt="whatsapp-logo" />
+            madamekemmiespecial
           </p>
         </div>
-        <p>
-          <img className="handle-icon" src={facebook} alt="whatsapp-logo" />
-          Kemi Oluwole
-        </p>
-        <p>
-          <img className="handle-icon" src={instagram} alt="whatsapp-logo" />
-          madamekemmiespecial
-        </p>
-        <p>
-          <img className="handle-icon" src={tiktok} alt="whatsapp-logo" />
-          madamekemmiespecial
-        </p>
       </div>
     </section>
   );
