@@ -70,27 +70,33 @@ function Cart() {
 
           {cart.map((item, index) => (
             <div className="product-flex" key={index}>
-              <div className="product">
-                <img className="cart-image" src={item.img} alt={item.name} />
-                <p>{item.name}</p>
-              </div>
-
-              <div className="quantity">
-                <p onClick={() => updateQuantity(item.name, item.quantity - 1)}>
-                  -
-                </p>
-                <div className="quantity-box">
-                  <p>{item.quantity}</p>
+              <div className="product-details">
+                <div className="product">
+                  <img className="cart-image" src={item.img} alt={item.name} />
+                  <p>{item.name}</p>
                 </div>
-                <p onClick={() => updateQuantity(item.name, item.quantity + 1)}>
-                  +
-                </p>
-              </div>
-              <div className="price">
-                <p>NGN {item.price}</p>
-              </div>
-              <div className="total">
-                <p>NGN {item.price * item.quantity}</p>
+
+                <div className="quantity">
+                  <p
+                    onClick={() => updateQuantity(item.name, item.quantity - 1)}
+                  >
+                    -
+                  </p>
+                  <div className="quantity-box">
+                    <p>{item.quantity}</p>
+                  </div>
+                  <p
+                    onClick={() => updateQuantity(item.name, item.quantity + 1)}
+                  >
+                    +
+                  </p>
+                </div>
+                <div className="price">
+                  <p>N{item.price}</p>
+                </div>
+                <div className="total">
+                  <p>N {item.price * item.quantity}</p>
+                </div>
               </div>
               <div className="trash-box">
                 <img
@@ -160,7 +166,7 @@ function Cart() {
       <div className="nothing-card">
         <div className="nothing-wrapper">
           {" "}
-          <h4>Nothing is here</h4>
+          <h4>Nothing in here</h4>
           <p>Your cart is currently empty</p>
           <div className="nothing-image">
             <img

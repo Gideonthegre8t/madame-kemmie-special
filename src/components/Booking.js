@@ -1,6 +1,7 @@
 import React from "react";
 import logo from "../assets/images/logo.png";
 import wallpaper2 from "../assets/images/wallpaper2.png";
+import wallpaper2mobile from "../assets/images/wallpaper2mobile.png";
 import backIcon from "../assets/images/arrow-left.png";
 import CateringForm from "./CateringForm";
 import successIcon from "../assets/images/success.png";
@@ -10,7 +11,8 @@ import Footer from "./Footer";
 function Booking() {
   return (
     <section className="booking-container">
-      <img className="wallpaper2" src={wallpaper2} alt="wallpaper" />
+      <img className="wallpaper2 desktop" src={wallpaper2} alt="wallpaper" />
+      <img className="wallpaper2 mobile" src={wallpaper2mobile} alt="wallpaper" />
       <div className="booking-content">
         {" "}
         <div className="container-top">
@@ -20,7 +22,7 @@ function Booking() {
         <img className="back-icon" src={backIcon} alt="backIcon" />
         <h2 className="book-header">Book us</h2>
       </div>
-<div className="book-us-form hidden"><CateringForm /> </div>
+<div className="book-us-form "><CateringForm /> </div>
 <div className="success-tab">
 <img className="success-icon" src={successIcon} alt="successIcon" />
 <p className="success-text">Success</p>

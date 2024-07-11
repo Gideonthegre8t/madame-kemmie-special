@@ -52,8 +52,8 @@ const CateringForm = () => {
   return (
     <div className="form-container">
       <form onSubmit={handleSubmit}>
-        <div>
-          <p className="formcard-label">Full Name</p>
+        <div > 
+          <p className="formcard-label full-name">Full Name</p>
           <input
             type="text"
             name="fullName"

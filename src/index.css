@@ -223,7 +223,6 @@ h3 {
     rgba(255, 255, 255, 0.33) 13.99%,
     rgba(151, 71, 255, 0.2376) 100%
   );
-  /* Removed opacity to ensure visibility */
 }
 
 .rating-tab {
@@ -385,7 +384,8 @@ span {
   padding: 1em;
 }
 
-.handle-icon, .whatsapp-icon {
+.handle-icon,
+.whatsapp-icon {
   position: absolute;
   margin-left: -1.8em;
   margin-top: -5px;
@@ -440,7 +440,7 @@ form {
   text-align: left;
   padding: 1em;
   margin: 0em 12em;
-  font-family: Josefin Sans;
+  font-family: "Josefin Sans";
   font-size: 16px;
   font-weight: 900;
   line-height: 16px;
@@ -490,7 +490,7 @@ textarea {
 }
 
 .cart-detail > p {
-  font-family: Josefin Sans;
+  font-family: "Josefin Sans";
   font-size: 16px;
   font-weight: 900;
   line-height: 16px;
@@ -509,6 +509,10 @@ textarea {
 }
 
 .product-flex {
+  display: flex;
+}
+
+.product-details {
   margin-left: -8.5em;
   gap: 4em;
   margin-top: 2em;
@@ -516,7 +520,6 @@ textarea {
   height: 93px;
   border-radius: 5px;
 }
-
 .cart-image {
   position: absolute;
   margin-top: -1em;
@@ -551,11 +554,11 @@ textarea {
   padding: 5px;
 }
 
-.trash-box {
+/* .trash-box {
   border-left: 1px solid #7c1575;
   margin-left: -3em;
   padding: 1em;
-}
+} */
 .trash {
   margin-top: -2px;
   right: 5%;
@@ -712,18 +715,93 @@ textarea {
 }
 /* } */
 
-@media only screen and (max-width: 600px) {
-  button{
-    width:113px; 
-height: 37px;
-gap: 10px;
-border-radius: 10px ;
+@media only screen and (width < 601px) {
+  .desktop {
+    display: none;
   }
-  
-  .whatsapp-button {
-    width: 50%;
-    height: auto;
+
+  h2 {
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 24.2px;
   }
+
+  .container-top {
+    margin: 1em 0em;
+  }
+
+  .container-top > img {
+    width: 101px;
+    height: 50px;
+    margin-left: -1em;
+  }
+
+  .back-icon {
+    position: absolute;
+    margin-top: -5%;
+    margin-left: -1.5em;
+  }
+
+  .lets-talk {
+    font-size: 12px;
+    font-weight: 600;
+    line-height: 14.52px;
+    width: 80px;
+  }
+
+  .book-us-form {
+    padding: 0rem;
+    margin-top: -1em;
+  }
+
+  .book-header {
+    margin: 1.3em;
+  }
+
+  form {
+    gap: 0em;
+    margin-top: 2em;
+  }
+
+  .formcard-label {
+    margin: 1em 2em;
+    font-family: "Josefin Sans";
+    font-size: 12px;
+    font-weight: 600;
+    line-height: 12px;
+    padding: 0;
+  }
+
+  .full-name {
+    margin-top: 3em;
+  }
+
+  input,
+  textarea {
+    width: 90%;
+    height: 40px;
+    padding: 19px 28px 19px 28px;
+    gap: 10px;
+    border-radius: 10px;
+    font-size: 10px;
+    font-weight: 400;
+    line-height: 12.1px;
+  }
+
+  .book-submit {
+    margin: 0 auto;
+    margin-top: 2em;
+    margin-bottom: 3em;
+    background: #ad31a5;
+  }
+
+  button {
+    width: 113px;
+    height: 37px;
+    gap: 10px;
+    border-radius: 10px;
+  }
+
   .success-tab {
     width: 253px;
     height: 340px;
@@ -745,24 +823,23 @@ border-radius: 10px ;
   }
 
   .footer-top > h2 {
+    margin: 0 auto;
     margin-top: 0px;
     font-size: 24px;
     font-weight: 400;
-    line-height: 78px;
-    width: 100%;
+    line-height: 48px;
     text-align: center;
+    width: 100%;
   }
 
   .footer-middle,
   .footer-down {
     display: block;
-    gap: 2em;
- 
   }
 
   .whatsapp-button {
     margin: 0 auto;
-    width: 210px;
+    width: 200px;
     height: 37px;
     gap: 80px;
     border-radius: 10px;
@@ -771,41 +848,41 @@ border-radius: 10px ;
     padding: 12px;
   }
 
-  .whatsapp-button > P{
+  .whatsapp-button > P {
     margin-left: 1em;
     font-size: 14px;
-font-weight: 600;
-line-height: 14.52px;
+    font-weight: 600;
+    line-height: 14.52px;
   }
 
   .whatsapp-icon {
     width: 20px;
     margin-left: -2em;
-    
   }
 
-  .footer-flex{
- text-align: left;
+  .footer-flex {
+    margin: 0 auto;
+    text-align: center;
+    justify-content: center;
     display: flex;
-    justify-content: space-around;
     gap: 10px;
+    margin: 0em -1em;
+    margin-top: 2em;
   }
 
-  .footer-down > p{
-    margin: 11%;
-   margin-top: 1.3em;
-font-size: 14px;
-font-weight: 600;
-line-height: 14.52px;
+  .footer-down > p {
+    margin-top: 1.3em;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 14.52px;
   }
 
-  .footer-middle > p{
+  .footer-middle > p {
     margin-top: 1em;
-font-size: 12px;
-font-weight: 600;
-line-height: 14.52px;
-text-align: left;
-
+    font-size: 12px;
+    font-weight: 600;
+    line-height: 14.52px;
+    text-align: left;
   }
 
   .handle-icon {
@@ -815,19 +892,129 @@ text-align: left;
     margin-top: -5px;
   }
 
-  .success-text, .ok{
-font-size: 20px;
-font-weight: 600;
-line-height: 24.2px;
+  .success-text,
+  .ok {
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 24.2px;
   }
 
-  .success-paragraph{
-    font-family: Josefin Sans;
-font-size: 10px;
-font-weight: 400;
-line-height: 10px;
-width: 70%;
-
+  .success-paragraph {
+    font-size: 10px;
+    font-weight: 400;
+    line-height: 10px;
+    width: 70%;
   }
 
+  .cart-list {
+    margin: 0 auto;
+    flex-direction: column;
+    padding: 2em;
+    gap: 4em;
+  }
+  .cart-detail {
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    gap: 2em;
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 12px;
+    text-align: center;
+    margin-left: -2em;
+  }
+  /* 
+
+
+  .trash-box {
+
+   position: relative;
+   left: 16%;
+  }
+  */
+
+  .trash {
+    position: relative;
+    width: 19px;
+    height: 24px;
+    margin-top: 0.1em;
+    margin-left: -1em;
+  }
+
+  .product-flex {
+    display: flex;
+  }
+
+  .product-details {
+    display: flex;
+    margin: 0 auto;
+    gap: 1.5em;
+    margin-top: 1em;
+    border: 1px solid #7c1575;
+    height: 48px;
+    width: 100%;
+    border-radius: 5px;
+  }
+  .product {
+    width: 120px;
+    height: 41px;
+  }
+
+  .cart-image {
+    position: absolute;
+    width: 41px;
+    height: 41px;
+    margin-left: 0.5em;
+    margin-top: -1.6em;
+  }
+
+  .product > p {
+    margin-left: 6em;
+    margin-top: -2em;
+    font-size: 10px;
+    font-weight: 400;
+    line-height: 10px;
+  }
+
+  .quantity,
+  .price,
+  .total {
+    font-size: 10px;
+    font-weight: 400;
+    line-height: 12.1px;
+    margin-top: 1em;
+  }
+
+  .product,
+  .quantity,
+  .price,
+  .total {
+    margin-left: -1em;
+  }
+
+  .quantity-box {
+    width: 22px;
+    height: 26px;
+  }
+
+  .nothing-wrapper > h4 {
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 24.2px;
+  }
+
+  .nothing-wrapper > p {
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 14.52px;
+  }
+
+  .nothing-image {
+    margin: 0 auto;
+    width: 36.1%;
+  }
+
+  .nothing-wrapper {
+    padding: 3em;
+  }
 }
