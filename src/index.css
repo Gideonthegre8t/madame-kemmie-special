@@ -39,7 +39,7 @@ body {
 }
 
 .header-top {
-  margin: 1em 2em;
+  margin: 2em 5em;
   display: flex;
   justify-content: space-between;
 }
@@ -53,22 +53,34 @@ body {
 
 .header-content {
   position: relative;
-  margin: 10em 6em;
   color: #fff;
   display: flex;
   flex-direction: column;
+  margin-left: 1em;
+  margin-top: 11.5em;
 }
+
 
 h2 {
   font-size: 40px;
   font-weight: 700;
-  line-height: 40px;
+  line-height: 46px;
 }
 
-.header-content > h2 {
+.header-content > h2 ,.header-content > h4{
   text-align: left;
-  width: 50%;
+
+  margin-left: 7%;
 }
+
+.header-content > h2{
+  width: 40%;
+}
+
+.header-content > h4{
+width: 29%;
+}
+
 
 .header-description {
   width: 33%;
@@ -85,13 +97,19 @@ button {
   border: none;
 }
 
+.cart-icon{
+  position: absolute;
+  margin-left: -3%;
+}
+
 .lets-talk {
   background: #ad31a5;
 }
 
 .lets-talk2 {
   background: #f6cfa0;
-  margin: 2em;
+  margin-top: 4em;
+  margin-left: 10em;
 }
 
 .tag {
@@ -486,7 +504,7 @@ textarea {
 
 .cart-detail {
   display: flex;
-  gap: 5em;
+  gap: 4em;
 }
 
 .cart-detail > p {
@@ -510,9 +528,12 @@ textarea {
 
 .product-flex {
   display: flex;
+  flex-direction: column;
 }
 
 .product-details {
+  display: flex;
+  flex-direction: row;
   margin-left: -8.5em;
   gap: 4em;
   margin-top: 2em;
@@ -554,14 +575,14 @@ textarea {
   padding: 5px;
 }
 
-/* .trash-box {
+.trash-box {
   border-left: 1px solid #7c1575;
   margin-left: -3em;
   padding: 1em;
-} */
+}
 .trash {
-  margin-top: -2px;
-  right: 5%;
+  margin-top: 0.2em;
+  left: -5%; 
 }
 
 .total-card {
@@ -725,6 +746,19 @@ textarea {
     font-weight: 600;
     line-height: 24.2px;
   }
+
+  .header-top{
+    display: flex;
+    margin: 1em 2em;
+  }
+
+  .logo{
+    max-width: 40%;
+    margin-left: -10%;
+  }
+  
+
+
 
   .container-top {
     margin: 1em 0em;

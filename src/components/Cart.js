@@ -97,8 +97,8 @@ function Cart() {
                 <div className="total">
                   <p>N {item.price * item.quantity}</p>
                 </div>
-              </div>
-              <div className="trash-box">
+
+                <div className="trash-box">
                 <img
                   className="trash"
                   src={trash}
@@ -106,6 +106,8 @@ function Cart() {
                   onClick={() => removeFromCart(item.name)}
                 />
               </div>
+              </div>
+          
             </div>
           ))}
         </div>
