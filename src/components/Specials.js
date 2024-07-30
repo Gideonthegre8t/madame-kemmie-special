@@ -1,4 +1,5 @@
-import React, { useContext } from "react";
+import React, { useContext, useRef, useEffect, useState } from "react";
+import { motion } from "framer-motion";
 import { CartContext } from "./CartContext";
 import spicyGrilled from "../assets/images/spicy-grilled-chicken.png";
 import star from "../assets/images/star.png";
@@ -13,68 +14,50 @@ import smallChops from "../assets/images/small-chops.png";
 import stirFriedSpag from "../assets/images/stir-fried-spaghetti.png";
 
 const foodItems = [
-  {
-    img: spicyGrilled,
-    name: "Spicy Grilled Chicken",
-    rating: 4.9,
-    calories: 150,
-    price: 250,
-  },
-  {
-    img: fluffyFruit,
-    name: "Fluffy Fruit Pancake",
-    rating: 4.9,
-    calories: 150,
-    price: 250,
-  },
-  {
-    img: chocolateWhip,
-    name: "Chocolate Whipcream Cake",
-    rating: 4.9,
-    calories: 150,
-    price: 250,
-  },
-  {
-    img: shrimpBasmati,
-    name: "Shrimp Basmati Fried Rice",
-    rating: 4.9,
-    calories: 150,
-    price: 250,
-  },
-  {
-    img: foodTray,
-    name: "Food Tray",
-    rating: 4.9,
-    calories: 150,
-    price: 250,
-  },
-  {
-    img: richVegetableSalad,
-    name: "Rich Vegetable Salad",
-    rating: 4.9,
-    calories: 150,
-    price: 250,
-  },
-  {
-    img: smallChops,
-    name: "Small Chops",
-    rating: 4.9,
-    calories: 150,
-    price: 250,
-  },
-  {
-    img: stirFriedSpag ,
-    name: "Stir Fried Spaghetti",
-    rating: 4.9,
-    calories: 150,
-    price: 250,
-  },
-  // Add more items as needed
+  { img: spicyGrilled, name: "Spicy Grilled Chicken", rating: 4.9, calories: 150, price: 250 },
+  { img: fluffyFruit, name: "Fluffy Fruit Pancake", rating: 4.9, calories: 150, price: 250 },
+  { img: chocolateWhip, name: "Chocolate Whipcream Cake", rating: 4.9, calories: 150, price: 250 },
+  { img: shrimpBasmati, name: "Shrimp Basmati Fried Rice", rating: 4.9, calories: 150, price: 250 },
+  { img: foodTray, name: "Food Tray", rating: 4.9, calories: 150, price: 250 },
+  { img: richVegetableSalad, name: "Rich Vegetable Salad", rating: 4.9, calories: 150, price: 250 },
+  { img: smallChops, name: "Small Chops", rating: 4.9, calories: 150, price: 250 },
+  { img: stirFriedSpag, name: "Stir Fried Spaghetti", rating: 4.9, calories: 150, price: 250 },
 ];
-
 
 function Specials() {
   const { addToCart } = useContext(CartContext);
+  const carouselRef = useRef(null);
+  const [isMobile, setIsMobile] = useState(window.innerWidth < 768); // Adjust the breakpoint as needed
+  const [dragConstraints, setDragConstraints] = useState({ left: 0, right: 0 });
+
+  useEffect(() => {
+    const updateDragConstraints = () => {
+      if (carouselRef.current && isMobile) {
+        const containerWidth = carouselRef.current.offsetWidth;
+        const contentWidth = carouselRef.current.scrollWidth;
+
+        // Adjust constraints to ensure smooth dragging
+        const rightConstraint = Math.max(contentWidth - containerWidth, 0);
+        const leftConstraint =Math.max(contentWidth - containerWidth, 0)
+
+        setDragConstraints({
+          left: -rightConstraint,
+          right: +leftConstraint
+        });
+      }
+    };
+
+    updateDragConstraints(); // Initial calculation
+    window.addEventListener('resize', () => {
+      setIsMobile(window.innerWidth < 600); // Update screen size
+      updateDragConstraints();
+    });
+
+    return () => window.removeEventListener('resize', () => {
+      setIsMobile(window.innerWidth < 600); // Clean up listener
+      updateDragConstraints();
+    });
+  }, [isMobile]);
 
   return (
     <section className="specials-container">
@@ -87,45 +70,88 @@ function Specials() {
           blend of flavor and elegance!
         </p>
       </div>
+      <div className="carousel" ref={carouselRef}>
+        {isMobile ? (
+          <motion.div
+            className="food-item-container"
+            drag="x"
+            dragConstraints={dragConstraints}
+            whileTap={{ cursor: "grabbing" }}
+          >
+            {foodItems.map((item, index) => (
+              <motion.div className="food-item-card" key={index}>
+                <div className="food-item">
+                  <img className="item" src={item.img} alt={item.name} />
+                  <p className="item-name">{item.name}</p>
+                </div>
 
-      <div className="food-item-container">
-        {foodItems.map((item, index) => (
-          <div className="food-item-card" key={index}>
-            <div className="food-item">
-              <img className="item" src={item.img} alt={item.name} />
-              <p className="item-name">{item.name}</p>
-            </div>
+                <div className="food-details">
+                  <div className="rating-tab">
+                    <p>
+                      <img className="rating-icon" src={star} alt="star" />
+                      {item.rating}
+                    </p>
+                    <p>
+                      <img className="rating-icon" src={fire} alt="fire" />
+                      {item.calories}Kcal
+                    </p>
+                  </div>
 
-            <div className="food-details">
-              <div className="rating-tab">
-                <p>
-                  <img className="icon" src={star} alt="star" />
-                  {item.rating}
-                </p>
-                <p>
-                  <img className="icon" src={fire} alt="fire" />
-                  {item.calories}Kcal
-                </p>
-              </div>
+                  <div className="price-cart">
+                    <p className="price">
+                      <span>NGN </span>{item.price}
+                    </p>
+                    <div className="add-cart" onClick={() => addToCart(item)}>
+                      <p>
+                        <img className="plus-icon" src={plus} alt="plus" />
+                        Add to cart
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </motion.div>
+            ))}
+          </motion.div>
+        ) : (
+          <div className="food-item-container">
+            {foodItems.map((item, index) => (
+              <div className="food-item-card" key={index}>
+                <div className="food-item">
+                  <img className="item" src={item.img} alt={item.name} />
+                  <p className="item-name">{item.name}</p>
+                </div>
 
-              <div className="price-cart">
-                <p className="price">
-                  <span>NGN </span>{item.price}
-                </p>
-                <div className="add-cart" onClick={() => addToCart(item)}>
-                  <p>
-                    <img className="plus-icon" src={plus} alt="plus" />
-                    Add to cart
-                  </p>
+                <div className="food-details">
+                  <div className="rating-tab">
+                    <p>
+                      <img className="rating-icon" src={star} alt="star" />
+                      {item.rating}
+                    </p>
+                    <p>
+                      <img className="rating-icon" src={fire} alt="fire" />
+                      {item.calories}Kcal
+                    </p>
+                  </div>
+
+                  <div className="price-cart">
+                    <p className="price">
+                      <span>NGN </span>{item.price}
+                    </p>
+                    <div className="add-cart" onClick={() => addToCart(item)}>
+                      <p>
+                        <img className="plus-icon" src={plus} alt="plus" />
+                        Add to cart
+                      </p>
+                    </div>
+                  </div>
                 </div>
               </div>
-            </div>
+            ))}
           </div>
-        ))}
+        )}
       </div>
     </section>
   );
 }
 
 export default Specials;
-

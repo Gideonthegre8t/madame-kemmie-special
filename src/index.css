@@ -32,7 +32,7 @@ body {
 .wallpaper2 {
   position: absolute;
   width: 100%;
-  height: auto;
+  max-height: 120%;
   object-fit: cover;
   top: 0;
   z-index: -1;
@@ -47,7 +47,7 @@ body {
 .purp-circle {
   margin: -8em 3em;
   z-index: -1;
-  width: 38%;
+  max-width: 38%;
   position: absolute;
 }
 
@@ -60,27 +60,26 @@ body {
   margin-top: 11.5em;
 }
 
-
 h2 {
   font-size: 40px;
   font-weight: 700;
   line-height: 46px;
 }
 
-.header-content > h2 ,.header-content > h4{
+.header-content > h2,
+.header-content > h4 {
   text-align: left;
 
   margin-left: 7%;
 }
 
-.header-content > h2{
+.header-content > h2 {
   width: 40%;
 }
 
-.header-content > h4{
-width: 29%;
+.header-content > h4 {
+  width: 26%;
 }
-
 
 .header-description {
   width: 33%;
@@ -97,7 +96,7 @@ button {
   border: none;
 }
 
-.cart-icon{
+.cart-icon {
   position: absolute;
   margin-left: -3%;
 }
@@ -119,8 +118,7 @@ button {
 }
 
 .services-container {
-  position: relative;
-  top: 6em;
+  margin-top: 15%;
 }
 
 .services-top {
@@ -249,7 +247,7 @@ h3 {
   gap: 7em;
 }
 
-.icon {
+.rating-icon {
   position: absolute;
   margin-left: -1.5em;
 }
@@ -279,7 +277,8 @@ span {
 }
 
 .services2-container {
-  margin: 4em 3em;
+  margin: 4em 0em;
+  padding: 20px;
 }
 
 .services2-container > h3 {
@@ -288,7 +287,20 @@ span {
 
 .services2-wrapper {
   display: flex;
-  margin-top: 1em;
+  overflow: hidden;
+  position: relative;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.inner-carousel {
+  display: flex;
+  flex-direction: row;
+  transition: transform 0.3s ease;
+}
+
+.services2-card img {
+  width: 100%;
 }
 
 .services2-card {
@@ -296,7 +308,7 @@ span {
 }
 
 .services2-card > img {
-  width: 90%;
+  width: 100%;
 }
 
 .service2-name {
@@ -315,16 +327,19 @@ span {
 
 .feedback-container {
   margin: 5em 3em;
+  
 }
 
 .feedback-container > h3 {
   text-align: center;
+  
 }
 
 .review {
   box-shadow: 0px 8px 32px 0px #adadad29;
   padding: 1em;
   margin-top: 2em;
+ 
 }
 .review-scroll {
   padding: 24px 16px 24px 16px;
@@ -344,6 +359,8 @@ span {
   top: 2em;
   left: -6px;
 }
+
+
 
 .review-text {
   margin-top: 2.5em;
@@ -582,7 +599,7 @@ textarea {
 }
 .trash {
   margin-top: 0.2em;
-  left: -5%; 
+  left: -5%;
 }
 
 .total-card {
@@ -640,7 +657,8 @@ textarea {
   height: 10%;
 }
 
-.hidden {
+.hidden,
+.mobile {
   display: none;
 }
 
@@ -736,9 +754,21 @@ textarea {
 }
 /* } */
 
-@media only screen and (width < 601px) {
+@media only screen and (width < 600px) {
   .desktop {
     display: none;
+  }
+  .mobile {
+    display: block;
+  }
+
+  .header-wallpaper {
+    position: absolute;
+    width: 100%;
+    max-height: 105%;
+    object-fit: cover;
+    top: 0;
+    z-index: -1;
   }
 
   h2 {
@@ -747,18 +777,161 @@ textarea {
     line-height: 24.2px;
   }
 
-  .header-top{
+  .header-top {
     display: flex;
     margin: 1em 2em;
   }
 
-  .logo{
-    max-width: 40%;
+  .logo {
+    max-width: 50%;
     margin-left: -10%;
   }
-  
 
+  .purp-circle {
+    margin: -5em 1em;
+    z-index: -1;
+    max-width: 90%;
+    position: absolute;
+  }
 
+  .header-content {
+    margin: 0 auto;
+    margin-top: 13em;
+  }
+
+  .header-content > h2,
+  .header-content > h4 {
+    text-align: left;
+    margin-left: 11%;
+  }
+
+  .header-content > h2 {
+    width: 90%;
+
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 24px;
+  }
+
+  .header-content > h4 {
+    width: 80%;
+    font-size: 12px;
+    font-weight: 600;
+    line-height: 12px;
+  }
+
+  h3 {
+    margin: 0 auto;
+    font-size: 20px;
+    line-height: 20px;
+  }
+
+  .services-paragraph {
+    font-size: 12px;
+    line-height: 19.86px;
+
+    width: 100%;
+  }
+
+  .services-container {
+    margin-top: 9em;
+  }
+
+  .services-top {
+    margin: 4em 2em;
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
+  }
+
+  .services-top > .event-card {
+    width: 100%;
+  }
+
+  .services-bottom {
+    margin: 1em 2em;
+    display: flex;
+    flex-direction: column;
+    gap: 4em;
+  }
+
+  .specials-container {
+    margin: 0em 1em;
+  }
+
+  .specials-header > p {
+    font-size: 12px;
+    line-height: 19.86px;
+    width: 100%;
+  }
+
+  .book-us {
+    background: #f6cfa0;
+    margin: 0 auto;
+  }
+
+  .food-item-container {
+    margin: 0 auto;
+    margin-top: 1em;
+    justify-content: center;
+    text-align: center;
+    display: flex;
+    gap: 3em;
+  }
+
+  .carousel {
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+    /* Hide vertical scrollbar */
+  }
+
+  .food-item-card {
+    width: 100%;
+    cursor: grab;
+  }
+
+  .food-item-card:active {
+    cursor: grabbing;
+  }
+
+  .rating-icon {
+    margin-left: -2em;
+  }
+
+  .price-cart {
+    margin-top: -1em;
+  }
+  .rating-tab > p,
+  .price-cart > p,
+  span,
+  .add-cart > p {
+    font-size: 10px;
+    font-weight: 400;
+    line-height: 16px;
+  }
+
+  .add-cart {
+    width: 83px;
+    height: 20px;
+    padding: 3px;
+    gap: 4.57px;
+    border-radius: 6.86px;
+    margin-top: 0.5em;
+  }
+
+  .plus-icon {
+    position: absolute;
+    margin-left: -3.5%;
+    margin-top: 0.8%;
+    max-width: 3%;
+  }
+
+  .item-name {
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 14.52px;
+  }
 
   .container-top {
     margin: 1em 0em;
@@ -776,11 +949,174 @@ textarea {
     margin-left: -1.5em;
   }
 
-  .lets-talk {
+  .lets-talk,
+  .lets-talk2 {
     font-size: 12px;
     font-weight: 600;
     line-height: 14.52px;
     width: 80px;
+  }
+
+  .lets-talk2 {
+    margin: 0 auto;
+    margin-top: 2em;
+    margin-left: 23%;
+  }
+
+  .tag {
+    position: absolute;
+    margin-top: -1em;
+    margin-left: -0.3em;
+    max-width: 30%;
+  }
+
+  .services2-container {
+    margin-top: -1em;
+  }
+
+  .services2-container h3 {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  .services2-wrapper {
+    display: flex;
+    flex-direction: row;
+    gap: 16px;
+    padding: 16px;
+    overflow-x: auto; /* Enable horizontal scrolling */
+    overflow-y: hidden; /* Hide vertical scrollbar */
+  }
+
+  .services2-carousel {
+    display: flex;
+    flex-direction: row;
+    gap: 16px;
+    padding: 16px;
+  }
+
+  .services2-card {
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: none;
+    padding: 16px;
+    text-align: center;
+    width: 200px;
+    height: 200px;
+
+    flex-shrink: 0; /* Prevent shrinking in the carousel */
+  }
+
+  .services2-card img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  .service2-name {
+    margin-top: 10px;
+    font-size: 16px;
+    font-weight: bold;
+  }
+  .services2-wrapper::-webkit-scrollbar {
+    display: none; /* For Chrome, Safari, and Opera */
+  }
+
+  .feedback-container {
+    margin: 2em 2em;
+  }
+
+  
+  .review-carousel {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+  }
+
+  .review-inner-carousel {
+    display: flex;
+    width: 100%;
+  }
+
+  .review-scroll {
+    display: flex;
+    flex-direction: row;
+    width: 300%; /* Width is 3 times the container width to fit all cards */
+    transition: transform 0.5s ease; /* Smooth transition for sliding */
+    gap: 2em;
+    
+  }
+
+  .review {
+    box-sizing: border-box;
+  
+    gap: 1em;
+    box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    background-color: #fff;
+padding: 10px 16px;
+gap: 16px;
+border-radius: 24px;
+width: 306px;
+
+  }
+
+  .review-top {
+    display: flex;
+    align-items: center;
+    margin-top: 3em;
+   gap: 3em;
+  }
+
+  .profile-name {
+    display: flex;
+    align-items: center;
+    margin-top: -0.1em;
+    margin-left: 3em;
+    position: relative;
+  }
+
+  .review-image {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-left: -3em;
+    margin-top: -4em;
+  }
+
+  .star-rate {
+    width: 100px; /* Adjust width as needed */
+  }
+
+  .review-text {
+    font-family: "DM Sans", sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #323434;
+    text-align: center;
+
+  }
+
+  .active-review {
+    display: flex;
+    justify-content: center;
+    margin-top: 1em;
+  }
+
+  .active-review img {
+    width: 12px;
+    height: 12px;
+    margin: 0 5px;
+    cursor: pointer;
+  }
+
+  .active {
+    opacity: 1;
+  }
+
+  .non-active {
+    opacity: 0.5;
   }
 
   .book-us-form {
@@ -847,7 +1183,7 @@ textarea {
     text-align: center;
     flex-direction: column;
     gap: 1em;
-    padding: 2em;
+    padding: 2em 1em;
   }
 
   .logo-pad {
@@ -1051,4 +1387,16 @@ textarea {
   .nothing-wrapper {
     padding: 3em;
   }
+
 }
+
+
+@media only screen and (width > 399px)and(max-width : 600px){
+
+
+}
+
+
+
+
+
