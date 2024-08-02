@@ -26,7 +26,7 @@ const services2Items = [
 
 function Services2() {
   const carouselRef = useRef(null);
-  const [isMobile, setIsMobile] = useState(window.innerWidth < 768); // Adjust the breakpoint as needed
+  const [isMobile, setIsMobile] = useState(window.innerWidth < 700); // Adjust the breakpoint as needed
   const [dragConstraints, setDragConstraints] = useState({ left: 0, right: 0 });
 
   useEffect(() => {
@@ -49,13 +49,13 @@ function Services2() {
 
     updateDragConstraints(); // Initial calculation
     window.addEventListener("resize", () => {
-      setIsMobile(window.innerWidth < 600); // Update screen size
+      setIsMobile(window.innerWidth < 700); // Update screen size
       updateDragConstraints();
     });
 
     return () => {
       window.removeEventListener("resize", () => {
-        setIsMobile(window.innerWidth < 600); // Clean up listener
+        setIsMobile(window.innerWidth < 700); // Clean up listener
         updateDragConstraints();
       });
     };

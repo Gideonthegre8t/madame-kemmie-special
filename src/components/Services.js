@@ -24,7 +24,7 @@ function Services() {
           </p>
           <button className="book-us">Book us now</button>
         </div>
-        <div className="event-card">
+        <div className="event-card event-image1">
           <img className="event-image" src={events[0].src} alt={events[0].alt} />
           <h4 className="event-overlay">{events[0].title}</h4>
         </div>

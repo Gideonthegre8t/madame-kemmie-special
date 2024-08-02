@@ -32,11 +32,11 @@ function Scroll() {
 
   const [activeIndex, setActiveIndex] = useState(0);
   const intervalRef = useRef(null);
-  const [isMobile, setIsMobile] = useState(window.innerWidth <= 600);
+  const [isMobile, setIsMobile] = useState(window.innerWidth <= 700);
 
   useEffect(() => {
     const handleResize = () => {
-      setIsMobile(window.innerWidth <= 600)
+      setIsMobile(window.innerWidth <= 700)
     };
 
     window.addEventListener('resize', handleResize);

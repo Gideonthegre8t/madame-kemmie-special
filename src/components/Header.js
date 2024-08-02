@@ -22,8 +22,8 @@ function Header() {
         <div className="cart-container">
           <img className="cart-icon" src={cartIcon} alt="cart" />
           {totalItems > 0 && <span className="cart-counter">{totalItems}</span>}
-          <button className="lets-talk desktop">Let's Talk</button>
         </div>
+        <button className="lets-talk desktop">Let's Talk</button>
       </div>
 
       <div className="header-bottom">
