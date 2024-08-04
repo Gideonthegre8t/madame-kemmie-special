@@ -13,15 +13,16 @@ function App() {
     <div>
    
 
-     <Header />
+    <Header />
       <Services />
-    <Specials />
+
        <Services2 />
        <Feedback />
-       <Footer />
-      
-       {/* <Booking />
-       <Cart />  */}
+       <Footer /> 
+       
+         <Booking /> 
+         <Specials />
+       <Cart />   
     </div>
   );
 }

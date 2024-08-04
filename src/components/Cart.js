@@ -50,16 +50,16 @@ function Cart() {
   return (
     <section className="cart-container">
       <img className="wallpaper2" src={wallpaper2} alt="wallpaper" />
-      <div className="cart-content ">
+
         <div className="container-top">
           <img src={logo} alt="logo" />
           <button className="lets-talk">Let's Talk</button>
         </div>
         <img className="back-icon" src={backIcon} alt="backIcon" />
         <h2 className="book-header">Cart</h2>
-      </div>
+  
 
-      <div className="cart-list">
+<div className="cart-flex"><div className="cart-list">
         <div className="cart-card">
           <div className="cart-detail">
             <p>Product</p>
@@ -111,7 +111,8 @@ function Cart() {
             </div>
           ))}
         </div>
-
+</div>
+      
         <div className="total-card">
           <h4>Total</h4>
           <div className="total-details">

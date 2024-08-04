@@ -32,10 +32,13 @@ body {
 .wallpaper2 {
   position: absolute;
   width: 100%;
-  max-height: 120%;
   object-fit: cover;
   top: 0;
   z-index: -1;
+}
+
+.wallpaper2{
+  height:300px ;
 }
 
 .header-top {
@@ -78,7 +81,7 @@ h2 {
 }
 
 .header-content > h4 {
-  width: 28%;
+  width: 27%;
 }
 
 .header-description {
@@ -95,20 +98,16 @@ button {
   cursor: pointer;
   border: none;
 }
-/* 
-.cart-icon {
-  position: absolute;
-  margin-left: -3%;
-} */
 
-.cart-container {
+
+.cart-icon-container {
   position: absolute;
   left: 82%;
 }
 
 .cart-counter {
   position: absolute;
-  margin-left: -3em;
+  margin-left: -1em;
   color: red;
   font-weight: 700;
 }
@@ -121,7 +120,7 @@ button {
   background: #f6cfa0;
   margin-top: 4em;
   margin-left: 10em;
-  height: 24px;
+  height: 34px;
   padding: 0;
 }
 
@@ -230,6 +229,7 @@ h3 {
 }
 
 .food-item-card {
+  margin-top: 2em;
   width: 284.4px;
   height: 417px;
 }
@@ -289,6 +289,7 @@ span {
   padding: 7px;
   border-radius: 6.86px;
   color: #fff;
+  margin-top: 1.6em;
 }
 
 .services2-container {
@@ -455,7 +456,8 @@ span {
 
 .back-icon {
   position: absolute;
-  margin-top: -3%;
+width: 4%;
+  margin-left: 2%;
 }
 
 .booking-content {
@@ -502,7 +504,6 @@ textarea {
   border-left: solid lightgray;
   border-right: solid lightgray;
   border-radius: 10px;
-  opacity: 0px;
   font-family: "Inter";
   font-size: 16px;
   font-weight: 400;
@@ -521,12 +522,16 @@ textarea {
   background: #ad31a5;
 }
 
+.cart-flex{
+    background: linear-gradient(180deg, #fec1fa 20.14%, #f6d6e8 59.7%);
+ padding-bottom: 3em;
+}
+
 .cart-list {
   display: flex;
   justify-content: center;
   padding: 3em;
-  background: linear-gradient(180deg, #fec1fa 20.14%, #f6d6e8 59.7%);
-  gap: 4em;
+  gap: 9em;
 }
 
 .cart-detail {
@@ -553,10 +558,6 @@ textarea {
   display: flex;
 }
 
-.product-flex {
-  display: flex;
-  flex-direction: column;
-}
 
 .product-details {
   display: flex;
@@ -577,7 +578,14 @@ textarea {
 
 .product > p {
   margin-left: 7em;
+  width: 120px;
 }
+
+.cart-detail{
+  gap: 5.5em;
+}
+
+
 
 .product,
 .price,
@@ -613,6 +621,7 @@ textarea {
 }
 
 .total-card {
+  margin: 0 auto;
   display: flex;
   flex-direction: column;
   gap: 2em;
@@ -632,10 +641,12 @@ textarea {
 }
 
 .total-details {
+display: none;
   margin-top: 1em;
   display: flex;
   flex-direction: column;
   gap: 2em;
+
 }
 
 .price-total,
@@ -822,7 +833,7 @@ textarea {
     width: 50%;
   }
 
-  .cart-container {
+  .cart-icon-container {
     position: absolute;
     left: 91%;
   }
@@ -834,12 +845,41 @@ textarea {
   .food-item-container {
     margin: 3em 20em;
   }
+
+  .formcard-label{
+    margin-left: 15%;
+  }
+
+  .cart-image{
+    max-width: 3%;
+    margin-left: 1em;
+    margin-top: -1.2em;
+  }
+
+
+
+
+
+}
+@media only screen and (width > 1220px) and (width <1440px) {
+  .formcard-label{
+    margin-left: 15%;
+  }
+
 }
 
-@media only screen and (width > 680px) and (width <1220px) {
+@media only screen and (width > 702px) and (width <1220px) {
   .header-top {
     margin: 1em 2em;
   }
+
+  .lets-talk{
+    margin-top: 1em;
+  height: 30px;
+  padding: 0;
+  }
+
+
   .food-item-container,
   .review-scroll {
     display: grid;
@@ -877,7 +917,7 @@ textarea {
   .tag {
     margin-top: -1.5em;
   }
-
+ 
   .lets-talk2 {
     margin-top: 10px;
   }
@@ -904,9 +944,78 @@ textarea {
   .services-paragraph {
     width: 50%;
   }
+  
+  .container-top{
+    margin: 5px 2em;
+  }
+
+  .back-icon{
+    margin-left: 20px;
+    margin-top: 1em;
+    width:4%;
+  }
+
+  .wallpaper2{
+    height:250px ;
+  }
+
+
+  .product>p{
+width: 110px;
+  }
+
+  .total-card{
+    width: 40%;
+  }
+
+  .cart-list{
+    margin-left: 5em;
+  }
+
+  .cart-detail{
+    margin-left: 3em;
+  }
+
+.product-details{
+  margin-left: -4em;
+  gap: 4em;
 }
 
-@media only screen and (width > 700px) and (max-width: 999px) {
+  .cart-card, .total-card{
+    margin: 0 auto;
+  }
+
+  .total-card{
+    width: 400px;
+  }
+
+  .formcard-label{
+    margin-left: 15%;
+  }
+  .cart-image {
+    margin-top: -1.2em;
+    width: 7%;
+    margin-left: 1em;
+  }
+
+  
+}
+
+@media only screen and (width > 701px) and (max-width: 999px) {
+
+  .product-details{
+    width: 650px;
+  }
+
+  .quantity{
+    margin-left: -1em;
+  }
+
+
+ .cart-list{
+  gap: 1em;
+margin-left: 4em;
+}
   .services-container {
     margin-top: 20%;
   }
@@ -927,7 +1036,7 @@ textarea {
     width: 250px;
   }
 
-  .cart-container {
+  .cart-icon-container {
     margin-right: -40%;
   }
 
@@ -951,10 +1060,14 @@ textarea {
     width: 80%;
   }
 
-  .cart-container {
+  .cart-icon-container {
     position: absolute;
     left: 75%;
   }
+
+.cart-image{
+  width: 10%;
+}
 
   .event-image1 {
     position: absolute;
@@ -963,9 +1076,16 @@ textarea {
     left: 60%;
     margin-top: 2.2em;
   }
+
+  .container-top{
+    margin: 1em 1em;
+  }
+
+
 }
 
-@media only screen and (max-width: 700px) {
+
+@media only screen and (width< 702px) {
   .desktop {
     display: none;
   }
@@ -981,6 +1101,8 @@ textarea {
     top: 0;
     z-index: -1;
   }
+
+  
 
   h2 {
     font-size: 20px;
@@ -1045,6 +1167,7 @@ textarea {
 
   .services-container {
     margin-top: 23rem;
+    padding-top:12em;
   }
 
   .services-paragraph {
@@ -1156,8 +1279,7 @@ textarea {
 
   .plus-icon {
     position: absolute;
-    margin-left: -3.5%;
-    margin-top: 0.8%;
+    margin-left: -1.6em;
     max-width: 3%;
   }
 
@@ -1309,7 +1431,7 @@ textarea {
   }
 
   .star-rate {
-    width: 100px; /* Adjust width as needed */
+    width: 100px;
   }
 
   .review-text {
@@ -1390,9 +1512,11 @@ textarea {
 
   button {
     width: 113px;
-    height: 37px;
+    height: 27px;
     gap: 10px;
     border-radius: 10px;
+    padding: 0;
+    margin: 1em;
   }
 
   .success-tab {
@@ -1498,6 +1622,20 @@ textarea {
     line-height: 10px;
     width: 70%;
   }
+  
+  .container-top{
+    margin: 5px 1em;
+  }
+
+  .back-icon{
+    margin-left: 5px;
+    margin-top: 1em;
+    width: 5%;
+  }
+
+  .wallpaper2{
+    height:140px ;
+  }
 
   .cart-list {
     margin: 0 auto;
@@ -1520,6 +1658,7 @@ textarea {
     line-height: 12px;
   }
 
+
   .trash-box {
     position: absolute;
     right: 10%;
@@ -1534,24 +1673,35 @@ textarea {
     margin-left: -1em;
   }
 
-  .product-flex {
-    display: flex;
+  .cart-flex{
+width: 100%; ;
+
   }
 
+ 
+
   .product-details {
+    position: relative;
     display: flex;
     margin: 0 auto;
     gap: 1.9em;
     margin-top: 1em;
-    margin-left: 0em;
+    margin-left: 5em;
     border: 1px solid #7c1575;
     height: 48px;
-    width: 90%;
+    width: 300px;
+    margin-left: 4em;
     border-radius: 5px;
   }
   .product {
     width: 40%;
   }
+
+  .cart-detail{
+   gap: 2em;
+   margin-left: -1em;
+  }
+
 
   .cart-image {
     position: absolute;
@@ -1563,7 +1713,7 @@ textarea {
 
   .product > p {
     margin-left: 6em;
-    margin-top: -2.5em;
+    margin-top: -1.5em;
     font-size: 10px;
     font-weight: 400;
     line-height: 10px;
@@ -1603,8 +1753,9 @@ textarea {
   }
 
   .total-card {
-    margin-top: -1em;
-    width: 100%;
+    margin: 0 auto;
+    margin-top: 0em;
+ 
     height: auto;
   }
 
@@ -1651,7 +1802,7 @@ textarea {
   }
 }
 
-@media only screen and (width >390px) and (width < 701px) {
+@media only screen and (width >390px) and (width <701px) {
   .header-content {
     margin-top: 15em;
   }
@@ -1677,10 +1828,11 @@ textarea {
     position: absolute;
   }
   .services-container {
-    margin-top: 30%;
-    margin-left: 0;
-  }
-
+    margin-top: 9em;
+    padding-top: 0em;
+ 
+ 
+   }
   .services-paragraph {
     width: 100%;
     padding: 0;
@@ -1689,9 +1841,39 @@ textarea {
   .event-overlay {
     margin-top: -25px;
   }
+
+  .total-card{
+    width: 300px;
+   
+  }
+
+ 
+  .product-details {
+  
+    width: 350px;
+margin-left:1em;
+
+      }
+      
+
+      .trash-box {
+        position: absolute;
+       left: 100%;
+        height: 48px;
+      }  
+      .product-flex {
+        display: flex;
+        margin-left: 1%;
+      }
+
+      .product-details {
+margin: 0 auto;
+      }
+    
+
 }
 
-@media only screen and (width < 390px) {
+@media only screen and (width < 391px) {
   .header-content > h2,
   .header-content > h4 {
     margin-left: 10%;
@@ -1728,8 +1910,16 @@ textarea {
     padding: 1em;
   }
 
+  .plus-icon{
+    margin: 0;
+    margin-left: -1.2em;
+    margin-top: 0.1em;
+
+  }
+
   .services-container {
-    margin-top: 55%;
+   margin-top:12em;
+   padding-top: 0em;
   }
   .services-paragraph {
     font-size: 12px;
@@ -1750,12 +1940,24 @@ textarea {
 
   .trash-box {
     position: absolute;
-    right: 1%;
+    left: 50%;
     height: 48px;
   }
 
   .product-details {
     width: 100%;
+    margin-left: 5px;
+  }
+
+  .trash-box {
+    position: absolute;
+   left: 103%;
+    height: 48px;
+  }
+
+  .trash {
+    margin-top: 0.2em;
+    left: -22%;
   }
 
   .cart-detail {
@@ -1787,4 +1989,36 @@ textarea {
     width: 100%;
     margin-left: 0.5%;
   }
+
+  .total-card{
+    width: 85%;
+  }
+.container-top{
+  margin: 1em ;
+}
+
+.product > p {
+
+  margin-top: -2em;
+}
+
+
+}
+
+
+@media only screen and (width < 370px){
+  .trash-box {
+    position: absolute;
+   left: 107%;
+    height: 48px;
+    width: 3px;
+  }
+  
+  .trash {
+
+    margin-top: -0.2em;
+    left: -22%;
+  }
+  
+  
 }

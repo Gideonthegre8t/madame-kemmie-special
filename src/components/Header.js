@@ -19,7 +19,7 @@ function Header() {
       <img className="header-wallpaper mobile" src={headerWallpaper2} alt="wallpaper" />
       <div className="header-top">
         <img className="logo" src={logo} alt="logo" />
-        <div className="cart-container">
+        <div className="cart-icon-container">
           <img className="cart-icon" src={cartIcon} alt="cart" />
           {totalItems > 0 && <span className="cart-counter">{totalItems}</span>}
         </div>
@@ -32,7 +32,7 @@ function Header() {
           <h2>Have a function?</h2>
           <h2>We've got the catering covered.</h2>
           <h4 className="header-description">
-            Deliciously Crafted Catering:{" "}
+            Deliciously Crafted Catering{" "}
             <img className="tag" src={tag} alt="tag" />
             Where Every Bite Tells a Story{" "}
           </h4>
