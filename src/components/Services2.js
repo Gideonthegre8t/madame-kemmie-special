@@ -62,7 +62,7 @@ function Services2() {
   }, [isMobile]);
 
   return (
-    <section className="services2-container">
+    <section id="services2" className="services2-container">
       <h3>Other Services</h3>
       <div className="services2-wrapper services2-carousel" ref={carouselRef}>
         {isMobile ? (

@@ -27,6 +27,57 @@ body {
   font-family: "Josefin Sans";
 }
 
+.navigator {
+  position: fixed;
+  width: 50%;
+  left: 25%;
+  border-radius: 10px;
+  background: #AD31A5;
+  z-index: 1;
+  margin-top: -5px;
+  font-family: "Inter";
+}
+
+.navbar {
+  display: flex;
+  justify-content: center;
+  gap: 0em;
+}
+nav a {
+  position: relative;
+  margin: 1rem;
+  color: #fff;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 18.4px;
+  text-align: left;
+}
+
+.navbar a::before {
+  content: "";
+  position: absolute;
+  top: 120%;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: #fff;
+}
+.navbar a:hover::before {
+  width: 100%;
+  transition: 0.3s;
+}
+
+nav a:hover {
+  color: #fff;
+}
+
+.nav-btn {
+  display: none;
+ 
+}
+
+
 /* @media only screen and (min-width: 601px) { */
 .header-wallpaper,
 .wallpaper2 {
@@ -42,9 +93,17 @@ body {
 }
 
 .header-top {
-  margin: 2em 5em;
+  position: fixed;
   display: flex;
   justify-content: space-between;
+  top:-1%;
+  background: #f6cfa0;
+  width: 100%;
+  margin: 0 auto;
+  padding-top: 2em;
+  padding-bottom: 1em;
+  z-index: 1;
+  
 }
 
 .purp-circle {
@@ -60,7 +119,7 @@ body {
   display: flex;
   flex-direction: column;
   margin-left: 1em;
-  margin-top: 11.5em;
+  margin-top: 18em;
 }
 
 h2 {
@@ -101,9 +160,13 @@ button {
 
 
 .cart-icon-container {
-  position: absolute;
+  position: fixed;
   left: 82%;
+  cursor: pointer;
+ 
 }
+
+
 
 .cart-counter {
   position: absolute;
@@ -113,14 +176,55 @@ button {
 }
 
 .lets-talk {
+  position: absolute;
   background: #ad31a5;
+  left:85vw;
+}
+
+.lets-talk-container{
+  position: absolute;
+  width: 296px;
+padding: 28px 29px ;
+gap: 10px;
+border-radius: 19px;
+margin-left: -23em;
+margin-top: 8%;
+background: #fff;
+display: flex;
+flex-direction: column;
+}
+
+
+.talk-dot-container{
+
+  width: 25px;
+
+height: 25px;
+border: 1px solid #ADADAD;
+background:#fff;
+border-radius:24px
+}
+
+.talk-option-menu{
+  display:flex ;
+  gap: 1em;
+  cursor: pointer;
+}
+
+.talk-option-menu>p{
+  margin-top:7px;
+}
+
+.talk-option-dot-active{
+  position: absolute;
+  padding: 4.4px;
 }
 
 .lets-talk2 {
   background: #f6cfa0;
   margin-top: 4em;
   margin-left: 10em;
-  height: 34px;
+
   padding: 0;
 }
 
@@ -132,7 +236,7 @@ button {
 }
 
 .services-container {
-  margin-top: 20%;
+  margin-top: 15%;
 }
 
 .services-top {
@@ -290,6 +394,7 @@ span {
   border-radius: 6.86px;
   color: #fff;
   margin-top: 1.6em;
+  cursor: pointer;
 }
 
 .services2-container {
@@ -418,6 +523,14 @@ span {
   display: flex;
   flex-direction: column;
   gap: 2em;
+  padding-bottom: 2em;
+}
+
+
+
+a ,.social-link ,.whatsapp-button a {
+  text-decoration: none;
+  color: #fff;
 }
 
 .whatsapp-button {
@@ -425,11 +538,15 @@ span {
   height: 47px;
   gap: 10px;
   border-radius: 10px;
-  background: #f6cfa0;
+ 
   text-align: center;
   padding: 1em;
 }
 
+.book-us-footer, .whatsapp-button{
+  margin-left: -3.5em;
+  background: #f6cfa0;
+}
 .handle-icon,
 .whatsapp-icon {
   position: absolute;
@@ -458,6 +575,7 @@ span {
   position: absolute;
 width: 4%;
   margin-left: 2%;
+  cursor: pointer;
 }
 
 .booking-content {
@@ -866,17 +984,32 @@ display: none;
     margin-left: 15%;
   }
 
+  .lets-talk-container{
+    max-width: 50%;
+  
+  }
+
+  
+
 }
 
-@media only screen and (width > 702px) and (width <1220px) {
+@media only screen and (width > 701px) and (width <1220px) {
+  .navigator{
+    margin-top: 0.5em;
+  }
   .header-top {
     margin: 1em 2em;
   }
 
   .lets-talk{
-    margin-top: 1em;
+    margin-top: 3em;
   height: 30px;
   padding: 0;
+  }
+  .lets-talk-container{
+    max-width: 30%;
+    margin-top: 8em;
+    margin-left: -21em;
   }
 
 
@@ -887,10 +1020,19 @@ display: none;
     grid-template-columns: 2fr 2fr;
   }
 
+  .header-top {
+
+    top:-1%;
+    width: 100%;
+    margin: 0 auto;
+    padding-top: 2em;
+    padding-bottom: 2em;
+  }
+
   .header-content {
     position: relative;
     margin: 0 auto;
-    margin-top: 15%;
+    margin-top: 25%;
   }
 
   .header-content > h2,
@@ -930,7 +1072,7 @@ display: none;
   }
 
   .services-container {
-    margin-top: 15em;
+    margin-top: 11em;
   }
 
   .specials-container {
@@ -939,6 +1081,7 @@ display: none;
 
   .add-cart {
     margin-top: 1.5em;
+
   }
 
   .services-paragraph {
@@ -1003,6 +1146,34 @@ width: 110px;
 
 @media only screen and (width > 701px) and (max-width: 999px) {
 
+.lets-talk-container{
+  margin-top: 7em;
+  margin-left: -17em;
+}
+
+.lets-talk{
+  margin-left: -2em;
+}
+
+.lets-talk2{
+  height: 30px;
+  margin-left: 7.5em;
+}
+  .logo{
+    margin-left: -1em;
+  }
+.navigator{
+  max-width: 600px;
+}
+
+.header-content {
+  position: relative;
+  margin: 0 auto;
+  margin-top: 27%;
+}
+
+
+
   .product-details{
     width: 650px;
   }
@@ -1017,7 +1188,7 @@ width: 110px;
 margin-left: 4em;
 }
   .services-container {
-    margin-top: 20%;
+    margin-top: 13%;
   }
   .services-top > .event-card {
     width: 100%;
@@ -1062,7 +1233,7 @@ margin-left: 4em;
 
   .cart-icon-container {
     position: absolute;
-    left: 75%;
+    left:80%;
   }
 
 .cart-image{
@@ -1092,7 +1263,58 @@ margin-left: 4em;
   .mobile {
     display: block;
   }
+  
+  .cart-icon-container{
+    margin-top:10px;
+    margin-left: -5px;
+  }
+  .navbar.links {
+    display: none;
+  }
 
+  .navbar.links.visible {
+    display: flex;
+    gap: 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 70%;
+    background: #AD31A5;
+    flex-direction: column;
+    align-items: flex-start;
+    z-index: 100;
+  }
+
+  .navbar.links a {
+    margin: 1rem;
+    color: #fff;
+    text-decoration: none;
+    font-family: "Inter";
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 24px;
+    text-align: left;
+  }
+
+  .navbar.links a:hover{
+    color: black;
+  }
+
+  .nav-btn {
+    display: flex;
+    position: fixed;
+    left: 85%;
+    top: 1%;
+    background: transparent;
+    padding: 1px;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    color: #f6cfa0;
+    font-size: 1.2rem;
+    z-index: 110;
+  }
   .header-wallpaper {
     position: absolute;
     width: 100%;
@@ -1112,11 +1334,15 @@ margin-left: 4em;
 
   .header-top {
     display: flex;
-    margin: 1em 2em;
-  }
+    margin: 0em 0em;
+    position: relative;
+    width: 100%;
+    padding-top: 1em;
+    padding-bottom: 1em; 
+  background: none };
+
 
   .logo {
-    max-width: 30%;
     margin-left: -5%;
   }
 
@@ -1125,6 +1351,7 @@ margin-left: 4em;
     z-index: -1;
     max-width: 60%;
     position: absolute;
+    
   }
 
   .header-content {
@@ -1551,12 +1778,22 @@ margin-left: 4em;
 
   .footer-middle,
   .footer-down {
-    display: block;
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    
+  }
+  .book-us-footer{
+    margin: 0;
+  }
+
+  .social-link{
+    margin-left: 2em;
   }
 
   .whatsapp-button {
     margin: 0 auto;
-    width: 200px;
+    width: 220px;
     height: 37px;
     gap: 80px;
     border-radius: 10px;
@@ -1571,10 +1808,9 @@ margin-left: 4em;
     font-weight: 600;
     line-height: 14.52px;
   }
-
   .whatsapp-icon {
     width: 20px;
-    margin-left: -2em;
+    margin-left: -1.5em;
   }
 
   .footer-flex {
@@ -1586,6 +1822,7 @@ margin-left: 4em;
     margin: 0em -1em;
     margin-top: 2em;
   }
+
 
   .footer-down > p {
     margin-top: 1.3em;
@@ -1870,10 +2107,21 @@ margin-left:1em;
 margin: 0 auto;
       }
     
+      .lets-talk-container{
+        position: absolute;
 
+max-width: 50%;
+margin-left: -55%;
+margin-top: 4em;
+      }
 }
 
 @media only screen and (width < 391px) {
+  
+.wallpaper2{
+  height:300px ;
+}
+
   .header-content > h2,
   .header-content > h4 {
     margin-left: 10%;
@@ -1918,7 +2166,7 @@ margin: 0 auto;
   }
 
   .services-container {
-   margin-top:12em;
+   margin-top:10em;
    padding-top: 0em;
   }
   .services-paragraph {
@@ -1986,9 +2234,11 @@ margin: 0 auto;
   }
 
   .footer-flex {
-    width: 100%;
-    margin-left: 0.5%;
+    width: 60%;
+    margin-left:20%;
+    gap: 0em;
   }
+
 
   .total-card{
     width: 85%;
@@ -2001,7 +2251,13 @@ margin: 0 auto;
 
   margin-top: -2em;
 }
+.lets-talk-container{
+  position: absolute;
 
+max-width: 60%;
+margin-left: -80%;
+margin-top: 4em;
+}
 
 }
 
@@ -2015,10 +2271,11 @@ margin: 0 auto;
   }
   
   .trash {
-
     margin-top: -0.2em;
     left: -22%;
   }
+
+
   
   
 }

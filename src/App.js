@@ -1,5 +1,6 @@
 import React from "react";
-import Header from "../src/components/Header";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Header from "./components/Header";
 import Services from "./components/Services";
 import Specials from "./components/Specials";
 import Services2 from "./components/Services2";
@@ -10,20 +11,24 @@ import Cart from "./components/Cart";
 
 function App() {
   return (
-    <div>
-   
-
-    <Header />
-      <Services />
-
-       <Services2 />
-       <Feedback />
-       <Footer /> 
-       
-         <Booking /> 
-         <Specials />
-       <Cart />   
-    </div>
+    <Router>
+      <div>
+        <Routes>
+          <Route path="/" element={
+            <>
+              <Header />
+              <Services />
+              <Specials />
+              <Services2 />
+              <Feedback />
+              <Footer />
+            </>
+          } />
+          <Route path="/cart" element={<Cart />} />
+          <Route path="/booking" element={<Booking />} />
+        </Routes>
+      </div>
+    </Router>
   );
 }
 

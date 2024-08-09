@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import emailjs from "emailjs-com";
 
-const CateringForm = () => {
+const CateringForm = ({ onSubmitSuccess }) => {
   const [formData, setFormData] = useState({
     fullName: "",
     email: "",
@@ -30,6 +30,7 @@ const CateringForm = () => {
       .send("YOUR_SERVICE_ID", "YOUR_TEMPLATE_ID", formData, "YOUR_USER_ID")
       .then((response) => {
         console.log("SUCCESS!", response.status, response.text);
+        onSubmitSuccess(); // Call the onSubmitSuccess callback
       })
       .catch((err) => {
         console.log("FAILED...", err);
@@ -52,7 +53,7 @@ const CateringForm = () => {
   return (
     <div className="form-container">
       <form onSubmit={handleSubmit}>
-        <div > 
+        <div>
           <p className="formcard-label full-name">Full Name</p>
           <input
             type="text"
@@ -73,17 +74,16 @@ const CateringForm = () => {
           />
         </div>
         <div>
-              <p className="formcard-label">Phone number</p>
-              <input
-                type="text"
-                name="phone"
-                value={formData.phone}
-                placeholder="Enter number"
-                onChange={handleChange}
-                required
-            
-              />
-            </div>
+          <p className="formcard-label">Phone number</p>
+          <input
+            type="text"
+            name="phone"
+            value={formData.phone}
+            placeholder="Enter number"
+            onChange={handleChange}
+            required
+          />
+        </div>
         <div>
           <p className="formcard-label">Type of Event</p>
           <input
@@ -152,7 +152,7 @@ const CateringForm = () => {
             onChange={handleChange}
           />
         </div>
-        <button className="book-submit"type="submit">Submit Form</button>
+        <button className="book-submit" type="submit">Submit Form</button>
       </form>
     </div>
   );

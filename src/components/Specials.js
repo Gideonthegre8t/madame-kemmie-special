@@ -60,7 +60,8 @@ function Specials() {
   }, [isMobile]);
 
   return (
-    <section className="specials-container">
+    <section id="specials"
+     className="specials-container">
       <div className="specials-header">
         <h3>Our Special Catering</h3>
         <p>
