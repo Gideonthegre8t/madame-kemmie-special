@@ -892,19 +892,24 @@ display: none;
   color: #7c1575;
 }
 @media only screen and (width >2022px) {
+  .header-content{
+    margin-top: 15%;
+  }
+  .header-content > h2 {
+
+    width: 35%;
+  }
   .services-container {
     padding-top: 5em;
   }
+
+
 }
 
-@media only screen and (width > 1513px) {
-  .header-content {
-    margin-top: 19%;
-  }
+@media only screen and (width > 1509px) {
 
-  .purp-circle {
-    max-width: 30%;
-    margin-top: -10em;
+  .header-content{
+    margin-top: 20%;
   }
 
   .header-content > h2 {
@@ -914,13 +919,17 @@ display: none;
   }
 
   .header-content > h4 {
-    width: 28%;
+    width: 24%;
     font-size: 20px;
   }
   .purp-circle {
+    width: 800px;
     margin-left: 5em;
-    width: 100%;
     margin-top: -10em;
+  }
+
+  .tag{
+    margin-top: -35px;
   }
   .lets-talk2 {
     margin-left: 15em;
@@ -933,8 +942,8 @@ display: none;
     width: 100%;
   }
   .services-container {
-    margin: 0% 10%;
-    margin-top: 17%;
+    margin: 0% 5%;
+    margin-top: 23%;
   }
 
   .services-bottom {
@@ -953,7 +962,7 @@ display: none;
 
   .cart-icon-container {
     position: absolute;
-    left: 91%;
+    left: 80%;
   }
 
   .review-inner-carousel {

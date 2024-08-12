@@ -6,7 +6,7 @@ function Navbar() {
 
   const handleClick = (event, id) => {
     event.preventDefault(); // Prevent default anchor behavior
-    const offset = 60; // Adjust this value according to the height of your fixed navbar or header
+    const offset = 120; // Adjust this value according to the height of your fixed navbar or header
 
     if (id === "home") {
       window.scrollTo({ top: 0, behavior: "smooth" }); // Scroll to top of the page
