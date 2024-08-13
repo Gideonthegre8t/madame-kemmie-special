@@ -55,7 +55,7 @@ function Scroll() {
 
       return () => clearInterval(intervalRef.current);
     }
-  }, [isMobile, reviews.length]); // No need to include startAutoSlide here
+  }); 
 
   useEffect(() => {
     if (!isMobile) {

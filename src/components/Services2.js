@@ -20,13 +20,13 @@ const services2Items = [
   },
   {
     img: dailyCatering,
-    name: "Daily office catering ",
+    name: "Daily office catering",
   },
 ];
 
 function Services2() {
   const carouselRef = useRef(null);
-  const [isMobile, setIsMobile] = useState(window.innerWidth < 700); // Adjust the breakpoint as needed
+  const [isMobile, setIsMobile] = useState(window.innerWidth < 700); // Check if the screen width is less than 700px
   const [dragConstraints, setDragConstraints] = useState({ left: 0, right: 0 });
 
   useEffect(() => {
@@ -35,10 +35,9 @@ function Services2() {
         const containerWidth = carouselRef.current.offsetWidth;
         const contentWidth = carouselRef.current.scrollWidth;
 
-        // Adjust constraints to ensure smooth dragging
+        // Calculate drag constraints to ensure smooth dragging
         const rightConstraint = Math.max(contentWidth - containerWidth, 0);
         const leftConstraint = Math.max(contentWidth - containerWidth, 0);
-
 
         setDragConstraints({
           left: -rightConstraint,
@@ -47,7 +46,7 @@ function Services2() {
       }
     };
 
-    updateDragConstraints(); // Initial calculation
+    updateDragConstraints(); // Initial calculation of drag constraints
     window.addEventListener("resize", () => {
       setIsMobile(window.innerWidth < 700); // Update screen size
       updateDragConstraints();
@@ -72,10 +71,19 @@ function Services2() {
             dragConstraints={dragConstraints}
             whileTap={{ cursor: "grabbing" }}
             dragElastic={0.1}
-            animate={{ x: [-dragConstraints.left, 0] }}
           >
             {services2Items.map((item, index) => (
-              <motion.div className="services2-card" key={index}>
+              <motion.div
+                className="services2-card"
+                key={index}
+                whileHover={{
+                  scale: 1, // Enlarge the card slightly on hover
+                  rotate: 3, // Rotate the card slightly on hover
+                  boxShadow: "0px 15px 30px rgba(0,0,0,0.3)", // Add shadow on hover
+                  y: -10 // Move the card up slightly on hover
+                }}
+                transition={{ type: "spring", stiffness: 300, damping: 15 }} // Smooth transition for hover effects
+              >
                 <img className="service2-image" src={item.img} alt={item.name} />
                 <p className="service2-name">{item.name}</p>
               </motion.div>
@@ -84,10 +92,20 @@ function Services2() {
         ) : (
           <div className="inner-carousel">
             {services2Items.map((item, index) => (
-              <div className="services2-card" key={index}>
+              <motion.div
+                className="services2-card"
+                key={index}
+                whileHover={{
+                  scale: 1.1, // Enlarge the card slightly on hover
+                  rotate: 3, // Rotate the card slightly on hover
+                  boxShadow: "0px 15px 30px rgba(0,0,0,0.3)", // Add shadow on hover
+                  y: -10 // Move the card up slightly on hover
+                }}
+                transition={{ type: "spring", stiffness: 300, damping: 15 }} // Smooth transition for hover effects
+              >
                 <img className="service2-image" src={item.img} alt={item.name} />
                 <p className="service2-name">{item.name}</p>
-              </div>
+              </motion.div>
             ))}
           </div>
         )}

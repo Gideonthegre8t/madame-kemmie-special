@@ -1,11 +1,13 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
+import { motion } from "framer-motion"; // Import motion from framer-motion
 import officeEvents from "../assets/images/office-events.png";
 import weddingEvents from "../assets/images/wedding-events.png";
 import socialEvents from "../assets/images/social-events.png";
 import studentEvents from "../assets/images/student-events.png";
 import birthdayParty from "../assets/images/birthday-parties.png";
 
+// Array of event images and titles
 const events = [
   { src: officeEvents, alt: "Office events", title: "Office events" },
   { src: weddingEvents, alt: "Wedding events", title: "Wedding events" },
@@ -15,11 +17,11 @@ const events = [
 ];
 
 function Services() {
-  const navigate = useNavigate(); // Navigation hook for routing
+  const navigate = useNavigate(); // Hook for navigation
 
   // Handle click event for the "Book us now" button
   const handleBookNowClick = () => {
-    navigate("/booking"); // Redirect to the booking page immediately
+    navigate("/booking"); // Redirect to the booking page
   };
 
   return (
@@ -30,20 +32,59 @@ function Services() {
           <p className="services-paragraph">
             Spice up your event with our premium catering services! From intimate gatherings to grand celebrations, we craft delicious, customized menus that delight every palate. Book us today and experience the perfect blend of flavor and elegance!
           </p>
-          <button className="book-us" onClick={handleBookNowClick}>Book us now</button>
+          <motion.button
+            className="book-us"
+            onClick={handleBookNowClick}
+            initial={{ scale: 1, rotate: 0, borderRadius: "0%", boxShadow: "0px 0px 0px rgba(0,0,0,0)" }} // Initial state
+            whileHover={{ 
+              scale: 1.1, // Scale up slightly on hover
+              rotate: 10, // Rotate slightly on hover
+              backgroundColor: "#e63946", // Change background color on hover
+              color: "#fff", // Change text color on hover
+              boxShadow: "0px 0px 10px rgba(0,0,0,0.5)" // Add shadow on hover
+            }}
+            whileTap={{ 
+              scale: 0.9, // Scale down on click
+              rotate: -10, // Rotate in the opposite direction on click
+              backgroundColor: "#f1faee", // Change background color on click
+              color: "#1d3557" // Change text color on click
+            }}
+            transition={{ type: "spring", stiffness: 400, damping: 10 }} // Smooth spring transition
+          >
+            Book us now
+          </motion.button>
         </div>
-        <div className="event-card event-image1">
+        <motion.div
+          className="event-card event-image1" // Apply Framer Motion to event-image1
+          initial={{ scale: 1, y: 0, boxShadow: "0px 0px 0px rgba(0,0,0,0)" }} // Initial state
+          whileHover={{ 
+            scale: 1.05, // Scale up slightly on hover
+            y: -10, // Move up slightly on hover
+            boxShadow: "0px 15px 30px rgba(0,0,0,0.2)" // Add shadow on hover
+          }}
+          transition={{ type: "spring", stiffness: 300, damping: 10 }} // Smooth transition
+        >
           <img className="event-image" src={events[0].src} alt={events[0].alt} />
           <h4 className="event-overlay">{events[0].title}</h4>
-        </div>
+        </motion.div>
       </div>
 
       <div className="services-bottom">
         {events.slice(1).map((event, index) => (
-          <div className="event-card" key={index}>
+          <motion.div
+            className="event-card" // Apply Framer Motion to event cards
+            key={index}
+            initial={{ scale: 1, y: 0, boxShadow: "0px 0px 0px rgba(0,0,0,0)" }} // Initial state
+            whileHover={{ 
+              scale: 1.05, // Scale up slightly on hover
+              y: -10, // Move up slightly on hover
+              boxShadow: "0px 15px 30px rgba(0,0,0,0.2)" // Add shadow on hover
+            }}
+            transition={{ type: "spring", stiffness: 300, damping: 10 }} // Smooth transition
+          >
             <img className="event-image" src={event.src} alt={event.alt} />
             <h4 className="event-overlay">{event.title}</h4>
-          </div>
+          </motion.div>
         ))}
       </div>
     </section>

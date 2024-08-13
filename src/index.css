@@ -110,6 +110,13 @@ nav a:hover {
   position: absolute;
 }
 
+
+.ring{
+  position: absolute;
+  width: 3%;
+  top: 90%;
+ left: 6%;
+}
 .header-content {
   position: relative;
   color: #fff;
@@ -182,7 +189,7 @@ button {
   border-radius: 19px;
   margin-left: -23em;
   margin-top: 8%;
-  background: #fff;
+  background: #f6cfa0;
   display: flex;
   flex-direction: column;
 }
@@ -327,6 +334,7 @@ h3 {
   margin-top: 2em;
   width: 284.4px;
   height: 417px;
+  border-radius: 25px;
 }
 
 .item-name {
@@ -409,6 +417,7 @@ span {
   display: flex;
   flex-direction: row;
   transition: transform 0.3s ease;
+  padding: 3em;
 }
 
 .services2-card img {
@@ -449,6 +458,12 @@ span {
   box-shadow: 0px 8px 32px 0px #adadad29;
   padding: 1em;
   margin-top: 2em;
+  border-radius: 20px;
+}
+
+.review:hover{
+  background: #7c1575;
+  color: #fff;
 }
 .review-scroll {
   padding: 24px 16px 24px 16px;
@@ -476,7 +491,7 @@ span {
   font-weight: 400;
   line-height: 27px;
   letter-spacing: -0.01em;
-  color: #323434;
+
   width: 100%;
 }
 
@@ -893,11 +908,32 @@ textarea {
   bottom: 1px;
   left: 95%;
   z-index: 1;
+  cursor: pointer;
 }
 
 .top-arrow{
   width: 100%;
 }
+
+@keyframes typewriter {
+  from { width: 0; }
+  to { width: 100%; }
+}
+
+@keyframes blink {
+  50% { border-color: transparent; }
+}
+
+.animate-h2 {
+ 
+  white-space: nowrap;
+  overflow: hidden; /* Hide overflow so cursor appears right after text */
+  border-right: 0.15em solid rgba(0,0,0,0.75);
+  animation: 
+    typewriter 4s steps(40, end) 1s 1 normal both,
+    blink 500ms steps(40, end) infinite;
+}
+
 
 
 @media only screen and (width >2022px) {
@@ -923,11 +959,11 @@ textarea {
   .header-content > h2 {
     font-size: 58px;
     line-height: 62px;
-    width: 30%;
+    width: 32%;
   }
 
   .header-content > h4 {
-    width: 24%;
+    width: 30%;
     font-size: 20px;
   }
   .purp-circle {
@@ -951,7 +987,7 @@ textarea {
   }
   .services-container {
     margin: 0% 5%;
-    margin-top: 23%;
+    margin-top: 17%;
   }
 
   .services-bottom {
@@ -963,6 +999,7 @@ textarea {
   .food-item-container {
     place-items: center;
     gap: 5em;
+
   }
 
   .services-paragraph {
@@ -975,8 +1012,10 @@ textarea {
   }
 
   .review-inner-carousel {
-    margin: 0 20em;
+    margin: 0 15em;
   }
+
+  
 
   .food-item-container {
     margin: 3em 20em;
@@ -1153,6 +1192,10 @@ textarea {
 }
 
 @media only screen and (width > 701px) and (max-width: 999px) {
+  .ring{
+   
+   left: 10%;
+  }
   .lets-talk-container {
     margin-top: 7em;
     margin-left: -17em;
@@ -1348,6 +1391,8 @@ textarea {
   }
 
   .logo {
+    padding:0em 2em;
+    
     margin-left: -5%;
   }
 
@@ -2037,6 +2082,10 @@ textarea {
 }
 
 @media only screen and (width >390px) and (width <701px) {
+  .ring{
+   width: 10%;
+    left: 12%;
+   }
   .header-content {
     margin-top: 15em;
   }
@@ -2107,6 +2156,16 @@ textarea {
 }
 
 @media only screen and (width < 391px) {
+  .logo {
+    padding:0em 1em;
+    width: 50%;
+    
+  }
+
+  .ring{
+    width: 10%;
+     left: 16%;
+    }
   .wallpaper2 {
     height: 300px;
   }

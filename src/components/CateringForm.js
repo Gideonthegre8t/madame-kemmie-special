@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { motion } from "framer-motion"; // Import motion from framer-motion
 
 const CateringForm = ({ onSubmitSuccess }) => {
   const [formData, setFormData] = useState({
@@ -142,7 +143,7 @@ const CateringForm = ({ onSubmitSuccess }) => {
             value={formData.menuRequirements}
             onChange={handleChange}
             required
-            placeholder="Starters, main course and desert etc..."
+            placeholder="Starters, main course and dessert etc..."
           />
         </div>
         <div>
@@ -162,7 +163,15 @@ const CateringForm = ({ onSubmitSuccess }) => {
             onChange={handleChange}
           />
         </div>
-        <button className="book-submit" type="submit">Submit Form</button>
+        <motion.button
+          className="book-submit"
+          type="submit"
+          whileHover={{ scale: 1.05, backgroundColor: "#f0a500" }} // Slightly enlarge and change color on hover
+          whileTap={{ scale: 0.95, backgroundColor: "#e07b39" }} // Slightly shrink and darken color on click
+          transition={{ type: "spring", stiffness: 300, damping: 10 }} // Smooth spring transition
+        >
+          Submit Form
+        </motion.button>
       </form>
     </div>
   );

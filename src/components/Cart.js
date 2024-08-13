@@ -10,6 +10,7 @@ import Footer from "./Footer";
 import nothingHere from "../assets/images/nothing-here.png";
 import questionMark from "../assets/images/question-mark.png";
 import successIcon from "../assets/images/success.png";
+import { motion } from "framer-motion";
 
 const Cart = () => {
   const navigate = useNavigate();
@@ -191,9 +192,15 @@ const Cart = () => {
                   required
                 />
               </div>
-              <button className="checkout" type="submit">
+              <motion.button
+                className="checkout"
+                type="submit"
+                whileHover={{ scale: 1.1, backgroundColor: "#e63946", color: "#fff" }}
+                whileTap={{ scale: 0.95, backgroundColor: "#d62839" }}
+                transition={{ type: "spring", stiffness: 300, damping: 10 }}
+              >
                 Checkout
-              </button>
+              </motion.button>
             </div>
           </div>
         </form>
