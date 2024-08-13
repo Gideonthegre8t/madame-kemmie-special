@@ -9,13 +9,13 @@ import cartIcon from "../assets/images/cartIcon.png";
 import activeDot from "../assets/images/active-dot.png";
 import Navbar from "./Navbar";
 import { CartContext } from "./CartContext";
+import BackToTopText from "./BackToTopText";
 
 // Define social media links
 const socialMediaLinks = {
-  whatsapp: "https://wa.me/yourwhatsappnumber",
-  instagram: "https://www.instagram.com/yourprofile",
-  facebook: "https://www.facebook.com/yourprofile",
-  phone: "tel:+yourphonenumber"
+  whatsapp: "https://api.whatsapp.com/message/443CZADXNZFSK1?autoload=1&app_absent=0",
+  instagram: "https://www.instagram.com/madamekemmiespecial?igsh=MTBwNGZpbnJkNXJ3cw==",
+  facebook: "https://www.facebook.com/100065239971038/posts/1207313149682268/",
 };
 
 function Header() {
@@ -95,13 +95,7 @@ function Header() {
                 </div>
                 <p>Facebook</p>
               </div>
-              <div className="talk-option-menu" onClick={() => handleMenuClick("phone")}>
-                <div className="talk-dot-container">
-                  {activeMenu === "phone" && <img className="talk-option-dot-active" src={activeDot} alt="/" />}
-                  {/* Show active dot if "Phone Call" is active */}
-                </div>
-                <p>Phone Call</p>
-              </div>
+            
             </div>
           )}
         </div>
@@ -118,6 +112,8 @@ function Header() {
           <button className="lets-talk2" onClick={() => setShowTalkContainer(!showTalkContainer)}>Let's Talk</button>
         </div>
       </div>
+      <div><BackToTopText /></div>
+ 
     </header>
   );
 }

@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import emailjs from "emailjs-com";
 
 const CateringForm = ({ onSubmitSuccess }) => {
   const [formData, setFormData] = useState({
@@ -26,16 +25,27 @@ const CateringForm = ({ onSubmitSuccess }) => {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    emailjs
-      .send("YOUR_SERVICE_ID", "YOUR_TEMPLATE_ID", formData, "YOUR_USER_ID")
+    // Replace "YOUR_FORMSPREE_ENDPOINT" with your Formspree form's endpoint
+    fetch("https://formspree.io/f/movawyze", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(formData),
+    })
       .then((response) => {
-        console.log("SUCCESS!", response.status, response.text);
-        onSubmitSuccess(); // Call the onSubmitSuccess callback
+        if (response.ok) {
+          console.log("Form submission successful!");
+          onSubmitSuccess(); // Call the onSubmitSuccess callback
+        } else {
+          console.log("Form submission failed...");
+        }
       })
-      .catch((err) => {
-        console.log("FAILED...", err);
+      .catch((error) => {
+        console.error("Error submitting form:", error);
       });
 
+    // Clear the form after submission
     setFormData({
       fullName: "",
       email: "",

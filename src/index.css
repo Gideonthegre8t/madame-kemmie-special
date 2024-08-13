@@ -32,7 +32,7 @@ body {
   width: 50%;
   left: 25%;
   border-radius: 10px;
-  background: #AD31A5;
+  background: #ad31a5;
   z-index: 1;
   margin-top: -5px;
   font-family: "Inter";
@@ -74,9 +74,7 @@ nav a:hover {
 
 .nav-btn {
   display: none;
- 
 }
-
 
 /* @media only screen and (min-width: 601px) { */
 .header-wallpaper,
@@ -88,22 +86,21 @@ nav a:hover {
   z-index: -1;
 }
 
-.wallpaper2{
-  height:300px ;
+.wallpaper2 {
+  height: 300px;
 }
 
 .header-top {
   position: fixed;
   display: flex;
   justify-content: space-between;
-  top:-1%;
+  top: -1%;
   background: #f6cfa0;
   width: 100%;
   margin: 0 auto;
   padding-top: 2em;
   padding-bottom: 1em;
   z-index: 1;
-  
 }
 
 .purp-circle {
@@ -158,15 +155,11 @@ button {
   border: none;
 }
 
-
 .cart-icon-container {
   position: fixed;
   left: 82%;
   cursor: pointer;
- 
 }
-
-
 
 .cart-counter {
   position: absolute;
@@ -178,44 +171,42 @@ button {
 .lets-talk {
   position: absolute;
   background: #ad31a5;
-  left:85vw;
+  left: 85vw;
 }
 
-.lets-talk-container{
+.lets-talk-container {
   position: absolute;
   width: 296px;
-padding: 28px 29px ;
-gap: 10px;
-border-radius: 19px;
-margin-left: -23em;
-margin-top: 8%;
-background: #fff;
-display: flex;
-flex-direction: column;
+  padding: 28px 29px;
+  gap: 10px;
+  border-radius: 19px;
+  margin-left: -23em;
+  margin-top: 8%;
+  background: #fff;
+  display: flex;
+  flex-direction: column;
 }
 
-
-.talk-dot-container{
-
+.talk-dot-container {
   width: 25px;
 
-height: 25px;
-border: 1px solid #ADADAD;
-background:#fff;
-border-radius:24px
+  height: 25px;
+  border: 1px solid #adadad;
+  background: #fff;
+  border-radius: 24px;
 }
 
-.talk-option-menu{
-  display:flex ;
+.talk-option-menu {
+  display: flex;
   gap: 1em;
   cursor: pointer;
 }
 
-.talk-option-menu>p{
-  margin-top:7px;
+.talk-option-menu > p {
+  margin-top: 7px;
 }
 
-.talk-option-dot-active{
+.talk-option-dot-active {
   position: absolute;
   padding: 4.4px;
 }
@@ -526,9 +517,9 @@ span {
   padding-bottom: 2em;
 }
 
-
-
-a ,.social-link ,.whatsapp-button a {
+a,
+.social-link,
+.whatsapp-button a {
   text-decoration: none;
   color: #fff;
 }
@@ -538,12 +529,13 @@ a ,.social-link ,.whatsapp-button a {
   height: 47px;
   gap: 10px;
   border-radius: 10px;
- 
+
   text-align: center;
   padding: 1em;
 }
 
-.book-us-footer, .whatsapp-button{
+.book-us-footer,
+.whatsapp-button {
   margin-left: -3.5em;
   background: #f6cfa0;
 }
@@ -573,7 +565,7 @@ a ,.social-link ,.whatsapp-button a {
 
 .back-icon {
   position: absolute;
-width: 4%;
+  width: 4%;
   margin-left: 2%;
   cursor: pointer;
 }
@@ -640,9 +632,9 @@ textarea {
   background: #ad31a5;
 }
 
-.cart-flex{
-    background: linear-gradient(180deg, #fec1fa 20.14%, #f6d6e8 59.7%);
- padding-bottom: 3em;
+.cart-flex {
+  background: linear-gradient(180deg, #fec1fa 20.14%, #f6d6e8 59.7%);
+  padding-bottom: 3em;
 }
 
 .cart-list {
@@ -676,7 +668,6 @@ textarea {
   display: flex;
 }
 
-
 .product-details {
   display: flex;
   flex-direction: row;
@@ -699,11 +690,9 @@ textarea {
   width: 120px;
 }
 
-.cart-detail{
+.cart-detail {
   gap: 5.5em;
 }
-
-
 
 .product,
 .price,
@@ -714,6 +703,9 @@ textarea {
 
 .quantity {
   margin-top: 1.3em;
+}
+.subtract, .addition{
+  cursor: pointer;
 }
 
 .quantity-box {
@@ -736,6 +728,7 @@ textarea {
 .trash {
   margin-top: 0.2em;
   left: -5%;
+  cursor: pointer;
 }
 
 .total-card {
@@ -759,12 +752,11 @@ textarea {
 }
 
 .total-details {
-display: none;
+  display: none;
   margin-top: 1em;
   display: flex;
   flex-direction: column;
   gap: 2em;
-
 }
 
 .price-total,
@@ -863,6 +855,7 @@ display: none;
 .ok {
   text-align: center;
   justify-content: center;
+  cursor: pointer;
 }
 
 .success-text {
@@ -891,24 +884,39 @@ display: none;
   line-height: 48.41px;
   color: #7c1575;
 }
+
+.back-to-top {
+  position: fixed;
+  background: none;
+  outline: none;
+  border: none;
+  bottom: 1px;
+  left: 95%;
+  z-index: 1;
+}
+
+.top-arrow{
+  width: 100%;
+}
+
+
 @media only screen and (width >2022px) {
-  .header-content{
+  .header-content {
     margin-top: 15%;
   }
   .header-content > h2 {
-
     width: 35%;
   }
   .services-container {
     padding-top: 5em;
   }
-
-
 }
 
 @media only screen and (width > 1509px) {
-
-  .header-content{
+  .navbar {
+    gap: 4em;
+  }
+  .header-content {
     margin-top: 20%;
   }
 
@@ -928,7 +936,7 @@ display: none;
     margin-top: -10em;
   }
 
-  .tag{
+  .tag {
     margin-top: -35px;
   }
   .lets-talk2 {
@@ -954,6 +962,7 @@ display: none;
 
   .food-item-container {
     place-items: center;
+    gap: 5em;
   }
 
   .services-paragraph {
@@ -973,54 +982,48 @@ display: none;
     margin: 3em 20em;
   }
 
-  .formcard-label{
+  .formcard-label {
     margin-left: 15%;
   }
 
-  .cart-image{
+  .cart-image {
     max-width: 3%;
     margin-left: 1em;
     margin-top: -1.2em;
   }
 
-
-
-
-
+  .book-submit {
+    margin: 0em 21em;
+  }
 }
 @media only screen and (width > 1220px) and (width <1440px) {
-  .formcard-label{
+  .formcard-label {
     margin-left: 15%;
   }
 
-  .lets-talk-container{
+  .lets-talk-container {
     max-width: 50%;
-  
   }
-
-  
-
 }
 
 @media only screen and (width > 701px) and (width <1220px) {
-  .navigator{
+  .navigator {
     margin-top: 0.5em;
   }
   .header-top {
     margin: 1em 2em;
   }
 
-  .lets-talk{
+  .lets-talk {
     margin-top: 3em;
-  height: 30px;
-  padding: 0;
+    height: 30px;
+    padding: 0;
   }
-  .lets-talk-container{
+  .lets-talk-container {
     max-width: 30%;
     margin-top: 8em;
     margin-left: -21em;
   }
-
 
   .food-item-container,
   .review-scroll {
@@ -1030,8 +1033,7 @@ display: none;
   }
 
   .header-top {
-
-    top:-1%;
+    top: -1%;
     width: 100%;
     margin: 0 auto;
     padding-top: 2em;
@@ -1068,7 +1070,7 @@ display: none;
   .tag {
     margin-top: -1.5em;
   }
- 
+
   .lets-talk2 {
     margin-top: 10px;
   }
@@ -1090,58 +1092,57 @@ display: none;
 
   .add-cart {
     margin-top: 1.5em;
-
   }
 
   .services-paragraph {
     width: 50%;
   }
-  
-  .container-top{
+
+  .container-top {
     margin: 5px 2em;
   }
 
-  .back-icon{
+  .back-icon {
     margin-left: 20px;
     margin-top: 1em;
-    width:4%;
+    width: 4%;
   }
 
-  .wallpaper2{
-    height:250px ;
+  .wallpaper2 {
+    height: 250px;
   }
 
-
-  .product>p{
-width: 110px;
+  .product > p {
+    width: 110px;
   }
 
-  .total-card{
+  .total-card {
     width: 40%;
   }
 
-  .cart-list{
+  .cart-list {
     margin-left: 5em;
   }
 
-  .cart-detail{
+  .cart-detail {
     margin-left: 3em;
   }
 
-.product-details{
-  margin-left: -4em;
-  gap: 4em;
-}
+  .product-details {
+    margin-left: -4em;
+    gap: 4em;
+  }
 
-  .cart-card, .total-card{
+  .cart-card,
+  .total-card {
     margin: 0 auto;
   }
 
-  .total-card{
+  .total-card {
     width: 400px;
   }
 
-  .formcard-label{
+  .formcard-label {
     margin-left: 15%;
   }
   .cart-image {
@@ -1149,53 +1150,47 @@ width: 110px;
     width: 7%;
     margin-left: 1em;
   }
-
-  
 }
 
 @media only screen and (width > 701px) and (max-width: 999px) {
+  .lets-talk-container {
+    margin-top: 7em;
+    margin-left: -17em;
+  }
 
-.lets-talk-container{
-  margin-top: 7em;
-  margin-left: -17em;
-}
+  .lets-talk {
+    margin-left: -2em;
+  }
 
-.lets-talk{
-  margin-left: -2em;
-}
-
-.lets-talk2{
-  height: 30px;
-  margin-left: 7.5em;
-}
-  .logo{
+  .lets-talk2 {
+    height: 30px;
+    margin-left: 7.5em;
+  }
+  .logo {
     margin-left: -1em;
   }
-.navigator{
-  max-width: 600px;
-}
+  .navigator {
+    max-width: 600px;
+  }
 
-.header-content {
-  position: relative;
-  margin: 0 auto;
-  margin-top: 27%;
-}
+  .header-content {
+    position: relative;
+    margin: 0 auto;
+    margin-top: 27%;
+  }
 
-
-
-  .product-details{
+  .product-details {
     width: 650px;
   }
 
-  .quantity{
+  .quantity {
     margin-left: -1em;
   }
 
-
- .cart-list{
-  gap: 1em;
-margin-left: 4em;
-}
+  .cart-list {
+    gap: 1em;
+    margin-left: 4em;
+  }
   .services-container {
     margin-top: 13%;
   }
@@ -1242,12 +1237,12 @@ margin-left: 4em;
 
   .cart-icon-container {
     position: absolute;
-    left:80%;
+    left: 80%;
   }
 
-.cart-image{
-  width: 10%;
-}
+  .cart-image {
+    width: 10%;
+  }
 
   .event-image1 {
     position: absolute;
@@ -1257,24 +1252,27 @@ margin-left: 4em;
     margin-top: 2.2em;
   }
 
-  .container-top{
+  .container-top {
     margin: 1em 1em;
   }
-
-
 }
 
-
 @media only screen and (width< 702px) {
+  .back-to-top {
+    left: 90%;
+  }
+  .top-arrow{
+    width: 100%;
+  }
   .desktop {
     display: none;
   }
   .mobile {
     display: block;
   }
-  
-  .cart-icon-container{
-    margin-top:10px;
+
+  .cart-icon-container {
+    margin-top: 10px;
     margin-left: -5px;
   }
   .navbar.links {
@@ -1289,7 +1287,7 @@ margin-left: 4em;
     left: 0;
     width: 100%;
     height: 70%;
-    background: #AD31A5;
+    background: #ad31a5;
     flex-direction: column;
     align-items: flex-start;
     z-index: 100;
@@ -1306,7 +1304,7 @@ margin-left: 4em;
     text-align: left;
   }
 
-  .navbar.links a:hover{
+  .navbar.links a:hover {
     color: black;
   }
 
@@ -1322,7 +1320,7 @@ margin-left: 4em;
     outline: none;
     color: #f6cfa0;
     font-size: 1.2rem;
-    z-index: 110;
+    z-index: 1;
   }
   .header-wallpaper {
     position: absolute;
@@ -1332,8 +1330,6 @@ margin-left: 4em;
     top: 0;
     z-index: -1;
   }
-
-  
 
   h2 {
     font-size: 20px;
@@ -1347,9 +1343,9 @@ margin-left: 4em;
     position: relative;
     width: 100%;
     padding-top: 1em;
-    padding-bottom: 1em; 
-  background: none };
-
+    padding-bottom: 1em;
+    background: none;
+  }
 
   .logo {
     margin-left: -5%;
@@ -1360,7 +1356,6 @@ margin-left: 4em;
     z-index: -1;
     max-width: 60%;
     position: absolute;
-    
   }
 
   .header-content {
@@ -1403,7 +1398,7 @@ margin-left: 4em;
 
   .services-container {
     margin-top: 23rem;
-    padding-top:12em;
+    padding-top: 12em;
   }
 
   .services-paragraph {
@@ -1790,13 +1785,12 @@ margin-left: 4em;
     display: flex;
     flex-direction: column;
     gap: 1em;
-    
   }
-  .book-us-footer{
+  .book-us-footer {
     margin: 0;
   }
 
-  .social-link{
+  .social-link {
     margin-left: 2em;
   }
 
@@ -1831,7 +1825,6 @@ margin-left: 4em;
     margin: 0em -1em;
     margin-top: 2em;
   }
-
 
   .footer-down > p {
     margin-top: 1.3em;
@@ -1868,19 +1861,19 @@ margin-left: 4em;
     line-height: 10px;
     width: 70%;
   }
-  
-  .container-top{
+
+  .container-top {
     margin: 5px 1em;
   }
 
-  .back-icon{
+  .back-icon {
     margin-left: 5px;
     margin-top: 1em;
     width: 5%;
   }
 
-  .wallpaper2{
-    height:140px ;
+  .wallpaper2 {
+    height: 140px;
   }
 
   .cart-list {
@@ -1904,7 +1897,6 @@ margin-left: 4em;
     line-height: 12px;
   }
 
-
   .trash-box {
     position: absolute;
     right: 10%;
@@ -1919,12 +1911,9 @@ margin-left: 4em;
     margin-left: -1em;
   }
 
-  .cart-flex{
-width: 100%; ;
-
+  .cart-flex {
+    width: 100%;
   }
-
- 
 
   .product-details {
     position: relative;
@@ -1943,11 +1932,10 @@ width: 100%; ;
     width: 40%;
   }
 
-  .cart-detail{
-   gap: 2em;
-   margin-left: -1em;
+  .cart-detail {
+    gap: 2em;
+    margin-left: -1em;
   }
-
 
   .cart-image {
     position: absolute;
@@ -2001,7 +1989,7 @@ width: 100%; ;
   .total-card {
     margin: 0 auto;
     margin-top: 0em;
- 
+
     height: auto;
   }
 
@@ -2076,9 +2064,7 @@ width: 100%; ;
   .services-container {
     margin-top: 9em;
     padding-top: 0em;
- 
- 
-   }
+  }
   .services-paragraph {
     width: 100%;
     padding: 0;
@@ -2088,48 +2074,42 @@ width: 100%; ;
     margin-top: -25px;
   }
 
-  .total-card{
+  .total-card {
     width: 300px;
-   
   }
 
- 
   .product-details {
-  
     width: 350px;
-margin-left:1em;
+    margin-left: 1em;
+  }
 
-      }
-      
+  .trash-box {
+    position: absolute;
+    left: 100%;
+    height: 48px;
+  }
+  .product-flex {
+    display: flex;
+    margin-left: 1%;
+  }
 
-      .trash-box {
-        position: absolute;
-       left: 100%;
-        height: 48px;
-      }  
-      .product-flex {
-        display: flex;
-        margin-left: 1%;
-      }
+  .product-details {
+    margin: 0 auto;
+  }
 
-      .product-details {
-margin: 0 auto;
-      }
-    
-      .lets-talk-container{
-        position: absolute;
+  .lets-talk-container {
+    position: absolute;
 
-max-width: 50%;
-margin-left: -55%;
-margin-top: 4em;
-      }
+    max-width: 50%;
+    margin-left: -55%;
+    margin-top: 4em;
+  }
 }
 
 @media only screen and (width < 391px) {
-  
-.wallpaper2{
-  height:300px ;
-}
+  .wallpaper2 {
+    height: 300px;
+  }
 
   .header-content > h2,
   .header-content > h4 {
@@ -2167,16 +2147,15 @@ margin-top: 4em;
     padding: 1em;
   }
 
-  .plus-icon{
+  .plus-icon {
     margin: 0;
     margin-left: -1.2em;
     margin-top: 0.1em;
-
   }
 
   .services-container {
-   margin-top:10em;
-   padding-top: 0em;
+    margin-top: 10em;
+    padding-top: 0em;
   }
   .services-paragraph {
     font-size: 12px;
@@ -2208,7 +2187,7 @@ margin-top: 4em;
 
   .trash-box {
     position: absolute;
-   left: 103%;
+    left: 103%;
     height: 48px;
   }
 
@@ -2244,47 +2223,39 @@ margin-top: 4em;
 
   .footer-flex {
     width: 60%;
-    margin-left:20%;
+    margin-left: 20%;
     gap: 0em;
   }
 
-
-  .total-card{
+  .total-card {
     width: 85%;
   }
-.container-top{
-  margin: 1em ;
+  .container-top {
+    margin: 1em;
+  }
+
+  .product > p {
+    margin-top: -2em;
+  }
+  .lets-talk-container {
+    position: absolute;
+
+    max-width: 60%;
+    margin-left: -80%;
+    margin-top: 4em;
+  }
 }
 
-.product > p {
-
-  margin-top: -2em;
-}
-.lets-talk-container{
-  position: absolute;
-
-max-width: 60%;
-margin-left: -80%;
-margin-top: 4em;
-}
-
-}
-
-
-@media only screen and (width < 370px){
+@media only screen and (width < 370px) {
   .trash-box {
     position: absolute;
-   left: 107%;
+    left: 107%;
     height: 48px;
     width: 3px;
   }
-  
+
   .trash {
     margin-top: -0.2em;
     left: -22%;
   }
-
-
-  
-  
 }

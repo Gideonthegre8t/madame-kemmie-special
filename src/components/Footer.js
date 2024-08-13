@@ -8,19 +8,19 @@ import tiktok from "../assets/images/tiktok.png";
 
 const socialLinks = [
   {
-    href: "https://www.facebook.com/your-facebook-profile",
+    href: "https://www.facebook.com/100065239971038/posts/1207313149682268/",
     imgSrc: facebook,
     alt: "facebook-logo",
     text: "Kemi Oluwole",
   },
   {
-    href: "https://www.instagram.com/your-instagram-profile",
+    href: "https://www.instagram.com/madamekemmiespecial?igsh=MTBwNGZpbnJkNXJ3cw==",
     imgSrc: instagram,
     alt: "instagram-logo",
     text: "madamekemmiespecial",
   },
   {
-    href: "https://www.tiktok.com/@your-tiktok-profile",
+    href: "https://www.tiktok.com/@madamkemmiespecial?_t=8ooBdXNfiOz&_r=1",
     imgSrc: tiktok,
     alt: "tiktok-logo",
     text: "madamekemmiespecial",
@@ -43,14 +43,14 @@ function Footer() {
       </div>
       <div className="footer-flex">
         <div className="footer-middle">
-          {/* Add onClick handler to the "Book us now" button */}
+
           <button className="book-us-footer" onClick={handleBookNowClick}>Book us now</button>
         
         </div>
         <div className="footer-down">
           {/* Special WhatsApp button */}
           <div className="whatsapp-button">
-            <a href="https://wa.me/your-whatsapp-number" target="_blank" rel="noopener noreferrer">
+            <a href="https://api.whatsapp.com/message/443CZADXNZFSK1?autoload=1&app_absent=0" target="_blank" rel="noopener noreferrer">
               <p>
                 <img className="whatsapp-icon" src={whatsapp} alt="whatsapp-logo" />
                 Reach us on WhatsApp
