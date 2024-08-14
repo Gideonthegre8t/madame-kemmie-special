@@ -417,20 +417,21 @@ span {
   display: flex;
   flex-direction: row;
   transition: transform 0.3s ease;
-  padding: 3em;
+  padding-top: 1em;
 }
 
 .services2-card img {
-  width: 100%;
+  width: 300px;
+  
 }
 
 .services2-card {
   text-align: center;
+  padding-bottom: 1em;
+  border-radius: 20px;
 }
 
-.services2-card > img {
-  width: 100%;
-}
+
 
 .service2-name {
   margin-top: -2em;
@@ -521,7 +522,7 @@ span {
   font-size: 64px;
   font-weight: 400;
   line-height: 78px;
-  text-align: left;
+  text-align: center;
   width: 90%;
 }
 
@@ -530,6 +531,8 @@ span {
   flex-direction: column;
   gap: 2em;
   padding-bottom: 2em;
+  justify-content: center;
+ 
 }
 
 a,
@@ -551,7 +554,7 @@ a,
 
 .book-us-footer,
 .whatsapp-button {
-  margin-left: -3.5em;
+margin: 0 auto;
   background: #f6cfa0;
 }
 .handle-icon,
@@ -565,7 +568,7 @@ a,
   display: flex;
   flex-direction: column;
   gap: 1.2em;
-  text-align: left;
+  text-align: center;
 }
 
 .footer-down > p {
@@ -1189,6 +1192,15 @@ textarea {
     width: 7%;
     margin-left: 1em;
   }
+  
+  .footer-container {
+    margin: 0 auto;
+  
+    flex-direction: column;
+   
+  
+  }
+
 }
 
 @media only screen and (width > 701px) and (max-width: 999px) {
@@ -1298,6 +1310,22 @@ textarea {
   .container-top {
     margin: 1em 1em;
   }
+
+  .inner-carousel {
+    display: grid;
+    grid-template-columns: 2fr 2fr;
+ 
+  }
+
+  .footer-top > h2 {
+
+    font-size: 34px;
+  }
+
+  .footer-flex{
+    margin-top: -3em;
+  }
+
 }
 
 @media only screen and (width< 702px) {
@@ -1442,8 +1470,8 @@ textarea {
   }
 
   .services-container {
-  margin-top:40%;
- }
+    margin-top:30%;
+   }
 
   .services-paragraph {
     font-size: 12px;
@@ -1593,9 +1621,7 @@ textarea {
     margin-left: 23%;
   }
 
-  .services2-container {
-    margin-top: -1em;
-  }
+ 
 
   .services2-container h3 {
     text-align: center;
@@ -1605,8 +1631,6 @@ textarea {
   .services2-wrapper {
     display: flex;
     flex-direction: row;
-    gap: 16px;
-    padding: 16px;
     overflow-x: auto; /* Enable horizontal scrolling */
     overflow-y: hidden; /* Hide vertical scrollbar */
   }
@@ -1652,6 +1676,7 @@ textarea {
     position: relative;
     overflow: hidden;
     width: 100%;
+ 
   }
 
   .review-inner-carousel {
@@ -1829,7 +1854,8 @@ textarea {
     gap: 1em;
   }
   .book-us-footer {
-    margin: 0;
+    margin-top: -5em;
+    
   }
 
   .social-link {
@@ -2106,8 +2132,9 @@ textarea {
     position: absolute;
   }
 
-  
- 
+  .services-container {
+    margin-top: 35%;
+  }
   .services-paragraph {
     width: 100%;
     padding: 0;
@@ -2149,15 +2176,17 @@ textarea {
   }
 }
 
-@media only screen and (width >391px) and (width <600px){
+@media only screen and (width >391px) and (width <649px){
   .header-content {
     position: relative;
     margin: 0 auto;
-    margin-top: 70%;
+    margin-top: 60%;
   }
   .services-container {
-    margin-top:55%;
+    margin-top:19em;
    }
+
+ 
 }
 
 @media only screen and (width < 391px) {
@@ -2310,6 +2339,11 @@ textarea {
 }
 
 @media only screen and (width < 370px) {
+
+  .header-content > h4 {
+    width: 70%;
+  }
+
   .trash-box {
     position: absolute;
     left: 107%;
