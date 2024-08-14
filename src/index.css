@@ -470,10 +470,7 @@ span {
   border-radius: 20px;
 }
 
-.review:hover{
-  background: #7c1575;
-  color: #fff;
-}
+
 .review-scroll {
   padding: 24px 16px 24px 16px;
   border-radius: 24px;
@@ -992,6 +989,7 @@ textarea {
   }
   .event-image1 {
     max-width: 20%;
+    height: auto;
   }
 
   .event-card > img {
@@ -1208,6 +1206,9 @@ textarea {
     flex-direction: column;
    
   
+  }
+  .footer-top {
+    text-align: center;
   }
 
 }
@@ -1501,12 +1502,6 @@ textarea {
   .services-top > .event-card {
     width: 100%;
   }
-  .event-image1 {
-    position: relative;
-    width: 50%;
-
-    left: 0%;
-  }
 
   .services-bottom {
     margin: 1em 2em;
@@ -1713,6 +1708,7 @@ textarea {
     width: 306px;
   }
 
+
   .review-top {
     display: flex;
     align-items: center;
@@ -1843,6 +1839,7 @@ textarea {
     width: 123px;
     height: 47px;
     border-radius: 11px;
+    
   }
 
   .footer-top > h2 {
@@ -2191,6 +2188,12 @@ margin-left: 30px;
     margin-left: -55%;
     margin-top: 4em;
   }
+
+  .event-image1 {
+    max-width: 70%;
+    height: auto;
+  }
+
 }
 
 @media only screen and (width >391px) and (width <649px){
@@ -2259,8 +2262,9 @@ margin-left: 30px;
 
   .plus-icon {
     margin: 0;
-    margin-left: -1.2em;
-    margin-top: 0.1em;
+    margin-left: -1em;
+    margin-top: 0.3em;
+    z-index: 1;
   }
 
   .services-container {
@@ -2359,6 +2363,11 @@ margin-left: 30px;
 
   .header-content > h4 {
     width: 70%;
+  }
+
+  .event-image1 {
+    max-width: 100%;
+    height: auto;
   }
 
   .trash-box {

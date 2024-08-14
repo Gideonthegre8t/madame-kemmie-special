@@ -116,13 +116,13 @@ function Specials() {
                       className="add-cart"
                       onClick={() => addToCart(item)} // Add item to cart on click
                       whileHover={{
-                        scale: 1.1, // Slightly enlarge button on hover
+                        scale: 2, // Slightly enlarge button on hover
                         backgroundColor: "#e63946", // Change background color on hover
                         color: "#fff", // Change text color on hover
                         boxShadow: "0px 5px 15px rgba(0,0,0,0.3)" // Add shadow on hover
                       }}
                       whileTap={{
-                        scale: 0.95, // Slightly shrink button on click
+                        scale: 2, // Slightly shrink button on click
                         backgroundColor: "#f1faee", // Change background color on click
                         color: "#1d3557" // Change text color on click
                       }}
