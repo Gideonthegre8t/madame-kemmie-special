@@ -87,7 +87,7 @@ const CateringForm = ({ onSubmitSuccess }) => {
         <div>
           <p className="formcard-label">Phone number</p>
           <input
-            type="text"
+            type="number"
             name="phone"
             value={formData.phone}
             placeholder="Enter number"

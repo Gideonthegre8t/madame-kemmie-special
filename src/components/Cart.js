@@ -183,7 +183,7 @@ const Cart = () => {
               <div className="phone-tab">
                 <p>Phone number</p>
                 <input
-                  type="text"
+                  type="number"
                   name="phoneNumber"
                   value={formData.phoneNumber}
                   onChange={handleChange}
