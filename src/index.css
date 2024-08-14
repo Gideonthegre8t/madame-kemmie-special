@@ -173,10 +173,10 @@ button {
 .cart-counter {
   position: absolute;
   margin-left: -1em;
-  color: #f6cfa0;
+  color: red ;
   font-weight: 900;
   background: transparent;
-  background-color: red;
+  background-color:#7c1575 ;
   max-width: 100%;
   height: 18px;
   border-radius: 12px;

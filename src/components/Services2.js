@@ -96,7 +96,7 @@ function Services2() {
                 className="services2-card"
                 key={index}
                 whileHover={{
-                  scale: 1.1, // Enlarge the card slightly on hover
+                  scale: 1, // Enlarge the card slightly on hover
                   rotate: 3, // Rotate the card slightly on hover
                   boxShadow: "0px 15px 30px rgba(0,0,0,0.3)", // Add shadow on hover
                   y: -10 // Move the card up slightly on hover
