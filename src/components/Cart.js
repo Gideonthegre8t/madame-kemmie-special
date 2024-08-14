@@ -23,6 +23,7 @@ const Cart = () => {
     address: ""
   });
   const [isCheckoutSuccessful, setIsCheckoutSuccessful] = useState(false);
+  const [isLoading, setIsLoading] = useState(false);  // State for loading
 
   useEffect(() => {
     if (cart.length > 0) {
@@ -53,6 +54,8 @@ const Cart = () => {
       quantity: item.quantity
     }));
 
+    setIsLoading(true);  // Start loading
+
     try {
       const response = await fetch("https://formspree.io/f/movawyze", {
         method: "POST",
@@ -75,10 +78,16 @@ const Cart = () => {
       }
     } catch (error) {
       console.error("Error submitting form:", error);
+    } finally {
+      setIsLoading(false);  // End loading
     }
   };
 
   const handleBackClick = () => {
+    navigate("/");
+  };
+
+  const handleLogoClick = () => {
     navigate("/");
   };
 
@@ -90,7 +99,7 @@ const Cart = () => {
     <section id="cart" className="cart-container">
       <img className="wallpaper2" src={wallpaper2} alt="wallpaper" />
       <div className="container-top cart-container-top">
-        <img className="cart-logo" src={logo} alt="logo" />
+        <img className="cart-logo" src={logo} alt="logo" onClick={handleLogoClick} />
       </div>
       <img
         className="back-icon cart-back-icon"
@@ -126,7 +135,12 @@ const Cart = () => {
                       <p>{item.name}</p>
                     </div>
                     <div className="quantity">
-                      <p className="subtract" onClick={() => updateQuantity(item.name, item.quantity - 1)}>-</p>
+                      <p 
+                        className="subtract" 
+                        onClick={() => item.quantity > 1 && updateQuantity(item.name, item.quantity - 1)}
+                      >
+                        -
+                      </p>
                       <div className="quantity-box">
                         <p>{item.quantity}</p>
                       </div>
@@ -138,13 +152,8 @@ const Cart = () => {
                     <div className="total">
                       <p>N {item.price * item.quantity}</p>
                     </div>
-                    <div className="trash-box"                        onClick={() => removeFromCart(item.name)}
- >
-                      <img
-                        className="trash"
-                        src={trash}
-                        alt="trash"
-                      />
+                    <div className="trash-box" onClick={() => removeFromCart(item.name)}>
+                      <img className="trash" src={trash} alt="trash" />
                     </div>
                   </div>
                 </div>
@@ -198,8 +207,9 @@ const Cart = () => {
                 whileHover={{ scale: 1.1, backgroundColor: "#e63946", color: "#fff" }}
                 whileTap={{ scale: 0.95, backgroundColor: "#d62839" }}
                 transition={{ type: "spring", stiffness: 300, damping: 10 }}
+                disabled={isLoading}  // Disable button when loading
               >
-                Checkout
+                {isLoading ? "Processing..." : "Checkout"}  {/* Show loading text */}
               </motion.button>
             </div>
           </div>

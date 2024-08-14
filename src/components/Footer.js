@@ -59,10 +59,19 @@ function Footer() {
   // Handle click event for the "Book us now" button
   const handleBookNowClick = () => navigate("/booking");
 
+  // Handle click event for the logo
+  const handleLogoClick = () => navigate("/");
+
   return (
     <section id="footer" className="footer-container" ref={footerRef}>
       <div className="footer-top">
-        <img className="logo-pad" src={logoWhite} alt="logo" />
+        <img
+          className="logo-pad"
+          src={logoWhite}
+          alt="logo"
+          onClick={handleLogoClick}
+          style={{ cursor: "pointer" }} // Optional: add a pointer cursor on hover
+        />
         <h2 className={isInView ? "animate-h2" : ""}>Ready to spice up your event?</h2>
       </div>
       <div className="footer-flex">

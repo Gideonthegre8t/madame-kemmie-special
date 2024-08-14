@@ -16,6 +16,10 @@ function Booking() {
     navigate("/");
   };
 
+  const handleLogoClick = () => {
+    navigate("/");
+  };
+
   const handleFormSubmitSuccess = () => {
     setIsSubmitted(true);
   };
@@ -30,7 +34,7 @@ function Booking() {
       <img className="wallpaper2 mobile" src={wallpaper2mobile} alt="wallpaper" />
       <div className="booking-content">
         <div className="container-top">
-          <img src={logo} alt="logo" />
+          <img src={logo} alt="logo" onClick={handleLogoClick} />
         </div>
         <img className="back-icon" src={backIcon} alt="backIcon" onClick={handleBackClick} />
         <h2 className="book-header">Book us</h2>
