@@ -1333,7 +1333,7 @@ textarea {
     background: #ad31a5;
     flex-direction: column;
     align-items: flex-start;
-    z-index: 100;
+    z-index: 1;
   }
 
   .navbar.links a {
@@ -1368,7 +1368,7 @@ textarea {
   .header-wallpaper {
     position: absolute;
     width: 100%;
-    max-height: 105%;
+    max-height: 100%;
     object-fit: cover;
     top: 0;
     z-index: -1;
@@ -1406,7 +1406,7 @@ textarea {
   .header-content {
     position: relative;
     margin: 0 auto;
-    margin-top: 50%;
+    margin-top: 23%;
   }
 
   .header-content > h2,
@@ -1442,9 +1442,8 @@ textarea {
   }
 
   .services-container {
-    margin-top: 23rem;
-    padding-top: 12em;
-  }
+  margin-top:30%;
+ }
 
   .services-paragraph {
     font-size: 12px;
@@ -1454,7 +1453,6 @@ textarea {
   }
 
   .services-top {
-    margin: 4em 2em;
     display: flex;
     flex-direction: column;
     gap: 2em;
@@ -1715,7 +1713,6 @@ textarea {
     font-size: 16px;
     font-weight: 400;
     line-height: 1.5;
-    color: #323434;
     text-align: center;
   }
 
@@ -1725,19 +1722,19 @@ textarea {
     margin-top: 1em;
   }
 
-  .active-review img {
-    width: 12px;
-    height: 12px;
-    margin: 0 5px;
-    cursor: pointer;
-  }
 
   .active {
     opacity: 1;
+    width: 26px;
+    height: 6px;
+    margin-top: 2px;
   }
 
   .non-active {
     opacity: 0.5;
+    width: 10px;
+    height: 10px;
+
   }
 
   .book-us-form {
@@ -2086,9 +2083,7 @@ textarea {
    width: 10%;
     left: 12%;
    }
-  .header-content {
-    margin-top: 15em;
-  }
+ 
 
   .header-content > h2 {
     width: 50%;
@@ -2110,10 +2105,9 @@ textarea {
     max-width: 310px;
     position: absolute;
   }
-  .services-container {
-    margin-top: 9em;
-    padding-top: 0em;
-  }
+
+  
+ 
   .services-paragraph {
     width: 100%;
     padding: 0;
@@ -2155,6 +2149,17 @@ textarea {
   }
 }
 
+@media only screen and (width >390px) and (width <540px){
+  .header-content {
+    position: relative;
+    margin: 0 auto;
+    margin-top: 30%;
+  }
+  .services-container {
+    margin-top:40%;
+   }
+}
+
 @media only screen and (width < 391px) {
   .logo {
     padding:0em 1em;
@@ -2176,7 +2181,7 @@ textarea {
   }
   .header-content {
     margin: 0 auto;
-    margin-top: 13em;
+    margin-top: 11em;
   }
   .header-content > h2 {
     width: 90%;
@@ -2213,8 +2218,7 @@ textarea {
   }
 
   .services-container {
-    margin-top: 10em;
-    padding-top: 0em;
+    margin-top: 40%;
   }
   .services-paragraph {
     font-size: 12px;
@@ -2316,5 +2320,8 @@ textarea {
   .trash {
     margin-top: -0.2em;
     left: -22%;
+  }
+  .services-container {
+    margin-top: 59%;
   }
 }
