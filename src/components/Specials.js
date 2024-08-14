@@ -34,22 +34,24 @@ function Specials() {
       if (carouselRef.current) {
         const containerWidth = carouselRef.current.offsetWidth;
         const contentWidth = carouselRef.current.scrollWidth;
-        console.log('Container Width:', containerWidth);
-        console.log('Content Width:', contentWidth);
-        const rightConstraint = contentWidth - containerWidth; // Total scrollable width
+
+        // Calculate constraints
+        const leftConstraint = 0; // No left constraint (dragging to start)
+        const rightConstraint = contentWidth - containerWidth; // Right constraint to prevent dragging beyond end
 
         setDragConstraints({
-          left: -rightConstraint, // Set negative constraint to allow scrolling to the start
-          right: +rightConstraint // Allow scrolling to the end
+          left: leftConstraint-rightConstraint, // Allow dragging to the start
+          right: +rightConstraint // Prevent dragging beyond the end
         });
       }
     };
 
     updateDragConstraints(); // Initial calculation of drag constraints
-    window.addEventListener('resize', updateDragConstraints); // Update constraints on window resize
+    const resizeObserver = new ResizeObserver(updateDragConstraints);
+    resizeObserver.observe(carouselRef.current); // Observe changes in the carousel container
 
-    return () => window.removeEventListener('resize', updateDragConstraints); // Clean up listener
-  }, []);
+    return () => resizeObserver.disconnect(); // Clean up observer
+  }, []); // No need to include foodItems here
 
   return (
     <section id="specials" className="specials-container">
@@ -69,63 +71,67 @@ function Specials() {
           dragConstraints={dragConstraints}
           whileTap={{ cursor: "grabbing" }}
         >
-          {foodItems.map((item, index) => (
-            <motion.div
-              className="food-item-card"
-              key={index}
-              whileHover={{
-                scale: 1.05,
-                boxShadow: "15px 15px 30px rgba(0,0,0,0.2)",
-                y: -10
-              }}
-              transition={{ type: "spring", stiffness: 300, damping: 10 }}
-            >
-              <div className="food-item">
-                <img className="item" src={item.img} alt={item.name} />
-                <p className="item-name">{item.name}</p>
-              </div>
-
-              <div className="food-details">
-                <div className="rating-tab">
-                  <p>
-                    <img className="rating-icon" src={star} alt="star" />
-                    {item.rating}
-                  </p>
-                  <p>
-                    <img className="rating-icon" src={fire} alt="fire" />
-                    {item.calories}Kcal
-                  </p>
+          {foodItems.length > 0 ? (
+            foodItems.map((item, index) => (
+              <motion.div
+                className="food-item-card"
+                key={index}
+                whileHover={{
+                  scale: 1.05,
+                  boxShadow: "15px 15px 30px rgba(0,0,0,0.2)",
+                  y: -10
+                }}
+                transition={{ type: "spring", stiffness: 300, damping: 10 }}
+              >
+                <div className="food-item">
+                  <img className="item" src={item.img} alt={item.name} />
+                  <p className="item-name">{item.name}</p>
                 </div>
 
-                <div className="price-cart">
-                  <p className="price">
-                    <span>NGN </span>{item.price}
-                  </p>
-                  <motion.div
-                    className="add-cart"
-                    onClick={() => addToCart(item)}
-                    whileHover={{
-                      scale: 2,
-                      backgroundColor: "#e63946",
-                      color: "#fff",
-                      boxShadow: "0px 5px 15px rgba(0,0,0,0.3)"
-                    }}
-                    whileTap={{
-                      scale: 2,
-                      backgroundColor: "#f1faee",
-                      color: "#1d3557"
-                    }}
-                    transition={{ type: "spring", stiffness: 300, damping: 10 }}
-                  >
+                <div className="food-details">
+                  <div className="rating-tab">
                     <p>
-                      <img className="plus-icon" src={plus} alt="plus" />
-                      Add to cart
+                      <img className="rating-icon" src={star} alt="star" />
+                      {item.rating}
                     </p>
-                  </motion.div>
+                    <p>
+                      <img className="rating-icon" src={fire} alt="fire" />
+                      {item.calories}Kcal
+                    </p>
+                  </div>
+
+                  <div className="price-cart">
+                    <p className="price">
+                      <span>NGN </span>{item.price}
+                    </p>
+                    <motion.div
+                      className="add-cart"
+                      onClick={() => addToCart(item)}
+                      whileHover={{
+                        scale: 1.1,
+                        backgroundColor: "#e63946",
+                        color: "#fff",
+                        boxShadow: "0px 5px 15px rgba(0,0,0,0.3)"
+                      }}
+                      whileTap={{
+                        scale: 0.95,
+                        backgroundColor: "#f1faee",
+                        color: "#1d3557"
+                      }}
+                      transition={{ type: "spring", stiffness: 300, damping: 10 }}
+                    >
+                      <p>
+                        <img className="plus-icon" src={plus} alt="plus" />
+                        Add to cart
+                      </p>
+                    </motion.div>
+                  </div>
                 </div>
-              </div>
-            </motion.div>
-          ))}
+              </motion.div>
+            ))
+          ) : (
+            <p>No specials available at the moment.</p>
+          )}
         </motion.div>
       </div>
     </section>
