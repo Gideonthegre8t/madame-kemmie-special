@@ -138,12 +138,12 @@ const Cart = () => {
                     <div className="total">
                       <p>N {item.price * item.quantity}</p>
                     </div>
-                    <div className="trash-box">
+                    <div className="trash-box"                        onClick={() => removeFromCart(item.name)}
+ >
                       <img
                         className="trash"
                         src={trash}
                         alt="trash"
-                        onClick={() => removeFromCart(item.name)}
                       />
                     </div>
                   </div>

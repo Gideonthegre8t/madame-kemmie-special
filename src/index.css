@@ -742,11 +742,12 @@ textarea {
   border-left: 1px solid #7c1575;
   margin-left: -3em;
   padding: 1em;
+  cursor: pointer;
 }
 .trash {
   margin-top: 0.2em;
   left: -5%;
-  cursor: pointer;
+ 
 }
 
 .total-card {
@@ -1296,7 +1297,7 @@ textarea {
   }
 
   .cart-image {
-    width: 10%;
+    width: 8%;
   }
 
   .event-image1 {
@@ -1434,7 +1435,7 @@ textarea {
   .header-content {
     position: relative;
     margin: 0 auto;
-    margin-top: 60%;
+    margin-top: 65%;
   }
 
   .header-content > h2,
@@ -2112,7 +2113,7 @@ textarea {
  
 
   .header-content > h2 {
-    width: 50%;
+    width: 70%;
   }
   .header-content > h4 {
     width: 65%;
@@ -2183,7 +2184,7 @@ textarea {
     margin-top: 60%;
   }
   .services-container {
-    margin-top:19em;
+    margin-top:20em;
    }
 
  
@@ -2358,4 +2359,8 @@ textarea {
   .services-container {
     margin-top: 69%;
   }
+
+  .cart-detail, .product-flex{
+width: 95%;  
+margin-left: -8px;    }
 }
