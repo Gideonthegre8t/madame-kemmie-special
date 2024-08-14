@@ -162,6 +162,8 @@ button {
   border: none;
 }
 
+
+
 .cart-icon-container {
   position: fixed;
   left: 82%;
@@ -171,8 +173,14 @@ button {
 .cart-counter {
   position: absolute;
   margin-left: -1em;
-  color: red;
-  font-weight: 700;
+  color: #f6cfa0;
+  font-weight: 900;
+  background: transparent;
+  background-color: red;
+  max-width: 100%;
+  height: 18px;
+  border-radius: 12px;
+
 }
 
 .lets-talk {
@@ -1330,6 +1338,9 @@ textarea {
 }
 
 @media only screen and (width< 702px) {
+  .container-top{
+    margin:0em 5em;
+  }
   .back-to-top {
     left: 90%;
   }
@@ -1358,7 +1369,7 @@ textarea {
     top: 0;
     left: 0;
     width: 100%;
-    height: 70%;
+    height: 100%;
     background: #ad31a5;
     flex-direction: column;
     align-items: flex-start;
@@ -1599,14 +1610,10 @@ textarea {
   .container-top > img {
     width: 101px;
     height: 50px;
-    margin-left: -1em;
+    
   }
 
-  .back-icon {
-    position: absolute;
-    margin-top: -5%;
-    margin-left: -1.5em;
-  }
+
 
   .lets-talk,
   .lets-talk2 {
@@ -1936,9 +1943,17 @@ textarea {
   }
 
   .back-icon {
-    margin-left: 5px;
+    margin-left: 15px;
     margin-top: 1em;
     width: 5%;
+  }
+
+  .cart-logo{
+    margin-left: 1em;
+  }
+
+  .cart-back-icon{
+margin-left: 30px;
   }
 
   .wallpaper2 {
@@ -1983,6 +1998,7 @@ textarea {
   .cart-flex {
     width: 100%;
   }
+
 
   .product-details {
     position: relative;
@@ -2362,5 +2378,12 @@ textarea {
 
   .cart-detail, .product-flex{
 width: 95%;  
-margin-left: -8px;    }
+margin-left: 4px;    }
+
+.cart-card{
+margin-left: -5px;
+}
+.cart-list{
+  padding: 0px;
+}
 }

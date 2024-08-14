@@ -89,11 +89,11 @@ const Cart = () => {
   return (
     <section id="cart" className="cart-container">
       <img className="wallpaper2" src={wallpaper2} alt="wallpaper" />
-      <div className="container-top">
-        <img src={logo} alt="logo" />
+      <div className="container-top cart-container-top">
+        <img className="cart-logo" src={logo} alt="logo" />
       </div>
       <img
-        className="back-icon"
+        className="back-icon cart-back-icon"
         src={backIcon}
         alt="backIcon"
         onClick={handleBackClick}
