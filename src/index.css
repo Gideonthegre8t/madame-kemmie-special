@@ -1406,7 +1406,7 @@ textarea {
   .header-content {
     position: relative;
     margin: 0 auto;
-    margin-top: 23%;
+    margin-top: 60%;
   }
 
   .header-content > h2,
@@ -1442,7 +1442,7 @@ textarea {
   }
 
   .services-container {
-  margin-top:30%;
+  margin-top:40%;
  }
 
   .services-paragraph {
@@ -2149,14 +2149,14 @@ textarea {
   }
 }
 
-@media only screen and (width >390px) and (width <540px){
+@media only screen and (width >391px) and (width <600px){
   .header-content {
     position: relative;
     margin: 0 auto;
-    margin-top: 30%;
+    margin-top: 70%;
   }
   .services-container {
-    margin-top:40%;
+    margin-top:55%;
    }
 }
 
@@ -2218,7 +2218,7 @@ textarea {
   }
 
   .services-container {
-    margin-top: 40%;
+    margin-top: 75%;
   }
   .services-paragraph {
     font-size: 12px;
@@ -2322,6 +2322,6 @@ textarea {
     left: -22%;
   }
   .services-container {
-    margin-top: 59%;
+    margin-top: 69%;
   }
 }
