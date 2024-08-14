@@ -27,38 +27,30 @@ const foodItems = [
 function Specials() {
   const { addToCart } = useContext(CartContext); // Access addToCart function from CartContext
   const carouselRef = useRef(null); // Ref for carousel container
-  const [isMobile, setIsMobile] = useState(window.innerWidth < 700); // Check if the screen width is less than 700px
   const [dragConstraints, setDragConstraints] = useState({ left: 0, right: 0 }); // State for drag constraints
 
   useEffect(() => {
-    // Update drag constraints based on carousel width and content width
     const updateDragConstraints = () => {
-      if (carouselRef.current && isMobile) {
+      if (carouselRef.current) {
         const containerWidth = carouselRef.current.offsetWidth;
         const contentWidth = carouselRef.current.scrollWidth;
 
-        // Calculate constraints to ensure smooth dragging
-        const rightConstraint = Math.max(contentWidth - containerWidth, 0);
-        const leftConstraint = Math.max(contentWidth - containerWidth, 0);
-
+        // Calculate right constraint to allow scrolling to the end
+        const rightConstraint = contentWidth - containerWidth;
+        
+        // Set constraints to ensure smooth scrolling to the start and end
         setDragConstraints({
-          left: -rightConstraint,
-          right: +leftConstraint
+          left: -rightConstraint, // Allow dragging to the start
+          right: +rightConstraint // Allow dragging to the end
         });
       }
     };
 
     updateDragConstraints(); // Initial calculation of drag constraints
-    window.addEventListener('resize', () => {
-      setIsMobile(window.innerWidth < 700); // Update screen size
-      updateDragConstraints();
-    });
+    window.addEventListener('resize', updateDragConstraints); // Update constraints on window resize
 
-    return () => window.removeEventListener('resize', () => {
-      setIsMobile(window.innerWidth < 700); // Clean up listener
-      updateDragConstraints();
-    });
-  }, [isMobile]);
+    return () => window.removeEventListener('resize', updateDragConstraints); // Clean up listener
+  }, []);
 
   return (
     <section id="specials" className="specials-container">
@@ -72,133 +64,70 @@ function Specials() {
         </p>
       </div>
       <div className="carousel" ref={carouselRef}>
-        {isMobile ? (
-          <motion.div
-            className="food-item-container"
-            drag="x" // Enable horizontal dragging
-            dragConstraints={dragConstraints} // Apply drag constraints
-            whileTap={{ cursor: "grabbing" }} // Change cursor on drag
-          >
-            {foodItems.map((item, index) => (
-              <motion.div
-                className="food-item-card"
-                key={index}
-                whileHover={{
-                  scale: 1.05, // Slightly enlarge the card on hover
-              
-                  boxShadow: "15px 15px 30px rgba(0,0,0,0.2)", // Add shadow on hover
-                  y: -10 // Move the card up slightly on hover
-                }}
-                transition={{ type: "spring", stiffness: 300, damping: 10 }} // Smooth transition for hover effect
-              >
-                <div className="food-item">
-                  <img className="item" src={item.img} alt={item.name} />
-                  <p className="item-name">{item.name}</p>
+        <motion.div
+          className="food-item-container"
+          drag="x" // Enable horizontal dragging
+          dragConstraints={dragConstraints} // Apply drag constraints
+          whileTap={{ cursor: "grabbing" }} // Change cursor on drag
+        >
+          {foodItems.map((item, index) => (
+            <motion.div
+              className="food-item-card"
+              key={index}
+              whileHover={{
+                scale: 1.05, // Slightly enlarge the card on hover
+                boxShadow: "15px 15px 30px rgba(0,0,0,0.2)", // Add shadow on hover
+                y: -10 // Move the card up slightly on hover
+              }}
+              transition={{ type: "spring", stiffness: 300, damping: 10 }} // Smooth transition for hover effect
+            >
+              <div className="food-item">
+                <img className="item" src={item.img} alt={item.name} />
+                <p className="item-name">{item.name}</p>
+              </div>
+
+              <div className="food-details">
+                <div className="rating-tab">
+                  <p>
+                    <img className="rating-icon" src={star} alt="star" />
+                    {item.rating}
+                  </p>
+                  <p>
+                    <img className="rating-icon" src={fire} alt="fire" />
+                    {item.calories}Kcal
+                  </p>
                 </div>
 
-                <div className="food-details">
-                  <div className="rating-tab">
+                <div className="price-cart">
+                  <p className="price">
+                    <span>NGN </span>{item.price}
+                  </p>
+                  <motion.div
+                    className="add-cart"
+                    onClick={() => addToCart(item)} // Add item to cart on click
+                    whileHover={{
+                      scale: 2, // Slightly enlarge button on hover
+                      backgroundColor: "#e63946", // Change background color on hover
+                      color: "#fff", // Change text color on hover
+                      boxShadow: "0px 5px 15px rgba(0,0,0,0.3)" // Add shadow on hover
+                    }}
+                    whileTap={{
+                      scale: 2, // Slightly shrink button on click
+                      backgroundColor: "#f1faee", // Change background color on click
+                      color: "#1d3557" // Change text color on click
+                    }}
+                    transition={{ type: "spring", stiffness: 300, damping: 10 }} // Smooth transition for button effects
+                  >
                     <p>
-                      <img className="rating-icon" src={star} alt="star" />
-                      {item.rating}
+                      <img className="plus-icon" src={plus} alt="plus" />
+                      Add to cart
                     </p>
-                    <p>
-                      <img className="rating-icon" src={fire} alt="fire" />
-                      {item.calories}Kcal
-                    </p>
-                  </div>
-
-                  <div className="price-cart">
-                    <p className="price">
-                      <span>NGN </span>{item.price}
-                    </p>
-                    <motion.div
-                      className="add-cart"
-                      onClick={() => addToCart(item)} // Add item to cart on click
-                      whileHover={{
-                        scale: 2, // Slightly enlarge button on hover
-                        backgroundColor: "#e63946", // Change background color on hover
-                        color: "#fff", // Change text color on hover
-                        boxShadow: "0px 5px 15px rgba(0,0,0,0.3)" // Add shadow on hover
-                      }}
-                      whileTap={{
-                        scale: 2, // Slightly shrink button on click
-                        backgroundColor: "#f1faee", // Change background color on click
-                        color: "#1d3557" // Change text color on click
-                      }}
-                      transition={{ type: "spring", stiffness: 300, damping: 10 }} // Smooth transition for button effects
-                    >
-                      <p>
-                        <img className="plus-icon" src={plus} alt="plus" />
-                        Add to cart
-                      </p>
-                    </motion.div>
-                  </div>
+                  </motion.div>
                 </div>
-              </motion.div>
-            ))}
-          </motion.div>
-        ) : (
-          <div className="food-item-container">
-            {foodItems.map((item, index) => (
-              <motion.div
-                className="food-item-card"
-                key={index}
-                whileHover={{
-                  scale: 1.05, // Slightly enlarge the card on hover
-                  boxShadow: "0px 15px 30px rgba(0,0,0,0.2)", // Add shadow on hover
-                  y: -10 // Move the card up slightly on hover
-                }}
-                transition={{ type: "spring", stiffness: 300, damping: 10 }} // Smooth transition for hover effect
-              >
-                <div className="food-item">
-                  <img className="item" src={item.img} alt={item.name} />
-                  <p className="item-name">{item.name}</p>
-                </div>
-
-                <div className="food-details">
-                  <div className="rating-tab">
-                    <p>
-                      <img className="rating-icon" src={star} alt="star" />
-                      {item.rating}
-                    </p>
-                    <p>
-                      <img className="rating-icon" src={fire} alt="fire" />
-                      {item.calories}Kcal
-                    </p>
-                  </div>
-
-                  <div className="price-cart">
-                    <p className="price">
-                      <span>NGN </span>{item.price}
-                    </p>
-                    <motion.div
-                      className="add-cart"
-                      onClick={() => addToCart(item)} // Add item to cart on click
-                      whileHover={{
-                        scale: 1.1, // Slightly enlarge button on hover
-                        backgroundColor: "#e63946", // Change background color on hover
-                        color: "#fff", // Change text color on hover
-                        boxShadow: "0px 5px 15px rgba(0,0,0,0.3)" // Add shadow on hover
-                      }}
-                      whileTap={{
-                        scale: 0.95, // Slightly shrink button on click
-                        backgroundColor: "#f1faee", // Change background color on click
-                        color: "#1d3557" // Change text color on click
-                      }}
-                      transition={{ type: "spring", stiffness: 300, damping: 10 }} // Smooth transition for button effects
-                    >
-                      <p>
-                        <img className="plus-icon" src={plus} alt="plus" />
-                        Add to cart
-                      </p>
-                    </motion.div>
-                  </div>
-                </div>
-              </motion.div>
-            ))}
-          </div>
-        )}
+              </div>
+            </motion.div>
+          ))}
+        </motion.div>
       </div>
     </section>
   );

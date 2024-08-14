@@ -110,12 +110,11 @@ nav a:hover {
   position: absolute;
 }
 
-
-.ring{
+.ring {
   position: absolute;
   width: 3%;
   top: 90%;
- left: 6%;
+  left: 6%;
 }
 .header-content {
   position: relative;
@@ -162,8 +161,6 @@ button {
   border: none;
 }
 
-
-
 .cart-icon-container {
   position: fixed;
   left: 82%;
@@ -173,14 +170,13 @@ button {
 .cart-counter {
   position: absolute;
   margin-left: -1em;
-  color: red ;
+  color: red;
   font-weight: 900;
   background: transparent;
-  background-color:#7c1575 ;
+  background-color: #7c1575;
   max-width: 100%;
   height: 18px;
   border-radius: 12px;
-
 }
 
 .lets-talk {
@@ -430,7 +426,6 @@ span {
 
 .services2-card img {
   width: 300px;
-  
 }
 
 .services2-card {
@@ -438,8 +433,6 @@ span {
   padding-bottom: 1em;
   border-radius: 20px;
 }
-
-
 
 .service2-name {
   margin-top: -2em;
@@ -469,7 +462,6 @@ span {
   margin-top: 2em;
   border-radius: 20px;
 }
-
 
 .review-scroll {
   padding: 24px 16px 24px 16px;
@@ -537,7 +529,6 @@ span {
   gap: 2em;
   padding-bottom: 2em;
   justify-content: center;
- 
 }
 
 a,
@@ -559,7 +550,7 @@ a,
 
 .book-us-footer,
 .whatsapp-button {
-margin: 0 auto;
+  margin: 0 auto;
   background: #f6cfa0;
 }
 .handle-icon,
@@ -727,7 +718,8 @@ textarea {
 .quantity {
   margin-top: 1.3em;
 }
-.subtract, .addition{
+.subtract,
+.addition {
   cursor: pointer;
 }
 
@@ -752,7 +744,6 @@ textarea {
 .trash {
   margin-top: 0.2em;
   left: -5%;
- 
 }
 
 .total-card {
@@ -920,30 +911,32 @@ textarea {
   cursor: pointer;
 }
 
-.top-arrow{
+.top-arrow {
   width: 100%;
 }
 
 @keyframes typewriter {
-  from { width: 0; }
-  to { width: 100%; }
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
 }
 
 @keyframes blink {
-  50% { border-color: transparent; }
+  50% {
+    border-color: transparent;
+  }
 }
 
 .animate-h2 {
- 
   white-space: nowrap;
   overflow: hidden; /* Hide overflow so cursor appears right after text */
-  border-right: 0.15em solid rgba(0,0,0,0.75);
-  animation: 
-    typewriter 4s steps(40, end) 1s 1 normal both,
+  border-right: 0.15em solid rgba(0, 0, 0, 0.75);
+  animation: typewriter 4s steps(40, end) 1s 1 normal both,
     blink 500ms steps(40, end) infinite;
 }
-
-
 
 @media only screen and (width >2022px) {
   .header-content {
@@ -1009,7 +1002,6 @@ textarea {
   .food-item-container {
     place-items: center;
     gap: 5em;
-
   }
 
   .services-paragraph {
@@ -1024,8 +1016,6 @@ textarea {
   .review-inner-carousel {
     margin: 0 15em;
   }
-
-  
 
   .food-item-container {
     margin: 3em 20em;
@@ -1199,24 +1189,20 @@ textarea {
     width: 7%;
     margin-left: 1em;
   }
-  
+
   .footer-container {
     margin: 0 auto;
-  
+
     flex-direction: column;
-   
-  
   }
   .footer-top {
     text-align: center;
   }
-
 }
 
 @media only screen and (width > 701px) and (max-width: 999px) {
-  .ring{
-   
-   left: 10%;
+  .ring {
+    left: 10%;
   }
   .lets-talk-container {
     margin-top: 7em;
@@ -1324,28 +1310,25 @@ textarea {
   .inner-carousel {
     display: grid;
     grid-template-columns: 2fr 2fr;
- 
   }
 
   .footer-top > h2 {
-
     font-size: 34px;
   }
 
-  .footer-flex{
+  .footer-flex {
     margin-top: -3em;
   }
-
 }
 
 @media only screen and (width< 702px) {
-  .container-top{
-    margin:0em 5em;
+  .container-top {
+    margin: 0em 5em;
   }
   .back-to-top {
     left: 90%;
   }
-  .top-arrow{
+  .top-arrow {
     width: 100%;
   }
   .desktop {
@@ -1432,8 +1415,8 @@ textarea {
   }
 
   .logo {
-    padding:0em 2em;
-    
+    padding: 0em 2em;
+
     margin-left: -5%;
   }
 
@@ -1483,8 +1466,8 @@ textarea {
   }
 
   .services-container {
-    margin-top:30%;
-   }
+    margin-top: 30%;
+  }
 
   .services-paragraph {
     font-size: 12px;
@@ -1605,10 +1588,7 @@ textarea {
   .container-top > img {
     width: 101px;
     height: 50px;
-    
   }
-
-
 
   .lets-talk,
   .lets-talk2 {
@@ -1623,8 +1603,6 @@ textarea {
     margin-top: 2em;
     margin-left: 23%;
   }
-
- 
 
   .services2-container h3 {
     text-align: center;
@@ -1679,7 +1657,6 @@ textarea {
     position: relative;
     overflow: hidden;
     width: 100%;
- 
   }
 
   .review-inner-carousel {
@@ -1707,7 +1684,6 @@ textarea {
     border-radius: 24px;
     width: 306px;
   }
-
 
   .review-top {
     display: flex;
@@ -1751,7 +1727,6 @@ textarea {
     margin-top: 1em;
   }
 
-
   .active {
     opacity: 1;
     width: 26px;
@@ -1763,7 +1738,6 @@ textarea {
     opacity: 0.5;
     width: 10px;
     height: 10px;
-
   }
 
   .book-us-form {
@@ -1839,7 +1813,6 @@ textarea {
     width: 123px;
     height: 47px;
     border-radius: 11px;
-    
   }
 
   .footer-top > h2 {
@@ -1860,7 +1833,6 @@ textarea {
   }
   .book-us-footer {
     margin-top: -5em;
-    
   }
 
   .social-link {
@@ -1945,12 +1917,12 @@ textarea {
     width: 5%;
   }
 
-  .cart-logo{
+  .cart-logo {
     margin-left: 1em;
   }
 
-  .cart-back-icon{
-margin-left: 30px;
+  .cart-back-icon {
+    margin-left: 30px;
   }
 
   .wallpaper2 {
@@ -1995,7 +1967,6 @@ margin-left: 30px;
   .cart-flex {
     width: 100%;
   }
-
 
   .product-details {
     position: relative;
@@ -2119,11 +2090,10 @@ margin-left: 30px;
 }
 
 @media only screen and (width >390px) and (width <701px) {
-  .ring{
-   width: 10%;
+  .ring {
+    width: 10%;
     left: 12%;
-   }
- 
+  }
 
   .header-content > h2 {
     width: 70%;
@@ -2193,33 +2163,29 @@ margin-left: 30px;
     max-width: 70%;
     height: auto;
   }
-
 }
 
-@media only screen and (width >391px) and (width <649px){
+@media only screen and (width >391px) and (width <649px) {
   .header-content {
     position: relative;
     margin: 0 auto;
     margin-top: 60%;
   }
   .services-container {
-    margin-top:20em;
-   }
-
- 
+    margin-top: 20em;
+  }
 }
 
 @media only screen and (width < 391px) {
   .logo {
-    padding:0em 1em;
+    padding: 0em 1em;
     width: 50%;
-    
   }
 
-  .ring{
+  .ring {
     width: 10%;
-     left: 16%;
-    }
+    left: 16%;
+  }
   .wallpaper2 {
     height: 300px;
   }
@@ -2360,7 +2326,6 @@ margin-left: 30px;
 }
 
 @media only screen and (width < 370px) {
-
   .header-content > h4 {
     width: 70%;
   }
@@ -2385,14 +2350,16 @@ margin-left: 30px;
     margin-top: 69%;
   }
 
-  .cart-detail, .product-flex{
-width: 95%;  
-margin-left: 4px;    }
+  .cart-detail,
+  .product-flex {
+    width: 95%;
+    margin-left: 4px;
+  }
 
-.cart-card{
-margin-left: -5px;
-}
-.cart-list{
-  padding: 0px;
-}
+  .cart-card {
+    margin-left: -5px;
+  }
+  .cart-list {
+    padding: 0px;
+  }
 }
