@@ -35,7 +35,7 @@ function Services2() {
         const containerWidth = carouselRef.current.offsetWidth;
         const contentWidth = carouselRef.current.scrollWidth;
 
-        // Calculate drag constraints to ensure smooth dragging
+        // Calculate drag constraints using the same technique you provided
         const rightConstraint = Math.max(contentWidth - containerWidth, 0);
         const leftConstraint = Math.max(contentWidth - containerWidth, 0);
 
@@ -77,7 +77,7 @@ function Services2() {
                 className="services2-card"
                 key={index}
                 whileHover={{
-                  scale: 1, // Enlarge the card slightly on hover
+                  scale: 1.05, // Enlarge the card slightly on hover
                   rotate: 3, // Rotate the card slightly on hover
                   boxShadow: "0px 15px 30px rgba(0,0,0,0.3)", // Add shadow on hover
                   y: -10 // Move the card up slightly on hover
@@ -96,7 +96,7 @@ function Services2() {
                 className="services2-card"
                 key={index}
                 whileHover={{
-                  scale: 1, // Enlarge the card slightly on hover
+                  scale: 1.05, // Enlarge the card slightly on hover
                   rotate: 3, // Rotate the card slightly on hover
                   boxShadow: "0px 15px 30px rgba(0,0,0,0.3)", // Add shadow on hover
                   y: -10 // Move the card up slightly on hover
