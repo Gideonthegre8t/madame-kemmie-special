@@ -24,10 +24,10 @@ function App() {
       <div>
         <Helmet>
           <meta charSet="utf-8" />
-          <title>Madame Kemmi Catering - Top Catering Service</title>
-          <meta name="description" content="Madame Kemmi offers the best catering services for weddings, corporate events, and parties in [Your City]. Enjoy top-tier catering with customized menus." />
+          <title>Madame Kemmie Special - Top Catering Service</title>
+          <meta name="description" content="Madame Kemmie offers the best catering services for weddings, corporate events, and parties in [Your City]. Enjoy top-tier catering with customized menus." />
           <meta name="keywords" content="catering service, wedding catering, corporate catering, party catering, event catering" />
-          <meta name="author" content="Madame Kemmi Catering" />
+          <meta name="author" content="Madame Kemmie Catering" />
           <meta name="viewport" content="width=device-width, initial-scale=1" />
         </Helmet>
 
@@ -35,7 +35,7 @@ function App() {
           <Route path="/" element={
             <>
               <Helmet>
-                <title>Madame Kemmi Catering - Home</title>
+                <title>Madame Kemmie Special - Home</title>
                 <meta name="description" content="Explore the best catering services in [Your City] by Madame Kemmi. We specialize in weddings, parties, and corporate events." />
               </Helmet>
               <Header />
@@ -49,7 +49,7 @@ function App() {
           <Route path="/cart" element={
             <>
               <Helmet>
-                <title>Your Cart - Madame Kemmi Catering</title>
+                <title>Your Cart - Madame Kemmie Special</title>
                 <meta name="description" content="Review your selected items and proceed to checkout. Madame Kemmi Catering provides top-tier service for all events." />
               </Helmet>
               <Cart />
@@ -58,7 +58,7 @@ function App() {
           <Route path="/booking" element={
             <>
               <Helmet>
-                <title>Book a Service - Madame Kemmi Catering</title>
+                <title>Book a Service - Madame Kemmie Special</title>
                 <meta name="description" content="Book our catering services for your upcoming event. We offer tailored solutions for weddings, parties, and corporate events." />
               </Helmet>
               <Booking />
