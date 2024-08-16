@@ -504,8 +504,13 @@ span {
   gap: 1em;
 }
 
+#footer{
+ background: #7c1575;
+ padding-bottom: 1em;
+}
+
 .footer-container {
-  background: #7c1575;
+ 
   padding: 4em;
   display: flex;
   justify-content: space-between;
@@ -569,6 +574,12 @@ a,
 
 .footer-down > p {
   margin-left: 23%;
+}
+
+.stamp{
+  margin: 0 auto;
+  text-align: center;
+  color:#fff
 }
 
 .container-top {

@@ -6,6 +6,7 @@ import whatsapp from "../assets/images/whatsapp.png";
 import instagram from "../assets/images/instagram.png";
 import facebook from "../assets/images/facebook.png";
 import tiktok from "../assets/images/tiktok.png";
+import Copyright from "./Copyright";
 
 // Social media links data
 const socialLinks = [
@@ -63,8 +64,8 @@ function Footer() {
   const handleLogoClick = () => navigate("/");
 
   return (
-    <section id="footer" className="footer-container" ref={footerRef}>
-      <div className="footer-top">
+    <section id="footer"ref={footerRef}>
+      <div  className="footer-container" >    <div className="footer-top">
         <img
           className="logo-pad"
           src={logoWhite}
@@ -129,7 +130,9 @@ function Footer() {
             </a>
           ))}
         </div>
-      </div>
+      </div></div>
+      <div><Copyright /></div>
+
     </section>
   );
 }
