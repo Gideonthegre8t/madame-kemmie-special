@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import { Helmet } from 'react-helmet'; // Import react-helmet
+import { Helmet } from 'react-helmet'; // Import react-helmet for SEO
 import Header from './components/Header';
 import Services from './components/Services';
 import Specials from './components/Specials';
@@ -22,13 +22,21 @@ function App() {
   return (
     <Router>
       <div>
+        <Helmet>
+          <meta charSet="utf-8" />
+          <title>Madame Kemmi Catering - Top Catering Service</title>
+          <meta name="description" content="Madame Kemmi offers the best catering services for weddings, corporate events, and parties in [Your City]. Enjoy top-tier catering with customized menus." />
+          <meta name="keywords" content="catering service, wedding catering, corporate catering, party catering, event catering" />
+          <meta name="author" content="Madame Kemmi Catering" />
+          <meta name="viewport" content="width=device-width, initial-scale=1" />
+        </Helmet>
+
         <Routes>
           <Route path="/" element={
             <>
               <Helmet>
-                <title>Welcome to Madame Kemi Special</title>
-                <meta name="description" content="Offering top-tier catering services for weddings, corporate events, and parties." />
-                <meta name="keywords" content="catering, food, events, wedding, corporate, party" />
+                <title>Madame Kemmi Catering - Home</title>
+                <meta name="description" content="Explore the best catering services in [Your City] by Madame Kemmi. We specialize in weddings, parties, and corporate events." />
               </Helmet>
               <Header />
               <Services />
@@ -41,8 +49,8 @@ function App() {
           <Route path="/cart" element={
             <>
               <Helmet>
-                <title>Your Cart - Madame Kemi Special</title>
-                <meta name="description" content="Review your selected items and proceed to checkout." />
+                <title>Your Cart - Madame Kemmi Catering</title>
+                <meta name="description" content="Review your selected items and proceed to checkout. Madame Kemmi Catering provides top-tier service for all events." />
               </Helmet>
               <Cart />
             </>
@@ -50,8 +58,8 @@ function App() {
           <Route path="/booking" element={
             <>
               <Helmet>
-                <title>Book a Service - Madame Kemi Special</title>
-                <meta name="description" content="Book our services for your next event. We're here to make your day special." />
+                <title>Book a Service - Madame Kemmi Catering</title>
+                <meta name="description" content="Book our catering services for your upcoming event. We offer tailored solutions for weddings, parties, and corporate events." />
               </Helmet>
               <Booking />
             </>
