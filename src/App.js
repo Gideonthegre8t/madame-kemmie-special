@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { Helmet } from 'react-helmet'; // Import react-helmet
 import Header from './components/Header';
 import Services from './components/Services';
 import Specials from './components/Specials';
@@ -24,6 +25,11 @@ function App() {
         <Routes>
           <Route path="/" element={
             <>
+              <Helmet>
+                <title>Welcome to Madame Kemi Special</title>
+                <meta name="description" content="Offering top-tier catering services for weddings, corporate events, and parties." />
+                <meta name="keywords" content="catering, food, events, wedding, corporate, party" />
+              </Helmet>
               <Header />
               <Services />
               <Specials />
@@ -32,8 +38,24 @@ function App() {
               <Footer />
             </>
           } />
-          <Route path="/cart" element={<Cart />} />
-          <Route path="/booking" element={<Booking />} />
+          <Route path="/cart" element={
+            <>
+              <Helmet>
+                <title>Your Cart - Madame Kemi Special</title>
+                <meta name="description" content="Review your selected items and proceed to checkout." />
+              </Helmet>
+              <Cart />
+            </>
+          } />
+          <Route path="/booking" element={
+            <>
+              <Helmet>
+                <title>Book a Service - Madame Kemi Special</title>
+                <meta name="description" content="Book our services for your next event. We're here to make your day special." />
+              </Helmet>
+              <Booking />
+            </>
+          } />
         </Routes>
       </div>
     </Router>
