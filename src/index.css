@@ -579,7 +579,8 @@ a,
 .stamp{
   margin: 0 auto;
   text-align: center;
-  color:#fff
+  color:#fff;
+  font-size: 12px;
 }
 
 .container-top {
