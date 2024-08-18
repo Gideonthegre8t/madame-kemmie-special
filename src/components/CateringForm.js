@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { motion } from "framer-motion"; // Import motion from framer-motion
 
 const CateringForm = ({ onSubmitSuccess }) => {
+  // Form data state
   const [formData, setFormData] = useState({
     fullName: "",
     email: "",
@@ -15,6 +16,9 @@ const CateringForm = ({ onSubmitSuccess }) => {
     additionalMessage: "",
   });
 
+  // Loading state
+  const [isLoading, setIsLoading] = useState(false);
+
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData({
@@ -25,8 +29,10 @@ const CateringForm = ({ onSubmitSuccess }) => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    
+    // Set loading to true when the form is submitted
+    setIsLoading(true);
 
-    // Replace "YOUR_FORMSPREE_ENDPOINT" with your Formspree form's endpoint
     fetch("https://formspree.io/f/movawyze", {
       method: "POST",
       headers: {
@@ -44,6 +50,10 @@ const CateringForm = ({ onSubmitSuccess }) => {
       })
       .catch((error) => {
         console.error("Error submitting form:", error);
+      })
+      .finally(() => {
+        // Set loading to false after request completes
+        setIsLoading(false);
       });
 
     // Clear the form after submission
@@ -169,8 +179,9 @@ const CateringForm = ({ onSubmitSuccess }) => {
           whileHover={{ scale: 1.05, backgroundColor: "#f0a500" }} // Slightly enlarge and change color on hover
           whileTap={{ scale: 0.95, backgroundColor: "#e07b39" }} // Slightly shrink and darken color on click
           transition={{ type: "spring", stiffness: 300, damping: 10 }} // Smooth spring transition
+          disabled={isLoading} // Disable button while loading
         >
-          Submit Form
+          {isLoading ? "Submitting..." : "Submit Form"} {/* Change button text based on loading state */}
         </motion.button>
       </form>
     </div>
