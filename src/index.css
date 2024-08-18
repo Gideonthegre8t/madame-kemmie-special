@@ -2102,6 +2102,10 @@ textarea {
 }
 
 @media only screen and (width >390px) and (width <701px) {
+
+  .header-wallpaper{
+    max-height: 150%;
+  }
   .ring {
     width: 10%;
     left: 12%;
@@ -2191,8 +2195,8 @@ textarea {
 @media only screen and (width < 392px) {
   
   .header-wallpaper {
-position: absolute;
-   display: none;
+
+    height: 120%;
   
   }
   .logo {
