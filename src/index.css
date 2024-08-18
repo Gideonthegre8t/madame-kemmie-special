@@ -2188,11 +2188,11 @@ textarea {
   }
 }
 
-@media only screen and (width < 391px) {
+@media only screen and (width < 392px) {
   
   .header-wallpaper {
 
-    height: 110%;
+    height: auto;
   
   }
   .logo {
