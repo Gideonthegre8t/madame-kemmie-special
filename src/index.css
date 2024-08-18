@@ -86,7 +86,7 @@ nav a:hover {
   z-index: -1;
 }
 
-.header-wallpaper{
+.header-wallpaper {
   height: auto;
 }
 
@@ -508,13 +508,12 @@ span {
   gap: 1em;
 }
 
-#footer{
- background: #7c1575;
- padding-bottom: 1em;
+#footer {
+  background: #7c1575;
+  padding-bottom: 1em;
 }
 
 .footer-container {
- 
   padding: 4em;
   display: flex;
   justify-content: space-between;
@@ -580,10 +579,10 @@ a,
   margin-left: 23%;
 }
 
-.stamp{
+.stamp {
   margin: 0 auto;
   text-align: center;
-  color:#fff;
+  color: #fff;
   font-size: 12px;
 }
 
@@ -1406,10 +1405,9 @@ textarea {
     z-index: 1;
   }
   .header-wallpaper {
-  
     position: absolute;
     width: 100%;
-  height: 150%;
+ height: 160%;
     object-fit: cover;
     top: 0;
     z-index: -1;
@@ -2107,8 +2105,6 @@ textarea {
 }
 
 @media only screen and (width >390px) and (width <701px) {
-
-
   .ring {
     width: 10%;
     left: 12%;
@@ -2196,11 +2192,8 @@ textarea {
 }
 
 @media only screen and (width < 392px) {
-  
   .header-wallpaper {
-
     height: 120%;
-  
   }
   .logo {
     padding: 0em 1em;
@@ -2351,11 +2344,8 @@ textarea {
 }
 
 @media only screen and (width < 370px) {
-
   .header-wallpaper {
-
     height: 110%;
-  
   }
 
   .header-content > h4 {
