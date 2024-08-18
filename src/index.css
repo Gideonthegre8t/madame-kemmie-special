@@ -1406,10 +1406,10 @@ textarea {
     z-index: 1;
   }
   .header-wallpaper {
-    display: none;
+  
     position: absolute;
     width: 100%;
-  height: 100%;
+  height: 150%;
     object-fit: cover;
     top: 0;
     z-index: -1;
