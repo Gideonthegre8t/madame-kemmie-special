@@ -1,6 +1,9 @@
 import React, { useState, useEffect, useRef } from "react";
 import { motion } from "framer-motion";
 import mike from "../assets/images/photo/Mike.png";
+import gideon from "../assets/images/photo/GIDEON.png";
+import blessing from "../assets/images/photo/blessing.png";
+
 import starRate from "../assets/images/star-rating.png";
 import active from "../assets/images/active.png";
 import nonActive from "../assets/images/non-active.png";
@@ -11,22 +14,22 @@ function Scroll() {
       id: 1,
       reviewText:
         "Best catering experience we've ever had! The attention to detail and the quality of the food were outstanding. We will definitely be using their services again.",
-      imgLoc: mike,
-      name: "Mike.J",
+      imgLoc: gideon,
+      name: "Johnson.G",
     },
     {
       id: 2,
       reviewText:
         "The food was absolutely amazing, and the presentation was stunning! Our guests couldn't stop raving about the delicious dishes. Thank you for making our event unforgettable!",
-      imgLoc: mike,
-      name: "Bryant.K",
+      imgLoc: blessing,
+      name: "Blessing.C",
     },
     {
       id: 3,
       reviewText:
         "Exceptional service from start to finish. The team was professional, punctual, and catered to all our dietary needs with ease. Highly recommend!",
       imgLoc: mike,
-      name: "James.L",
+      name: "Aliyu M",
     },
   ];
 
