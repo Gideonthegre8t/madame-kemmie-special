@@ -1377,7 +1377,7 @@ textarea {
 
   .navbar.links a {
     margin: 1rem;
-    color: #fff;
+    color: #f6cfa0;
     text-decoration: none;
     font-family: "Inter";
     font-size: 18px;
@@ -1709,6 +1709,7 @@ textarea {
 
   .profile-name {
     display: flex;
+    width: 80px;
     align-items: center;
     margin-top: -0.1em;
     margin-left: 3em;
