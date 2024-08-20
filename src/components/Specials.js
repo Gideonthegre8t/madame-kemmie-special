@@ -14,14 +14,14 @@ import smallChops from "../assets/images/small-chops.png";
 import stirFriedSpag from "../assets/images/stir-fried-spaghetti.png";
 
 const foodItems = [
-  { img: spicyGrilled, name: "Spicy Grilled Chicken", rating: 4.9, calories: 150, price: 250 },
-  { img: fluffyFruit, name: "Fluffy Fruit Pancake", rating: 4.9, calories: 150, price: 250 },
-  { img: chocolateWhip, name: "Chocolate Whipcream Cake", rating: 4.9, calories: 150, price: 250 },
-  { img: shrimpBasmati, name: "Shrimp Basmati Fried Rice", rating: 4.9, calories: 150, price: 250 },
-  { img: foodTray, name: "Food Tray", rating: 4.9, calories: 150, price: 250 },
-  { img: richVegetableSalad, name: "Rich Vegetable Salad", rating: 4.9, calories: 150, price: 250 },
-  { img: smallChops, name: "Small Chops", rating: 4.9, calories: 150, price: 250 },
-  { img: stirFriedSpag, name: "Stir Fried Spaghetti", rating: 4.9, calories: 150, price: 250 },
+  { img: spicyGrilled, name: "Spicy Grilled Chicken", rating: 4.9, calories: 150, price: 12000 },
+  { img: fluffyFruit, name: "Fluffy Fruit Pancake", rating: 4.9, calories: 150, price: 7500 },
+  { img: chocolateWhip, name: "Chocolate Whipcream Cake", rating: 4.9, calories: 150, price: 45000 },
+  { img: shrimpBasmati, name: "Shrimp Basmati Fried Rice", rating: 4.9, calories: 150, price: 6500 },
+  { img: foodTray, name: "Food Tray", rating: 4.9, calories: 150, price: 85000 },
+  { img: richVegetableSalad, name: "Rich Vegetable Salad", rating: 4.9, calories: 150, price: 8000 },
+  { img: smallChops, name: "Small Chops", rating: 4.9, calories: 150, price: 11000 },
+  { img: stirFriedSpag, name: "Stir Fried Spaghetti", rating: 4.9, calories: 150, price: 7500 },
 ];
 
 function Specials() {
