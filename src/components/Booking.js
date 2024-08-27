@@ -32,10 +32,10 @@ function Booking() {
   return (
     <section id="booking" className="booking-container">
       <Helmet>
-        <title>Booking - Madame Kemmie Catering</title>
+        <title>Booking - Madame Kemmie Special</title>
         <meta name="description" content="Book Madame Kemmie’s catering services. Fill out the form to schedule your event and get in touch with us for further details and pricing." />
         <meta name="keywords" content="catering booking, Madame Kemmie, event catering, book catering services" />
-        <meta property="og:title" content="Booking - Madame Kemmie Catering" />
+        <meta property="og:title" content="Booking - Madame Kemmie Special" />
         <meta property="og:description" content="Book Madame Kemmie’s catering services. Fill out the form to schedule your event and get in touch with us for further details and pricing." />
         <meta property="og:image" content="URL_TO_AN_IMAGE_REPRESENTING_THE_BOOKING_PAGE" />
         <meta property="og:url" content="URL_TO_THE_BOOKING_PAGE" />

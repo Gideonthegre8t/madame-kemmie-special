@@ -953,6 +953,7 @@ textarea {
 
 .animate-h2 {
   white-space: nowrap;
+  color: #fff;
   overflow: hidden; /* Hide overflow so cursor appears right after text */
   border-right: 0.15em solid rgba(0, 0, 0, 0.75);
   animation: typewriter 4s steps(40, end) 1s 1 normal both,
