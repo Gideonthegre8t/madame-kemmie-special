@@ -42,7 +42,7 @@ function Specials() {
         const rightConstraint = contentWidth - containerWidth; // Right constraint to prevent dragging beyond end
 
         setDragConstraints({
-          left: leftConstraint-rightConstraint, // Allow dragging to the start
+          left: leftConstraint - rightConstraint, // Allow dragging to the start
           right: +rightConstraint // Prevent dragging beyond the end
         });
       }
@@ -57,7 +57,7 @@ function Specials() {
 
   return (
     <section id="specials" className="specials-container">
-        <Helmet>
+      <Helmet>
         <title>Madame Kemmie Special | Our Delicious Offers</title>
         <meta name="description" content="Explore our special catering offers including spicy grilled chicken, fluffy fruit pancakes, and more. Perfect for any event!" />
         <meta property="og:title" content="Madame Kemmie Special | Our Delicious Offers" />
@@ -94,18 +94,36 @@ function Specials() {
                 transition={{ type: "spring", stiffness: 300, damping: 10 }}
               >
                 <div className="food-item">
-                  <img className="item" src={item.img} alt={item.name} />
+                  <img 
+                    className="item" 
+                    src={item.img} 
+                    alt={item.name} 
+                    title={item.name} // Add title attribute for SEO
+                    loading="lazy" // Add lazy loading
+                  />
                   <p className="item-name">{item.name}</p>
                 </div>
 
                 <div className="food-details">
                   <div className="rating-tab">
                     <p>
-                      <img className="rating-icon" src={star} alt="star" />
+                      <img 
+                        className="rating-icon" 
+                        src={star} 
+                        alt="star" 
+                        title="Star rating" // Add title attribute
+                        loading="lazy" // Add lazy loading
+                      />
                       {item.rating}
                     </p>
                     <p>
-                      <img className="rating-icon" src={fire} alt="fire" />
+                      <img 
+                        className="rating-icon" 
+                        src={fire} 
+                        alt="fire" 
+                        title="Calories" // Add title attribute
+                        loading="lazy" // Add lazy loading
+                      />
                       {item.calories}Kcal
                     </p>
                   </div>
@@ -131,7 +149,13 @@ function Specials() {
                       transition={{ type: "spring", stiffness: 300, damping: 10 }}
                     >
                       <p>
-                        <img className="plus-icon" src={plus} alt="plus" />
+                        <img 
+                          className="plus-icon" 
+                          src={plus} 
+                          alt="plus" 
+                          title="Add to cart" // Add title attribute
+                          loading="lazy" // Add lazy loading
+                        />
                         Add to cart
                       </p>
                     </motion.div>

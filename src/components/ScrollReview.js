@@ -39,7 +39,7 @@ function Scroll() {
 
   useEffect(() => {
     const handleResize = () => {
-      setIsMobile(window.innerWidth <= 700)
+      setIsMobile(window.innerWidth <= 700);
     };
 
     window.addEventListener('resize', handleResize);
@@ -58,7 +58,7 @@ function Scroll() {
 
       return () => clearInterval(intervalRef.current);
     }
-  }); 
+  }, [isMobile, reviews.length]); // Added reviews.length here
 
   useEffect(() => {
     if (!isMobile) {
@@ -117,12 +117,24 @@ function Scroll() {
                 <div className="review-top">
                   <div className="profile">
                     <p className="profile-name">
-                      <img className="review-image" src={review.imgLoc} alt={review.name} />
+                      <img
+                        className="review-image"
+                        src={review.imgLoc}
+                        alt={review.name}
+                        title={review.name} // Added title attribute
+                        loading="lazy" // Enable lazy loading
+                      />
                       {review.name}
                     </p>
                   </div>
                   <div>
-                    <img className="star-rate" src={starRate} alt="starRate" />
+                    <img
+                      className="star-rate"
+                      src={starRate}
+                      alt="star rating"
+                      title="Star Rating" // Added title attribute
+                      loading="lazy" // Enable lazy loading
+                    />
                   </div>
                 </div>
                 <p className="review-text">{review.reviewText}</p>
@@ -137,8 +149,10 @@ function Scroll() {
                 key={index}
                 className={index === activeIndex ? "active" : "non-active"}
                 src={index === activeIndex ? active : nonActive}
-                alt={index === activeIndex ? "activeSign" : "nonActiveSign"}
+                alt={index === activeIndex ? "active indicator" : "inactive indicator"}
+                title={index === activeIndex ? "Active Review" : "Inactive Review"} // Added title attribute
                 onClick={() => setActiveIndex(index)}
+                loading="lazy" // Enable lazy loading
               />
             ))}
           </div>

@@ -73,7 +73,13 @@ function Services() {
           }}
           transition={{ type: "spring", stiffness: 300, damping: 10 }} // Smooth transition
         >
-          <img className="event-image" src={events[0].src} alt={events[0].alt} />
+          <img 
+            className="event-image" 
+            src={events[0].src} 
+            alt={events[0].alt} 
+            title={events[0].title} 
+            loading="lazy" // Add lazy loading
+          />
           <h4 className="event-overlay">{events[0].title}</h4>
         </motion.div>
       </div>
@@ -91,7 +97,13 @@ function Services() {
             }}
             transition={{ type: "spring", stiffness: 300, damping: 10 }} // Smooth transition
           >
-            <img className="event-image" src={event.src} alt={event.alt} />
+            <img 
+              className="event-image" 
+              src={event.src} 
+              alt={event.alt} 
+              title={event.title} 
+              loading="lazy" // Add lazy loading
+            />
             <h4 className="event-overlay">{event.title}</h4>
           </motion.div>
         ))}

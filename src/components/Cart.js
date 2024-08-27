@@ -115,7 +115,7 @@ const Cart = () => {
         alt="backIcon"
         onClick={handleBackClick}
       />
-      <h2 className="book-header">Cart</h2>
+      <h1 className="book-header">Cart</h1>
       {isCheckoutSuccessful ? (
         <div className="success-tab">
           <img className="success-icon" src={successIcon} alt="successIcon" />

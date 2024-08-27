@@ -47,16 +47,14 @@ function Services2() {
     };
 
     updateDragConstraints(); // Initial calculation of drag constraints
-    window.addEventListener("resize", () => {
+    const handleResize = () => {
       setIsMobile(window.innerWidth < 700); // Update screen size
       updateDragConstraints();
-    });
+    };
+    window.addEventListener("resize", handleResize);
 
     return () => {
-      window.removeEventListener("resize", () => {
-        setIsMobile(window.innerWidth < 700); // Clean up listener
-        updateDragConstraints();
-      });
+      window.removeEventListener("resize", handleResize); // Clean up listener
     };
   }, [isMobile]);
 
@@ -84,7 +82,13 @@ function Services2() {
                 }}
                 transition={{ type: "spring", stiffness: 300, damping: 15 }} // Smooth transition for hover effects
               >
-                <img className="service2-image" src={item.img} alt={item.name} />
+                <img
+                  className="service2-image"
+                  src={item.img}
+                  alt={item.name}
+                  title={item.name} // Added title attribute
+                  loading="lazy" // Enable lazy loading
+                />
                 <p className="service2-name">{item.name}</p>
               </motion.div>
             ))}
@@ -103,7 +107,13 @@ function Services2() {
                 }}
                 transition={{ type: "spring", stiffness: 300, damping: 15 }} // Smooth transition for hover effects
               >
-                <img className="service2-image" src={item.img} alt={item.name} />
+                <img
+                  className="service2-image"
+                  src={item.img}
+                  alt={item.name}
+                  title={item.name} // Added title attribute
+                  loading="lazy" // Enable lazy loading
+                />
                 <p className="service2-name">{item.name}</p>
               </motion.div>
             ))}
