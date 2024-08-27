@@ -46,9 +46,9 @@ const Header = () => {
   return (
     <header id="header">
       <Helmet>
-        <title>Special Catering | Our Delicious Offers</title>
+        <title>Madame Kemmie Special | Our Delicious Offers</title>
         <meta name="description" content="Professional catering services for events, offering a variety of delicious dishes for any occasion." />
-        <meta property="og:title" content="Special Catering | Our Delicious Offers" />
+        <meta property="og:title" content="Madame Kemmie Special | Our Delicious Offers" />
         <meta property="og:description" content="Explore our special catering offers including spicy grilled chicken, fluffy fruit pancakes, and more. Perfect for any event!" />
         <meta property="og:url" content="https://madame-kemmie-special.vercel.app/" /> {/* Corrected canonical URL */}
         <meta property="og:type" content="website" />

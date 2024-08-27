@@ -28,9 +28,9 @@ function Services() {
   return (
     <section id="services" className="services-container">
       <Helmet>
-        <title>Our Catering Services - Book Now for Your Event</title>
+        <title>Madame Kemmie Special - Book Now for Your Event</title>
         <meta name="description" content="Explore our premium catering services for office events, weddings, social engagements, student parties, and birthday celebrations. Book us now for a delightful experience." />
-        <meta property="og:title" content="Our Catering Services - Book Now for Your Event" />
+        <meta property="og:title" content="Madame Kemmie Special - Book Now for Your Event" />
         <meta property="og:description" content="Explore our premium catering services for various events and book us now for a delightful experience." />
         <meta property="og:url" content="https://madame-kemmie-special.vercel.app/" />
         <meta property="og:type" content="website" />
