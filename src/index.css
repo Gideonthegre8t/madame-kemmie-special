@@ -2209,6 +2209,7 @@ textarea {
     max-width: 70%;
     height: auto;
   }
+
 }
 
 @media only screen and (width >391px) and (width <649px) {
@@ -2219,6 +2220,13 @@ textarea {
   }
   .services-container {
     margin-top: 20em;
+  }
+.book-header{
+  margin-top: 0em;
+}
+  
+  .nothing-wrapper{
+    margin-top: -1.2em;
   }
 }
 
