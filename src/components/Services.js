@@ -1,6 +1,7 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
 import { motion } from "framer-motion"; // Import motion from framer-motion
+import { Helmet } from "react-helmet-async"; // Import Helmet from react-helmet-async
 import officeEvents from "../assets/images/office-events.png";
 import weddingEvents from "../assets/images/wedding-events.png";
 import socialEvents from "../assets/images/social-events.png";
@@ -26,9 +27,17 @@ function Services() {
 
   return (
     <section id="services" className="services-container">
+      <Helmet>
+        <title>Our Catering Services - Book Now for Your Event</title>
+        <meta name="description" content="Explore our premium catering services for office events, weddings, social engagements, student parties, and birthday celebrations. Book us now for a delightful experience." />
+        <meta property="og:title" content="Our Catering Services - Book Now for Your Event" />
+        <meta property="og:description" content="Explore our premium catering services for various events and book us now for a delightful experience." />
+        <meta property="og:url" content="https://madame-kemmie-special.vercel.app/" />
+        <meta property="og:type" content="website" />
+      </Helmet>
       <div className="services-top">
         <div className="services-description">
-          <h3>Our services</h3>
+          <h2>Our services</h2>
           <p className="services-paragraph">
             Spice up your event with our premium catering services! From intimate gatherings to grand celebrations, we craft delicious, customized menus that delight every palate. Book us today and experience the perfect blend of flavor and elegance!
           </p>

@@ -129,24 +129,23 @@ nav a:hover {
   margin-top: 18em;
 }
 
-h2 {
+h1, h2 {
   font-size: 40px;
   font-weight: 700;
   line-height: 46px;
 }
 
-.header-content > h2,
-.header-content > h4 {
+.header-content >h1,
+.header-content >p {
   text-align: left;
 
   margin-left: 7%;
 }
-
-.header-content > h2 {
-  width: 40%;
+.header-content >h1{
+  width: 30%;
 }
 
-.header-content > h4 {
+.header-content >p {
   width: 27%;
 }
 
@@ -173,12 +172,14 @@ button {
 
 .cart-counter {
   position: absolute;
-  margin-left: -1em;
+  margin-left: -3em;
   color: red;
   font-weight: 900;
   background: transparent;
   background-color: #7c1575;
-  max-width: 100%;
+ width:20px;
+ padding: 5px;
+ padding-top: 0px;
   height: 18px;
   border-radius: 12px;
 }
@@ -260,12 +261,14 @@ button {
   gap: 1em;
 }
 
-h3 {
+h2,h3  {
+
   font-size: 45px;
   font-weight: 700;
   line-height: 45px;
   text-align: left;
   color: #ad31a5;
+ 
 }
 
 .services-paragraph {
@@ -960,9 +963,7 @@ textarea {
   .header-content {
     margin-top: 15%;
   }
-  .header-content > h2 {
-    width: 35%;
-  }
+
   .services-container {
     padding-top: 5em;
   }
@@ -976,14 +977,14 @@ textarea {
     margin-top: 20%;
   }
 
-  .header-content > h2 {
+  .header-content >h1 {
     font-size: 58px;
     line-height: 62px;
-    width: 32%;
+    width: 30%;
   }
 
-  .header-content > h4 {
-    width: 30%;
+  .header-content >p {
+    width: 27%;
     font-size: 20px;
   }
   .purp-circle {
@@ -1103,18 +1104,18 @@ textarea {
     margin-top: 25%;
   }
 
-  .header-content > h2,
-  .header-content > h4 {
+  .header-content >h1, .header-content >h2,
+  .header-content >p {
     margin-left: 8%;
   }
 
-  .header-content > h2 {
+  .header-content >h1, .header-content >h2 {
     font-size: 28px;
     line-height: 25px;
     width: 33%;
   }
 
-  .header-content > h4 {
+  .header-content >p {
     width: 33%;
     font-size: 12px;
   }
@@ -1245,7 +1246,11 @@ textarea {
   .header-content {
     position: relative;
     margin: 0 auto;
-    margin-top: 25%;
+    margin-top: 26%;
+  }
+
+  .purp-circle{
+    margin-top: -4em;
   }
 
   .product-details {
@@ -1360,6 +1365,20 @@ textarea {
     margin-top: 10px;
     margin-left: -5px;
   }
+
+  
+.cart-counter {
+  position: absolute;
+  margin-left: -4em;
+  color: #7c1575 ;
+  font-weight: 900;
+  background: transparent;
+  background-color: red;
+ width:20px;
+ padding: 6px;
+ padding-top: 0px;
+ 
+}
   .navbar.links {
     display: none;
   }
@@ -1451,27 +1470,27 @@ textarea {
     margin-top: 60%;
   }
 
-  .header-content > h2,
-  .header-content > h4 {
+  .header-content >h1, .header-content >h2,
+  .header-content >p {
     text-align: left;
     margin-left: 13%;
   }
 
-  .header-content > h2 {
+  .header-content >h1, .header-content >h2 {
     width: 50%;
     font-size: 24px;
     font-weight: 700;
     line-height: 24px;
   }
 
-  .header-content > h4 {
+  .header-content >p {
     width: 40%;
     font-size: 12px;
     font-weight: 600;
     line-height: 12px;
   }
 
-  h3 {
+  h2,h3 {
     margin: 0 auto;
     font-size: 20px;
     line-height: 20px;
@@ -2111,18 +2130,18 @@ textarea {
     left: 12%;
   }
 
-  .header-content > h2 {
+  .header-content >h1, .header-content >h2 {
     width: 70%;
   }
-  .header-content > h4 {
+  .header-content >p {
     width: 65%;
   }
 
   .tag {
     margin-top: -1.3em;
   }
-  .header-content > h2,
-  .header-content > h4 {
+  .header-content >h1, .header-content >h2,
+  .header-content >p {
     margin-left: 12%;
   }
   .purp-circle {
@@ -2209,19 +2228,19 @@ textarea {
     height: 300px;
   }
 
-  .header-content > h2,
-  .header-content > h4 {
+  .header-content >h1, .header-content >h2,
+  .header-content >p {
     margin-left: 10%;
   }
   .header-content {
     margin: 0 auto;
     margin-top: 11em;
   }
-  .header-content > h2 {
+  .header-content >h1, .header-content >h2 {
     width: 90%;
   }
 
-  .header-content > h4 {
+  .header-content >p {
     width: 80%;
   }
 
@@ -2349,7 +2368,7 @@ textarea {
     height: 110%;
   }
 
-  .header-content > h4 {
+  .header-content >p {
     width: 70%;
   }
 

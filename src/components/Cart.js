@@ -11,6 +11,7 @@ import nothingHere from "../assets/images/nothing-here.png";
 import questionMark from "../assets/images/question-mark.png";
 import successIcon from "../assets/images/success.png";
 import { motion } from "framer-motion";
+import { Helmet } from "react-helmet-async";  // Import Helmet
 
 const Cart = () => {
   const navigate = useNavigate();
@@ -97,6 +98,13 @@ const Cart = () => {
 
   return (
     <section id="cart" className="cart-container">
+      <Helmet>
+        <title>Cart - Madame Kemmie Specials</title>
+        <meta name="description" content="View and manage items in your cart. Complete your purchase or empty your cart. Madame Kemmie Specials offers delicious catering services." />
+        <meta property="og:title" content="Cart - Madame Kemmie Specials" />
+        <meta property="og:description" content="View and manage items in your cart. Complete your purchase or empty your cart. Madame Kemmie Specials offers delicious catering services." />
+        <meta property="og:image" content={logo} />
+      </Helmet>
       <img className="wallpaper2" src={wallpaper2} alt="wallpaper" />
       <div className="container-top cart-container-top">
         <img className="cart-logo" src={logo} alt="logo" onClick={handleLogoClick} />

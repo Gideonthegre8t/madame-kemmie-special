@@ -1,6 +1,8 @@
 import React, { useContext, useRef, useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import { CartContext } from "./CartContext";
+import { Helmet } from 'react-helmet-async'; // Import Helmet
+
 import spicyGrilled from "../assets/images/spicy-grilled-chicken.png";
 import star from "../assets/images/star.png";
 import fire from "../assets/images/fire.png";
@@ -55,6 +57,14 @@ function Specials() {
 
   return (
     <section id="specials" className="specials-container">
+        <Helmet>
+        <title>Special Catering | Our Delicious Offers</title>
+        <meta name="description" content="Explore our special catering offers including spicy grilled chicken, fluffy fruit pancakes, and more. Perfect for any event!" />
+        <meta property="og:title" content="Special Catering | Our Delicious Offers" />
+        <meta property="og:description" content="Explore our special catering offers including spicy grilled chicken, fluffy fruit pancakes, and more. Perfect for any event!" />
+        <meta property="og:image" content="path/to/your/image.png" />
+        <meta property="og:url" content="http://yourwebsite.com/specials" />
+      </Helmet>
       <div className="specials-header">
         <h3>Our Special Catering</h3>
         <p>

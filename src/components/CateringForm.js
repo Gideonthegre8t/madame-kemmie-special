@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { motion } from "framer-motion"; // Import motion from framer-motion
+import { motion } from "framer-motion";
 
 const CateringForm = ({ onSubmitSuccess }) => {
   // Form data state
@@ -82,6 +82,7 @@ const CateringForm = ({ onSubmitSuccess }) => {
             value={formData.fullName}
             onChange={handleChange}
             required
+            autoComplete="name" // Added autoComplete attribute
           />
         </div>
         <div>
@@ -92,17 +93,19 @@ const CateringForm = ({ onSubmitSuccess }) => {
             value={formData.email}
             onChange={handleChange}
             required
+            autoComplete="email" // Added autoComplete attribute
           />
         </div>
         <div>
           <p className="formcard-label">Phone number</p>
           <input
-            type="number"
+            type="tel" // Changed type to tel for better input handling
             name="phone"
             value={formData.phone}
             placeholder="Enter number"
             onChange={handleChange}
             required
+            autoComplete="tel" // Added autoComplete attribute
           />
         </div>
         <div>
@@ -114,6 +117,7 @@ const CateringForm = ({ onSubmitSuccess }) => {
             onChange={handleChange}
             required
             placeholder="(Wedding, birthday etc...)"
+            autoComplete="organization-title" // Added autoComplete attribute
           />
         </div>
         <div>
@@ -124,6 +128,7 @@ const CateringForm = ({ onSubmitSuccess }) => {
             value={formData.eventDate}
             onChange={handleChange}
             required
+            autoComplete="bday" // Added autoComplete attribute
           />
         </div>
         <div>
@@ -134,6 +139,7 @@ const CateringForm = ({ onSubmitSuccess }) => {
             value={formData.eventLocation}
             onChange={handleChange}
             required
+            autoComplete="address-line1" // Added autoComplete attribute
           />
         </div>
         <div>
@@ -144,6 +150,7 @@ const CateringForm = ({ onSubmitSuccess }) => {
             value={formData.numberOfGuests}
             onChange={handleChange}
             required
+            autoComplete="off" // Added autoComplete attribute
           />
         </div>
         <div>
@@ -154,6 +161,7 @@ const CateringForm = ({ onSubmitSuccess }) => {
             onChange={handleChange}
             required
             placeholder="Starters, main course and dessert etc..."
+            autoComplete="off" // Added autoComplete attribute
           />
         </div>
         <div>
@@ -163,6 +171,7 @@ const CateringForm = ({ onSubmitSuccess }) => {
             value={formData.additionalServices}
             onChange={handleChange}
             placeholder="Cocktails, waiters, decor etc..."
+            autoComplete="off" // Added autoComplete attribute
           />
         </div>
         <div>
@@ -171,6 +180,7 @@ const CateringForm = ({ onSubmitSuccess }) => {
             name="additionalMessage"
             value={formData.additionalMessage}
             onChange={handleChange}
+            autoComplete="off" // Added autoComplete attribute
           />
         </div>
         <motion.button

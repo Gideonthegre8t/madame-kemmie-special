@@ -1,4 +1,5 @@
 import React, { useEffect } from 'react';
+import './index.css';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Header from './components/Header';
 import Services from './components/Services';
@@ -9,6 +10,7 @@ import Footer from './components/Footer';
 import Booking from './components/Booking';
 import Cart from './components/Cart';
 import { useTransaction } from './components/TransactionContext';
+import { Helmet } from 'react-helmet-async'; // Import Helmet
 
 // Main Application Component
 function App() {
@@ -23,22 +25,28 @@ function App() {
 
   return (
     <Router> {/* Router component to handle client-side routing */}
+      <Helmet>
+        <title>Home - Catering Services</title>
+        <meta name="description" content="Delicious catering services for all your events. Book now for special offers!" />
+        <meta property="og:title" content="Catering Services" />
+        <meta property="og:description" content="We offer a wide variety of catering services to meet your needs." />
+       
+      </Helmet>
       <div>
         <Routes>
           {/* Route for the home page */}
           <Route path="/" element={
             <>
-              <Header /> {/* Header component */}
-              <Services /> {/* Services component */}
-              <Specials /> {/* Specials component */}
-              <Services2 /> {/* Additional services component */}
-              <Feedback /> {/* Feedback component */}
-              <Footer /> {/* Footer component */}
+              <Header /> 
+              <Services /> 
+              <Specials />
+              <Services2 /> 
+              <Feedback /> 
+              <Footer /> 
             </>
           } />
-          {/* Route for the cart page */}
+     
           <Route path="/cart" element={<Cart />} />
-          {/* Route for the booking page */}
           <Route path="/booking" element={<Booking />} />
         </Routes>
       </div>

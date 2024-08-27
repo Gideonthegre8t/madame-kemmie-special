@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import { Helmet } from "react-helmet-async"; // Import Helmet from react-helmet-async
 import logo from "../assets/images/logo.png";
 import wallpaper2 from "../assets/images/wallpaper2.png";
 import wallpaper2mobile from "../assets/images/wallpaper2mobile.png";
@@ -30,6 +31,16 @@ function Booking() {
 
   return (
     <section id="booking" className="booking-container">
+      <Helmet>
+        <title>Booking - Madame Kemmie Catering</title>
+        <meta name="description" content="Book Madame Kemmie’s catering services. Fill out the form to schedule your event and get in touch with us for further details and pricing." />
+        <meta name="keywords" content="catering booking, Madame Kemmie, event catering, book catering services" />
+        <meta property="og:title" content="Booking - Madame Kemmie Catering" />
+        <meta property="og:description" content="Book Madame Kemmie’s catering services. Fill out the form to schedule your event and get in touch with us for further details and pricing." />
+        <meta property="og:image" content="URL_TO_AN_IMAGE_REPRESENTING_THE_BOOKING_PAGE" />
+        <meta property="og:url" content="URL_TO_THE_BOOKING_PAGE" />
+        <meta property="og:type" content="website" />
+      </Helmet>
       <img className="wallpaper2 desktop" src={wallpaper2} alt="wallpaper" />
       <img className="wallpaper2 mobile" src={wallpaper2mobile} alt="wallpaper" />
       <div className="booking-content">

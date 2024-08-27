@@ -1,4 +1,4 @@
-import React, { useState, useContext, useEffect } from "react";
+import React, { useState, useContext } from "react";
 import { useNavigate } from "react-router-dom";
 import { motion } from "framer-motion";
 import logo from "../assets/images/logo.png";
@@ -12,6 +12,7 @@ import Navbar from "./Navbar";
 import { CartContext } from "./CartContext";
 import BackToTopText from "./BackToTopText";
 import Ring from "../assets/images/ring.png";
+import { Helmet } from "react-helmet-async"; // Import from react-helmet-async
 
 const socialMediaLinks = {
   whatsapp: "https://api.whatsapp.com/message/443CZADXNZFSK1?autoload=1&app_absent=0",
@@ -19,15 +20,11 @@ const socialMediaLinks = {
   facebook: "https://www.facebook.com/100065239971038/posts/1207313149682268/",
 };
 
-function Header() {
+const Header = () => {
   const { cart } = useContext(CartContext);
   const [showTalkContainer, setShowTalkContainer] = useState(false);
   const [activeMenu, setActiveMenu] = useState(null);
   const navigate = useNavigate();
-
-  useEffect(() => {
-    // No need for mouse move or scroll listeners for the ring
-  }, []);
 
   const handleMenuClick = (menu) => {
     setActiveMenu(menu);
@@ -48,6 +45,17 @@ function Header() {
 
   return (
     <header id="header">
+      <Helmet>
+        <title>Special Catering | Our Delicious Offers</title>
+        <meta name="description" content="Professional catering services for events, offering a variety of delicious dishes for any occasion." />
+        <meta property="og:title" content="Special Catering | Our Delicious Offers" />
+        <meta property="og:description" content="Explore our special catering offers including spicy grilled chicken, fluffy fruit pancakes, and more. Perfect for any event!" />
+        <meta property="og:url" content="https://madame-kemmie-special.vercel.app/" /> {/* Corrected canonical URL */}
+        <meta property="og:type" content="website" />
+        <link rel="canonical" href="https://madame-kemmie-special.vercel.app/" /> {/* Corrected canonical URL */}
+      </Helmet>
+
+      {/* Your existing header content */}
       <img className="header-wallpaper desktop" src={headerWallpaper} alt="wallpaper" />
       <img className="header-wallpaper mobile" src={headerWallpaper2} alt="wallpaper" />
       <div className="header-top">
@@ -55,15 +63,15 @@ function Header() {
           className="logo"
           src={logo}
           alt="logo"
-          whileHover={{ rotate: 360 }} // Rotate the logo on hover
+          whileHover={{ rotate: 360 }}
           transition={{ duration: 1 }}
         />
         <Navbar />
         <motion.div
           className="cart-icon-container"
           onClick={handleCartClick}
-          whileHover={{ scale: 1.1, rotate: 15 }} // Scale up and rotate on hover
-          whileTap={{ scale: 0.9, rotate: -15 }} // Scale down and rotate on click
+          whileHover={{ scale: 1.1, rotate: 15 }}
+          whileTap={{ scale: 0.9, rotate: -15 }}
           transition={{ type: "spring", stiffness: 300 }}
         >
           <img className="cart-icon" src={cartIcon} alt="cart" />
@@ -73,8 +81,8 @@ function Header() {
           <motion.button
             className="lets-talk desktop"
             onClick={() => setShowTalkContainer(!showTalkContainer)}
-            whileHover={{ scale: 1.1, backgroundColor: "#e63946", color: "#fff" }} // Scale and change color on hover
-            whileTap={{ scale: 0.9, backgroundColor: "#f1faee", color: "#1d3557" }} // Scale and change color on click
+            whileHover={{ scale: 1.1, backgroundColor: "#e63946", color: "#fff" }}
+            whileTap={{ scale: 0.9, backgroundColor: "#f1faee", color: "#1d3557" }}
             transition={{ duration: 0.3 }}
           >
             Let's Talk
@@ -112,12 +120,12 @@ function Header() {
       <div className="header-bottom">
         <div className="header-content">
           <img className="purp-circle" src={purpCircle} alt="purple-circle" />
-          <h2>Have a function?</h2>
-          <h2>We've got the catering covered.</h2>
-          <h4 className="header-description">
+          <h1>Have a function?We've got the catering covered.</h1>
+      
+          <p className="header-description">
             Deliciously Crafted Catering <img className="tag" src={tag} alt="tag" />
             Where Every Bite Tells a Story
-          </h4>
+          </p>
           <motion.button
             className="lets-talk2"
             onClick={() => setShowTalkContainer(!showTalkContainer)}
@@ -135,6 +143,6 @@ function Header() {
       <div><BackToTopText /></div>
     </header>
   );
-}
+};
 
 export default Header;
