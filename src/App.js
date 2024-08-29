@@ -1,5 +1,4 @@
 import React, { useEffect, lazy, Suspense } from 'react';
-import './index.css';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async'; // Import Helmet
 import { useTransaction } from './components/TransactionContext'; // Ensure this path is correct
