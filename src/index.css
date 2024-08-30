@@ -2212,7 +2212,7 @@ textarea {
 
 }
 
-@media only screen and (width >391px) and (width <649px) {
+@media only screen and (width >391px) and (width <700px) {
   .header-content {
     position: relative;
     margin: 0 auto;
@@ -2222,7 +2222,11 @@ textarea {
     margin-top: 20em;
   }
 .book-header{
-  margin-top: 0em;
+  margin-top: -5px;
+}
+
+.cart-flex{
+margin-top: -2em;
 }
   
   .nothing-wrapper{
