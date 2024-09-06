@@ -76,7 +76,6 @@ nav a:hover {
   display: none;
 }
 
-/* @media only screen and (min-width: 601px) { */
 .header-wallpaper,
 .wallpaper2 {
   position: absolute;
@@ -960,10 +959,16 @@ textarea {
     blink 500ms steps(40, end) infinite;
 }
 
-@media only screen and (width >2022px) {
+@media only screen and (width >1981px) {
   .header-content {
     margin-top: 15%;
   }
+
+  
+  .header-content >h1{
+    max-width: 25%;
+  }
+
 
   .services-container {
     padding-top: 5em;
@@ -981,7 +986,7 @@ textarea {
   .header-content > h1 {
     font-size: 58px;
     line-height: 62px;
-    width: 30%;
+ width: 33%;
   }
 
   .header-content > p {
@@ -1350,6 +1355,10 @@ textarea {
   .footer-flex {
     margin-top: -3em;
   }
+  .total{
+    margin-left: -2.5em;
+  }
+  
 }
 
 @media only screen and (width< 702px) {
@@ -2058,6 +2067,8 @@ textarea {
     line-height: 12.1px;
     margin-top: 1em;
   }
+
+
   .price,
   .total {
     margin-top: 2em;
@@ -2086,7 +2097,6 @@ textarea {
   .total-card {
     margin: 0 auto;
     margin-top: 0em;
-
     height: auto;
   }
 
@@ -2208,6 +2218,10 @@ textarea {
   .event-image1 {
     max-width: 70%;
     height: auto;
+  }
+
+  .total{
+    margin-left: -2em;
   }
 
 }
