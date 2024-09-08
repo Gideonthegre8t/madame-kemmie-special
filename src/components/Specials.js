@@ -137,7 +137,6 @@ function Specials() {
                       onClick={() => addToCart(item)}
                       whileHover={{
                         scale: 1.1,
-                        backgroundColor: "#e63946",
                         color: "#fff",
                         boxShadow: "0px 5px 15px rgba(0,0,0,0.3)"
                       }}

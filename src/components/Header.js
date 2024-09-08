@@ -81,7 +81,7 @@ const Header = () => {
           <motion.button
             className="lets-talk desktop"
             onClick={() => setShowTalkContainer(!showTalkContainer)}
-            whileHover={{ scale: 1.1, backgroundColor: "#e63946", color: "#fff" }}
+            whileHover={{ scale: 1.1, color: "#fff" }}
             whileTap={{ scale: 0.9, backgroundColor: "#f1faee", color: "#1d3557" }}
             transition={{ duration: 0.3 }}
           >
@@ -129,7 +129,7 @@ const Header = () => {
           <motion.button
             className="lets-talk2"
             onClick={() => setShowTalkContainer(!showTalkContainer)}
-            whileHover={{ scale: 1.1, backgroundColor: "#e63946", color: "#fff" }}
+            whileHover={{ scale: 1.1, backgroundColor: "#F7A134", color: "#fff" }}
             whileTap={{ scale: 0.9, backgroundColor: "#f1faee", color: "#1d3557" }}
             transition={{ duration: 0.3 }}
           >

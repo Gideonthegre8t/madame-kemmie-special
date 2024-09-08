@@ -48,8 +48,7 @@ function Services() {
             whileHover={{ 
               scale: 1.1, // Scale up slightly on hover
               rotate: 10, // Rotate slightly on hover
-              backgroundColor: "#e63946", // Change background color on hover
-              color: "#fff", // Change text color on hover
+              backgroundColor: "#F7A134", // Change background color on hover
               boxShadow: "0px 0px 10px rgba(0,0,0,0.5)" // Add shadow on hover
             }}
             whileTap={{ 
@@ -69,7 +68,6 @@ function Services() {
           whileHover={{ 
             scale: 1.05, // Scale up slightly on hover
             y: -10, // Move up slightly on hover
-            boxShadow: "0px 15px 30px rgba(0,0,0,0.2)" // Add shadow on hover
           }}
           transition={{ type: "spring", stiffness: 300, damping: 10 }} // Smooth transition
         >
@@ -93,7 +91,6 @@ function Services() {
             whileHover={{ 
               scale: 1.05, // Scale up slightly on hover
               y: -10, // Move up slightly on hover
-              boxShadow: "0px 15px 30px rgba(0,0,0,0.2)" // Add shadow on hover
             }}
             transition={{ type: "spring", stiffness: 300, damping: 10 }} // Smooth transition
           >

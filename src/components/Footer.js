@@ -85,8 +85,7 @@ function Footer() {
             whileHover={{ 
               scale: 1.1,
               boxShadow: "0px 8px 16px rgba(0,0,0,0.3)",
-              backgroundColor: "#e63946",
-              color: "#fff",
+              backgroundColor: "#F7A134",
             }}
             whileTap={{ 
               scale: 0.95,

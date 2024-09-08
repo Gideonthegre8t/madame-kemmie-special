@@ -27,12 +27,15 @@ body {
   font-family: "Josefin Sans";
 }
 
+.logo{
+  margin-top: -10px;
+}
+
 .navigator {
   position: fixed;
   width: 50%;
   left: 25%;
-  border-radius: 10px;
-  background: #ad31a5;
+  background: #f4f4f4;
   z-index: 1;
   margin-top: -5px;
   font-family: "Inter";
@@ -46,7 +49,7 @@ body {
 nav a {
   position: relative;
   margin: 1rem;
-  color: #fff;
+  color: #646464;
   text-decoration: none;
   font-size: 16px;
   font-weight: 400;
@@ -94,15 +97,16 @@ nav a:hover {
 }
 
 .header-top {
+ border-radius:300px;
   position: fixed;
   display: flex;
   justify-content: space-between;
-  top: -1%;
-  background: #f6cfa0;
-  width: 100%;
+  top: 5%;
+  background: #f4f4f4;
+  width: 97%;
   margin: 0 auto;
-  padding-top: 2em;
-  padding-bottom: 1em;
+  padding-top: 1em;
+  padding-bottom: -1em;
   z-index: 1;
 }
 
@@ -121,7 +125,7 @@ nav a:hover {
 }
 .header-content {
   position: relative;
-  color: #fff;
+  color: #f4f4f4;
   display: flex;
   flex-direction: column;
   margin-left: 1em;
@@ -168,15 +172,16 @@ button {
   position: fixed;
   left: 82%;
   cursor: pointer;
+  margin-top: 10px;
 }
 
 .cart-counter {
   position: absolute;
   margin-left: -3em;
-  color: red;
+  color: #f4f4f4;
   font-weight: 900;
   background: transparent;
-  background-color: #7c1575;
+  background-color: #ff0000;
   width: 20px;
   padding: 5px;
   padding-top: 0px;
@@ -198,7 +203,7 @@ button {
   border-radius: 19px;
   margin-left: -23em;
   margin-top: 8%;
-  background: #f6cfa0;
+  background: #f4f4f4;
   display: flex;
   flex-direction: column;
 }
@@ -281,12 +286,24 @@ h3 {
 
 .book-us {
   background: #f6cfa0;
+  color: #000000;
+}
+
+
+
+.event-card{
+  opacity: 80%;
+}
+
+.event-card:hover{
+opacity: 2000%;
 }
 
 .event-overlay {
   text-align: center;
   margin-top: -3.5em;
   color: #fff;
+
 }
 
 .services-bottom {
@@ -295,6 +312,8 @@ h3 {
   justify-content: space-between;
   gap: 1em;
 }
+
+
 
 .event-card > img {
   width: 100%;
@@ -565,6 +584,7 @@ a,
 .whatsapp-button {
   margin: 0 auto;
   background: #f6cfa0;
+  color: #000000;
 }
 .handle-icon,
 .whatsapp-icon {
@@ -1012,6 +1032,7 @@ textarea {
 
   .event-card > img {
     width: 100%;
+    color: #0000
   }
   .services-container {
     margin: 0% 5%;
@@ -1386,10 +1407,6 @@ textarea {
   .cart-counter {
     position: absolute;
     margin-left: -4em;
-    color: #7c1575;
-    font-weight: 900;
-    background: transparent;
-    background-color: red;
     width: 20px;
     padding: 6px;
     padding-top: 0px;
