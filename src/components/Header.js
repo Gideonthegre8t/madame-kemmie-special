@@ -67,7 +67,7 @@ const Header = () => {
           transition={{ duration: 1 }}
         />
         <Navbar />
-        <motion.div
+        <div className="header-top-bottom">        <motion.div
           className="cart-icon-container"
           onClick={handleCartClick}
           whileHover={{ scale: 1.1, rotate: 15 }}
@@ -115,7 +115,8 @@ const Header = () => {
               </div>
             </div>
           )}
-        </div>
+        </div></div>
+
       </div>
       <div className="header-bottom">
         <div className="header-content">
