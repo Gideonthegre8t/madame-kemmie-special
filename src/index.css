@@ -1166,6 +1166,7 @@ textarea {
   .header-content > h2,
   .header-content > p {
     margin-left: 13%;
+
   }
 
   .header-content > h1 {
@@ -1180,7 +1181,7 @@ textarea {
   }
 
   .purp-circle {
-    margin: -5em 3em;
+    margin: -6em 3em;
     width: 514px;
   }
 
@@ -1302,6 +1303,7 @@ textarea {
     margin-top: 7em;
     margin-left: -9em;
   }
+
 
   .lets-talk {
     margin-left: -2em;
