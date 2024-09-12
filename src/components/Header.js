@@ -121,7 +121,7 @@ const Header = () => {
       <div className="header-bottom">
         <div className="header-content">
           <img className="purp-circle" src={purpCircle} alt="purple-circle" />
-          <h1>Have a function?We've got the catering covered.</h1>
+          <h1>Have a function?<br />We've got the catering covered.</h1>
       
           <p className="header-description">
             Deliciously Crafted Catering <img className="tag" src={tag} alt="tag" />
