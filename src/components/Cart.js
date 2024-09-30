@@ -115,7 +115,7 @@ const Cart = () => {
         alt="backIcon"
         onClick={handleBackClick}
       />
-      <h1 className="book-header">Cart</h1>
+      <h2 className="book-header">Cart</h2>
       {isCheckoutSuccessful ? (
         <div className="success-tab">
           <img className="success-icon" src={successIcon} alt="successIcon" />
@@ -127,6 +127,7 @@ const Cart = () => {
         </div>
       ) : cart.length > 0 ? (
         <form onSubmit={handleCheckout} className="cart-flex">
+          <div></div>
           <div className="cart-list">
             <div className="cart-card">
               <div className="cart-detail">
@@ -212,7 +213,7 @@ const Cart = () => {
               <motion.button
                 className="checkout"
                 type="submit"
-                whileHover={{ scale: 1.1, backgroundColor: "#e63946", color: "#fff" }}
+                whileHover={{ scale: 1.1, backgroundColor: "#F7A134" }}
                 whileTap={{ scale: 0.95, backgroundColor: "#d62839" }}
                 transition={{ type: "spring", stiffness: 300, damping: 10 }}
                 disabled={isLoading}  // Disable button when loading

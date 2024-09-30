@@ -4,7 +4,7 @@ import { Helmet } from "react-helmet-async"; // Import Helmet from react-helmet-
 import logo from "../assets/images/logo.png";
 import wallpaper2 from "../assets/images/wallpaper2.png";
 import wallpaper2mobile from "../assets/images/wallpaper2mobile.png";
-import backIcon from "../assets/images/arrow-left.png";
+import backIcon from "../assets/images/back-icon.svg";
 import CateringForm from "./CateringForm";
 import successIcon from "../assets/images/success.png";
 import Footer from "./Footer";

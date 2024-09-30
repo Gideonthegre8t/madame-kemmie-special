@@ -634,7 +634,7 @@ a,
 }
 
 .book-header {
-  margin: 1.5em;
+  margin: 1em 1.5em;
   text-align: center;
   color: #fff;
 }
@@ -645,7 +645,7 @@ a,
   padding: 3rem;
 }
 
-form {
+.form-container {
   display: flex;
   flex-direction: column;
   gap: 2em;
@@ -692,13 +692,14 @@ textarea {
 
 .cart-flex {
   background: linear-gradient(180deg, #fec1fa 20.14%, #f6d6e8 59.7%);
-  padding-bottom: 3em;
+  display: flex;
+  padding: 5em 0em;
 }
 
 .cart-list {
   display: flex;
   justify-content: center;
-  padding: 3em;
+  padding: 3em 0em;
   gap: 9em;
 }
 
@@ -729,10 +730,11 @@ textarea {
 .product-details {
   display: flex;
   flex-direction: row;
-  margin-left: -8.5em;
+  margin-left: 4.5em;
   gap: 4em;
   margin-top: 2em;
   border: 1px solid #7c1575;
+  width: 729px;
   height: 93px;
   border-radius: 5px;
 }
@@ -750,6 +752,7 @@ textarea {
 
 .cart-detail {
   gap: 5.5em;
+  margin-left: 14em;
 }
 
 .product,
@@ -799,8 +802,8 @@ textarea {
   padding: 2em;
   border: 1px solid #7c1575;
   border-radius: 5px;
-  width: 30%;
-  height: auto;
+  width: 443px;
+padding: 24px 42px 24px 42px;
 }
 
 .total-card > h4 {
@@ -832,6 +835,11 @@ textarea {
   background: #f6cfa0;
   padding: 1em;
   margin-top: 1em;
+  color: #000000;
+
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 19.36px;
 }
 
 .phone-tab > input,
@@ -931,8 +939,9 @@ textarea {
   font-family: "Josefin Sans";
   font-size: 16px;
   font-weight: 400;
-  line-height: 16px;
-  width: 50%;
+  line-height: 19.7px;
+  width: 347px;
+  height: 80px;
   text-align: left;
 }
 
@@ -1166,7 +1175,6 @@ textarea {
   .header-content > h2,
   .header-content > p {
     margin-left: 13%;
-
   }
 
   .header-content > h1 {
@@ -1231,6 +1239,10 @@ textarea {
 
   .wallpaper2 {
     height: 250px;
+  }
+
+  .cart-flex {
+    flex-direction: column;
   }
 
   .product > p {
@@ -1303,7 +1315,6 @@ textarea {
     margin-top: 7em;
     margin-left: -9em;
   }
-
 
   .lets-talk {
     margin-left: -2em;
@@ -1551,14 +1562,13 @@ textarea {
     margin-left: 13%;
   }
 
-  .header-content > h1{
+  .header-content > h1 {
     font-size: 24px;
     font-weight: 700;
     line-height: 24px;
   }
 
   .header-content > p {
-
     font-size: 10px;
     font-weight: 600;
     line-height: 12px;
@@ -1712,7 +1722,7 @@ textarea {
   .lets-talk2 {
     margin: 0 auto;
     margin-top: 2em;
-  margin-left:8em;
+    margin-left: 8em;
   }
 
   .services2-container h3 {
@@ -1855,7 +1865,7 @@ textarea {
   }
 
   .book-header {
-    margin: 1.3em;
+    margin: 4em;
   }
 
   form {
@@ -2074,7 +2084,7 @@ textarea {
   }
 
   .cart-flex {
-    width: 100%;
+    flex-direction: column;
   }
 
   .product-details {
@@ -2159,10 +2169,9 @@ textarea {
     font-size: 16px;
   }
 
-  .total-card {
-    p {
+  .total-card >p{ 
       font-size: 10px;
-    }
+    
   }
 
   .total-details {
@@ -2172,6 +2181,7 @@ textarea {
   .checkout {
     padding: 0em;
     margin-top: 0em;
+    font-size: 12px;
     height: 24px;
     width: 84px;
   }
@@ -2204,7 +2214,7 @@ textarea {
     left: 50px;
   }
   .header-content > h1 {
-    width:310px;
+    width: 310px;
   }
   .header-content > p {
     width: 220px;
@@ -2241,6 +2251,7 @@ textarea {
   .total-card {
     width: 300px;
   }
+
 
   .product-details {
     width: 350px;
@@ -2332,14 +2343,12 @@ textarea {
   .header-content > h2,
   .header-content > p {
     margin-left: 20%;
-    
   }
   .header-content {
     margin: 0 auto;
     margin-top: 11em;
- 
   }
-  .header-content > h1{
+  .header-content > h1 {
     width: 300px;
   }
 
@@ -2361,7 +2370,7 @@ textarea {
   .lets-talk2 {
     padding: 0em;
     height: 24px;
-    margin-left:6em;
+    margin-left: 6em;
   }
 
   .specials-header > p {
@@ -2451,9 +2460,16 @@ textarea {
     gap: 0em;
   }
 
+  .book-header {
+    margin: 1em;
+  }
+
   .total-card {
     width: 85%;
+    font-size: 12px;
   }
+
+
   .container-top {
     margin: 1em;
   }
@@ -2475,7 +2491,7 @@ textarea {
   }
 
   .header-content > p {
-   max-width: 220px;
+    max-width: 220px;
   }
   .event-card {
     max-width: 224px;
