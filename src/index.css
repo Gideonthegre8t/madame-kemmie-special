@@ -294,13 +294,7 @@ h3 {
   color: #000000;
 }
 
-.event-card {
-  opacity: 80%;
-}
 
-.event-card:hover {
-  opacity: 2000%;
-}
 
 .event-overlay {
   text-align: center;

@@ -29,9 +29,18 @@ function Services() {
     <section id="services" className="services-container">
       <Helmet>
         <title>Madame Kemmie Special - Book Now for Your Event</title>
-        <meta name="description" content="Explore our premium catering services for office events, weddings, social engagements, student parties, and birthday celebrations. Book us now for a delightful experience." />
-        <meta property="og:title" content="Madame Kemmie Special - Book Now for Your Event" />
-        <meta property="og:description" content="Explore our premium catering services for various events and book us now for a delightful experience." />
+        <meta
+          name="description"
+          content="Explore our premium catering services for office events, weddings, social engagements, student parties, and birthday celebrations. Book us now for a delightful experience."
+        />
+        <meta
+          property="og:title"
+          content="Madame Kemmie Special - Book Now for Your Event"
+        />
+        <meta
+          property="og:description"
+          content="Explore our premium catering services for various events and book us now for a delightful experience."
+        />
         <meta property="og:url" content="https://madame-kemmie-special.vercel.app/" />
         <meta property="og:type" content="website" />
       </Helmet>
@@ -39,19 +48,22 @@ function Services() {
         <div className="services-description">
           <h2>Our services</h2>
           <p className="services-paragraph">
-            Spice up your event with our premium catering services! From intimate gatherings to grand celebrations, we craft delicious, customized menus that delight every palate. Book us today and experience the perfect blend of flavor and elegance!
+            Spice up your event with our premium catering services! From intimate
+            gatherings to grand celebrations, we craft delicious, customized menus
+            that delight every palate. Book us today and experience the perfect blend
+            of flavor and elegance!
           </p>
           <motion.button
             className="book-us"
             onClick={handleBookNowClick}
             initial={{ scale: 1, rotate: 0, borderRadius: "0%", boxShadow: "0px 0px 0px rgba(0,0,0,0)" }} // Initial state
-            whileHover={{ 
+            whileHover={{
               scale: 1.1, // Scale up slightly on hover
               rotate: 10, // Rotate slightly on hover
               backgroundColor: "#F7A134", // Change background color on hover
               boxShadow: "0px 0px 10px rgba(0,0,0,0.5)" // Add shadow on hover
             }}
-            whileTap={{ 
+            whileTap={{
               scale: 0.9, // Scale down on click
               rotate: -10, // Rotate in the opposite direction on click
               backgroundColor: "#f1faee", // Change background color on click
@@ -64,10 +76,11 @@ function Services() {
         </div>
         <motion.div
           className="event-card event-image1" // Apply Framer Motion to event-image1
-          initial={{ scale: 1, y: 0, boxShadow: "0px 0px 0px rgba(0,0,0,0)" }} // Initial state
-          whileHover={{ 
+          initial={{ scale: 1, y: 0, filter: "brightness(0.5)" }} // Initial state with reduced brightness
+          whileHover={{
             scale: 1.05, // Scale up slightly on hover
             y: -10, // Move up slightly on hover
+            filter: "brightness(1)" // Restore brightness on hover
           }}
           transition={{ type: "spring", stiffness: 300, damping: 10 }} // Smooth transition
         >
@@ -87,10 +100,11 @@ function Services() {
           <motion.div
             className="event-card" // Apply Framer Motion to event cards
             key={index}
-            initial={{ scale: 1, y: 0, boxShadow: "0px 0px 0px rgba(0,0,0,0)" }} // Initial state
-            whileHover={{ 
+            initial={{ scale: 1, y: 0, filter: "brightness(0.9)" }} // Initial state with reduced brightness
+            whileHover={{
               scale: 1.05, // Scale up slightly on hover
               y: -10, // Move up slightly on hover
+              filter: "brightness(1.2)" // Restore brightness on hover
             }}
             transition={{ type: "spring", stiffness: 300, damping: 10 }} // Smooth transition
           >
