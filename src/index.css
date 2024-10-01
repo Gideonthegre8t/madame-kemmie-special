@@ -574,21 +574,12 @@ a,
   color: #fff;
 }
 
-.whatsapp-button {
-  width: 245px;
-  height: 47px;
-  gap: 10px;
-  border-radius: 10px;
 
-  text-align: center;
-  padding: 1em;
-}
-
-.book-us-footer,
-.whatsapp-button {
+.book-us-footer {
   margin: 0 auto;
   background: #f6cfa0;
   color: #000000;
+  font-weight: 800;
 }
 .handle-icon,
 .whatsapp-icon {
@@ -601,7 +592,7 @@ a,
   display: flex;
   flex-direction: column;
   gap: 1.2em;
-  text-align: center;
+  text-align: left;
 }
 
 .footer-down > p {
@@ -1426,7 +1417,7 @@ padding: 24px 42px 24px 42px;
   }
 
   .footer-flex {
-    margin-top: -3em;
+  margin: 0 auto;
   }
   .total {
     margin-left: -2.5em;
@@ -2455,6 +2446,7 @@ padding: 24px 42px 24px 42px;
   }
 
   .footer-flex {
+    flex-direction: column;
     width: 60%;
     margin-left: 20%;
     gap: 0em;

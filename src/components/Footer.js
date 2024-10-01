@@ -27,6 +27,12 @@ const socialLinks = [
     imgSrc: tiktok,
     alt: "tiktok-logo",
     text: "madamekemmiespecial",
+  },
+  {
+    href:"https://api.whatsapp.com/message/443CZADXNZFSK1?autoload=1&app_absent=0",
+    imgSrc: whatsapp,
+    alt: "whatsapp-logo",
+    text: "Reach us on Whatsapp",
   }
 ];
 
@@ -98,27 +104,7 @@ function Footer() {
           </motion.button>
         </div>
         <div className="footer-down">
-          {/* Animated WhatsApp button */}
-          <motion.div
-            className="whatsapp-button"
-            whileHover={{ 
-              scale: 1.1,
-              rotate: 10,
-              boxShadow: "0px 8px 16px rgba(0,0,0,0.3)"
-            }}
-            whileTap={{ 
-              scale: 0.95,
-              rotate: -5
-            }}
-            transition={{ type: "spring", stiffness: 300, damping: 10 }}
-          >
-            <a href="https://api.whatsapp.com/message/443CZADXNZFSK1?autoload=1&app_absent=0" target="_blank" rel="noopener noreferrer">
-              <p>
-                <img className="whatsapp-icon" src={whatsapp} alt="whatsapp-logo" />
-                Reach us on WhatsApp
-              </p>
-            </a>
-          </motion.div>
+         
           {/* Social media links */}
           {socialLinks.map((link, index) => (
             <a key={index} href={link.href} target="_blank" rel="noopener noreferrer" className="social-link">
